@@ -25,6 +25,9 @@ class Header extends Component {
                     <li className="nav-item">
                         <Link className="nav-link nav-link-text boldLink" to="/contact" onClick={this.toggleNav}>Contact</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link nav-link-text" to="/about-us">About Us</Link>
+                    </li>
                 </Fragment>
             </div>
         )

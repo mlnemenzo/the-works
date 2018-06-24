@@ -5,6 +5,9 @@ class LandingPage extends Component {
         return(
             <div className="landing-page">
                 <h1>Landing Page Body</h1>
+                <div className="mission-statement">
+                    
+                </div>
             </div>
         )
     }
