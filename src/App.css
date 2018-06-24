@@ -4,6 +4,15 @@
   background-color: #222
 }
 
+.nav-item {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
