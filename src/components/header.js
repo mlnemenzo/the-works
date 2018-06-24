@@ -2,10 +2,31 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 class Header extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            shown: false
+        };
+
+        this.toggleNav = this.toggleNav.bind(this);
+
+    }
+
+    toggleNav() {
+        const {shown} = this.state;
+        this.setState({
+            shown: !shown
+        });
+    }
+
+
+
     render() {
         return (
-            <div>
-                <h1 className="header">The Works Auto Detailing</h1>
+            <div className = "header-body">
+                <h1 className="header">The Works Auto Detailing and Reconditioning</h1>
                 <Fragment>
                     <li className="nav-item">
                         <Link className="nav-link nav-link-text boldLink" to="/">Home</Link>
