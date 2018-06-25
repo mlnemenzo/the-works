@@ -9,6 +9,7 @@ import Contact from './components/contact';
 import Gallery from './components/gallery';
 import Payments from './components/payments';
 import Services from './components/services';
+import Footer from './components/footer';
 
 
 const App = () => {
@@ -16,17 +17,17 @@ const App = () => {
     return (
       <div className="App">
         <Header/>
-        <div className="container main-app-body">
-            <Route exact path="/" component={LandingPage}/>
-            <Route path ="/about-us" component={AboutUs}/>
-            <Route path ="/appointment" component={Appointment}/>
-            <Route path ="/contact" component={Contact}/>
-            <Route path ="/gallery" component={Gallery}/>
-            <Route path ="/payments" component={Payments}/>
-            <Route path ="/services" component={Services}/>
-        </div>
-
-       
+          <div className = "page-header mb-5"></div>
+          <div className="container main-app-body">
+              <Route exact path="/" component={LandingPage}/>
+              <Route path ="/about-us" component={AboutUs}/>
+              <Route path ="/appointment" component={Appointment}/>
+              <Route path ="/contact" component={Contact}/>
+              <Route path ="/gallery" component={Gallery}/>
+              <Route path ="/payments" component={Payments}/>
+              <Route path ="/services" component={Services}/>
+          </div>
+        <Footer/>
       </div>
     );
   
