@@ -44,7 +44,7 @@ class LandingPage extends Component {
                     </ul>
                     <h4>And more...</h4>
                 </div>
-                <div className= "Services-landing">
+                <div className= "services-landing">
                     <h2>OUR SERVICES</h2>
                     <p>We offer a full range of Auto Detailing and Auto Reconditioning to vehicle owners. Our professionals know how to handle a wide range of services.</p>
                     <div className="service-images">
