@@ -16,8 +16,8 @@ const App = () => {
 
     return (
       <div className="App">
-        <Header/>
-          <div className = "page-header mb-5"></div>
+        <Header />
+          <div className = "page-header"></div>
           <div className="container main-app-body">
               <Route exact path="/" component={LandingPage}/>
               <Route path ="/about-us" component={AboutUs}/>
@@ -27,7 +27,7 @@ const App = () => {
               <Route path ="/payments" component={Payments}/>
               <Route path ="/services" component={Services}/>
           </div>
-        <Footer/>
+        <Footer />
       </div>
     );
   
