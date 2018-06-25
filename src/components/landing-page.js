@@ -9,7 +9,7 @@ class LandingPage extends Component {
             <div className="landing-page">
                 <div className="landing-image"></div>
                 <div className="appt">
-                    <h3 className="make-appt">MAKE AN APPOINTMENT NOW WITH OUR ONLINE FORM</h3>
+                    <h3 className="make-appt">MAKE AN APPOINTMENT NOW WITH OUR ONLINE FORM:</h3>
                     <Link className="make-appt-link nav-link nav-link-text boldLink" to = "/appointment">MAKE AN APPOINTMENT</Link>
                 </div>
                 <div className="why-choose col-10">
@@ -20,7 +20,7 @@ class LandingPage extends Component {
                 <div className="vehicles-serviced">
                     <h2>VEHICLES SERVICED</h2>
                     <p>We provide top notch auto detailing and reconditioning services for all types of vehicles.</p>
-                    <h4>We cater to all types of vehicles.</h4>
+                    <h4>We cater to all types of vehicles...</h4>
                     <ul>
                         <li>Audi</li>
                         <li>Acura</li>
