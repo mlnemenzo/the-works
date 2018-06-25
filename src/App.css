@@ -1,8 +1,13 @@
 .App {
   text-align: center;
   color: white;
-  background-color: rgb(44, 44, 44);
+  width: 100vw;
+  /* height: 100vh; */
+  margin: auto;
+  background-color: rgb(73, 73, 73);
+  text-shadow: 1px 1px 5px rgb(39, 39, 39);
   font-family: 'Quattrocento Sans', sans-serif;
+
 }
 
 .nav-item {
@@ -28,10 +33,35 @@ a:hover {
   text-decoration: underline;
 }
 
+p, h4 {
+  text-align: center;
+  padding: 50px
+}
+
+li {
+  text-align: center;
+}
+
+.header {
+  margin: auto;
+  
+}
+
 .header-body {
   border-bottom: 1px solid white;
   background-color: rgb(36, 36, 36);
   box-shadow: 1px 2px 2px rgb(136, 42, 42)
+}
+
+.landing-page> p {
+  padding: 30px;
+  text-align: center;
+}
+
+.make-appt, .make-appt-link {
+  display: inline-block;
+  /* border: 1px solid white; */
+  padding: 15px
 }
 
 .about-us-body {
@@ -39,3 +69,8 @@ a:hover {
     text-align: -webkit-auto;
 }
 
+.footer-body {
+  border-top: 1px solid white;
+  background-color: rgb(36, 36, 36);
+  padding-bottom: 20px;
+}

@@ -9,7 +9,7 @@ const AboutUs = () => {
             </div> 
             <div className="mission-statement">
                 <h3 className="statement">Mission Statement: </h3>
-                <p className = "statment-text">The Mission of the The Works Auto Detailing & Reconditioning is to provide top-quality service and impeccable customer service to automobile owners in the Riverside County and surrounding areas.  The Works Auto Detailing & Reconditioning Company's philosophy is to Clean, Protect, and Restore CPR every vehicle that we service to ensure 100% customer satisfaction. </p>
+                <p className = "statment-text">The Mission of the The Works Auto Detailing & Reconditioning is to provide top-quality service and impeccable customer service to automobile owners in the Riverside County and surrounding areas.  The Works Auto Detailing & Reconditioning Company's philosophy is to Clean, Protect, and Restore (CPR) every vehicle that we service to ensure 100% customer satisfaction. </p>
             </div>
 
         </div>
