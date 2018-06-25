@@ -42,7 +42,10 @@ li {
   text-align: center;
 }
 
+/* /////////////////////////////////// header ////////////////////////////////////////////// */
+
 .header {
+  padding: 15px;
   margin: auto;
   
 }
@@ -53,12 +56,14 @@ li {
   box-shadow: 1px 2px 2px rgb(136, 42, 42)
 }
 
+/* ////////////////////////////////// landing page ///////////////////////////////////////// */
+
 .landing-page> p {
   padding: 30px;
   text-align: center;
 }
 
-.make-appt, .make-appt-link {
+.make-appt, .make-appt-link, .services-landing {
   display: inline-block;
   /* border: 1px solid white; */
   padding: 15px
@@ -74,3 +79,4 @@ li {
   background-color: rgb(36, 36, 36);
   padding-bottom: 20px;
 }
+
