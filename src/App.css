@@ -103,11 +103,33 @@ h5 {
   display: inline-block;
   text-align: justify;
   margin: 3px;
-  padding: 20px
+  padding: 0;
+  box-shadow: 1px 1px 5px rgb(36, 36, 36)
 }
 
-.service-level {
-  border: 1px solid white
+.service-info-body:hover {
+    height:110%;
+    width: 110%
+}
+
+.service-level, .service-appt {
+  background-color: rgb(199, 75, 75);
+  border-radius: 3px;
+  padding: 20px;
+  text-align: justify
+}
+
+.service-info {
+  background-color: white;
+  color: black;
+  font-size: .75em;
+  border-bottom: 1px solid rgb(135, 135, 135);
+  padding: 15px
+}
+
+.service-detail, .service-pricing-number {
+  padding: 15px;
+  text-align: justify;
 }
 
 
