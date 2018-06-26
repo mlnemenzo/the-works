@@ -82,7 +82,7 @@ h5 {
 
 .about-us-body {
   margin: 15px 20px;
-    text-align: -webkit-auto;
+  text-align: -webkit-auto;
 }
 
 .footer-body {
@@ -92,4 +92,22 @@ h5 {
 }
 
 /* ////////////////////////////////// disclaimer ///////////////////////////////////////// */
+
+
+/* ////////////////////////////////// services ///////////////////////////////////////// */
+
+.service-info-body {
+  border: 1px solid white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: justify;
+  margin: 3px;
+  padding: 20px
+}
+
+.service-level {
+  border: 1px solid white
+}
+
 
