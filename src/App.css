@@ -7,6 +7,7 @@
   background-color: rgb(73, 73, 73);
   text-shadow: 1px 1px 5px rgb(39, 39, 39);
   font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 1rem
 
 }
 
@@ -21,7 +22,8 @@ li {
 
 a {
   color: white;
-  text-shadow: 1px 2px 4px rgb(190, 73, 73)
+  text-shadow: 1px 2px 4px rgb(135, 135, 135);
+  outline-color: none
 }
 
 a:link {
@@ -30,22 +32,27 @@ a:link {
 }
 
 a:hover {
+  color: rgb(199, 75, 75);
   text-decoration: underline;
 }
 
 p, h4 {
-  text-align: center;
-  padding: 50px
+  text-align: justify;
+  padding: 15px
 }
 
 li {
   text-align: center;
 }
 
+h5 {
+  font-size: .75em;
+}
 /* /////////////////////////////////// header ////////////////////////////////////////////// */
 .header-body {
   position: fixed;
-  width: 100%
+  width: 100%;
+  z-index: 10;
 }
 
 .header {
@@ -83,4 +90,6 @@ li {
   background-color: rgb(36, 36, 36);
   padding-bottom: 20px;
 }
+
+/* ////////////////////////////////// disclaimer ///////////////////////////////////////// */
 

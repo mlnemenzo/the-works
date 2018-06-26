@@ -9,6 +9,7 @@ import Contact from './components/contact';
 import Gallery from './components/gallery';
 import Payments from './components/payments';
 import Services from './components/services';
+import Disclaimer from './components/disclaimer';
 import Footer from './components/footer';
 
 
@@ -26,6 +27,7 @@ const App = () => {
               <Route path ="/gallery" component={Gallery}/>
               <Route path ="/payments" component={Payments}/>
               <Route path ="/services" component={Services}/>
+              <Route path ="/disclaimer" component={Disclaimer}/>
           </div>
         <Footer />
       </div>

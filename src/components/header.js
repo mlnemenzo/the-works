@@ -35,7 +35,7 @@ class Header extends Component {
                         <Link className="nav-link nav-link-text boldLink" to="/services" onClick={this.toggleNav}>Services</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link nav-link-text boldLink" to="/gallery">Gallery</Link>
+                        <Link className="nav-link nav-link-text boldLin" to="/gallery">Gallery</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link nav-link-text boldLink" to="/appointment" onClick={this.toggleNav}>Appointments</Link>
@@ -57,4 +57,3 @@ class Header extends Component {
 
 export default Header;
 
-/* home / services / about us / gallery / appointment / coming soon / pay now / contact */

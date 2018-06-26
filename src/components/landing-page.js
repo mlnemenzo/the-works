@@ -15,7 +15,7 @@ class LandingPage extends Component {
                 <div className="why-choose col-10">
                     <h2>WHY CHOOSE US?</h2>
                     <p>We are Certified Advance Auto Detailing and Auto Reconditioning Professionals.  We have extensive training and experience in the field of auto detailing, paint correction and R1 Ceramic Coatings.  We use eco-safe products and commercial grade equipment to ensure optimum results without harming the environment.  As an Auto Reconditioning Professional, we provide a systematic and efficient appropact to rejuvenate and protect various surfaces / components of your vehicle.</p>
-                    <Link className = "about-link" to = "/about-us">READ MORE...</Link> 
+                    <Link className = "about-link btn" to = "/about-us">READ MORE...</Link> 
                 </div>
                 <div className="vehicles-serviced">
                     <h2>VEHICLES SERVICED</h2>
@@ -51,8 +51,11 @@ class LandingPage extends Component {
                     </div>
                     <Link className = "about-link btn" to = "/services">VIEW ALL SERVICES</Link> 
                 </div>
-                    
-                
+                <div className="disclaimer-landing">
+                    <h2>The Works Auto Detailing And Reconditioning LLC</h2>
+                    <Link className = "disclaimer-link" to = "/disclaimer">guarantees & disclaimer</Link>
+                </div>
+
             </div>
         )
     }
