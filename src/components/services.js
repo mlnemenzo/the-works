@@ -6,7 +6,7 @@ class Services extends Component {
         return (
             <div className = "services-body">
                 <h1 className="services-header" id = "service-header">Our Services</h1>
-                <div className="service-info-body col-2">
+                <div className="service-info-body col-3">
                     <div className="service-level text-center">Bronze Detail</div>
                     <div className="service-pricing">
                         <h2 className = "service-pricing-number text-center" id = "detail-cost">50/70</h2>
