@@ -4,7 +4,7 @@ class Appointment extends Component {
     render() {
         return (
             <div className="appointment-body">
-                <h1 className="appointments">Appointments</h1>
+                <h1 className="appointments">Book an Appointment</h1>
             </div>
         )
     }
