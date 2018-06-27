@@ -205,3 +205,17 @@ tr:nth-child(even) {
   padding: 20px
 }
 
+/* ////////////////////////////////// conact ///////////////////////////////////////// */
+
+.contact-header {
+  padding: 20px
+}
+
+.contact-options {
+  padding: 20px
+}
+
+.user-input {
+  padding: 5px 10px;
+  
+}
