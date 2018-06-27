@@ -11,9 +11,16 @@
 
 }
 
+.main-app-body {
+  position: relative;
+  top: 125px;
+  padding-bottom: 200px
+}
+
+
 .nav-item {
   display: inline-block;
-  margin: 10px 30px;
+  margin: 5px 20px;
 }
 
 li {
@@ -69,6 +76,7 @@ tr:nth-child(even) {
   position: fixed;
   width: 100%;
   z-index: 10;
+  height: 125px
 }
 
 .header {
@@ -127,6 +135,14 @@ tr:nth-child(even) {
 .service-info-body:hover {
     height:110%;
     width: 110%
+}
+
+#service-header {
+  padding: 20px
+}
+
+#detail-cost {
+  font-size: 2em
 }
 
 .service-pricing {
