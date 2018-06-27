@@ -42,9 +42,9 @@ class LandingPage extends Component {
                         <li>Tesla</li>
                         <li>Toyota</li>
                     </ul>
-                    <h4>And more...</h4>
+                    <h4 className = "text-center">And more...</h4>
                 </div>
-                <div className= "services-landing col-1- offset-1">
+                <div className= "services-landing col-1- offset-1 text-center">
                     <h2>OUR SERVICES</h2>
                     <p>We offer a full range of Auto Detailing and Auto Reconditioning to vehicle owners. Our professionals know how to handle a wide range of services.</p>
                     <div className="service-images">
@@ -53,7 +53,7 @@ class LandingPage extends Component {
                 </div>
                 <div className="disclaimer-landing">
                     <h2>The Works Auto Detailing And Reconditioning LLC</h2>
-                    <Link className = "disclaimer-link" to = "/disclaimer">guarantees & disclaimer</Link>
+                    <Link className = "disclaimer-link text-center" to = "/disclaimer">guarantees & disclaimer</Link>
                 </div>
 
             </div>

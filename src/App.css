@@ -117,7 +117,10 @@ tr:nth-child(even) {
   border-top: 1px solid white;
   background-color: rgb(36, 36, 36);
   padding-bottom: 75px;
+  margin-top: 80px
 }
+
+
 
 /* ////////////////////////////////// disclaimer ///////////////////////////////////////// */
 
@@ -195,3 +198,10 @@ tr:nth-child(even) {
   border-bottom: 1px solid rgb(73, 73, 73);
   padding: 5px
 }
+
+/* ////////////////////////////////// about us ///////////////////////////////////////// */
+
+.about-us-header {
+  padding: 20px
+}
+
