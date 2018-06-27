@@ -48,6 +48,22 @@ li {
 h5 {
   font-size: .75em;
 }
+
+td {
+  padding: 15px;
+  box-sizing: border-box;
+  border: 2px solid black
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+  color: black
+}
+
+tr:nth-child(even) {
+  background-color: rgb(36, 36, 36)
+}
+
 /* /////////////////////////////////// header ////////////////////////////////////////////// */
 .header-body {
   position: fixed;
@@ -56,7 +72,7 @@ h5 {
 }
 
 .header {
-  padding: 15px;
+  padding: 12px 10px;
   margin: auto;
   
 }
@@ -103,11 +119,60 @@ h5 {
   display: inline-block;
   text-align: justify;
   margin: 3px;
-  padding: 20px
+  padding: 0;
+  box-shadow: 2px 2px 5px rgb(24, 24, 24);
+  vertical-align: top
+}
+
+.service-info-body:hover {
+    height:110%;
+    width: 110%
+}
+
+.service-pricing {
+  background-color: rgb(36, 36, 36)
 }
 
 .service-level {
-  border: 1px solid white
+  background-color: rgb(199, 75, 75);
+  border-radius: 3px;
+  padding: 20px;
+  text-align: justify
 }
 
+.service-info {
+  background-color: white;
+  color: black;
+  font-size: .75em;
+  border-bottom: 1px solid rgb(135, 135, 135);
+  padding: 15px
+}
 
+.service-detail, .service-pricing-number {
+  padding: 15px;
+  font-size: .8em;
+  text-align: justify;
+}
+
+.service-appt {
+  background-color: rgb(199, 75, 75);
+  border-radius: 3px;
+  width: 100%;
+  font-size: .8em;
+  padding: 0;
+  text-align: center;
+}
+
+.table-note {
+  margin: 20px
+}
+
+.custom-work {
+  margin: 15px;
+  border-bottom: 1px solid white;
+}
+
+.service-info> h5 {
+  border-bottom: 1px solid rgb(73, 73, 73);
+  padding: 5px
+}
