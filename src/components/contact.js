@@ -13,7 +13,6 @@ class Contact extends Component {
 
     handleEvent(event) {
         event.preventDefault();
-        console.log('this state: ', this.state )
         this.props.add(this.state);
         
 
@@ -36,7 +35,7 @@ class Contact extends Component {
                     <div className = "call col-4">
                         <h3>Call Us Now At</h3>
                         <ul>
-                            <li className = "text-left">(951)449-6383</li>                       
+                            <li className = "text-left"><span className="glyphicons glyphicons-call-outgoing"></span>(951)449-6383</li>                       
                             <li className = "text-left">(951)368-4899</li>
                         </ul>
                     </div>
