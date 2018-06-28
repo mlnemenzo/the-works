@@ -207,6 +207,10 @@ tr:nth-child(even) {
 
 /* ////////////////////////////////// conact ///////////////////////////////////////// */
 
+.call, .email, .availability {
+  border-bottom: 1px solid rgb(36, 36, 36)
+}
+
 .contact-header {
   padding: 20px
 }
@@ -216,6 +220,6 @@ tr:nth-child(even) {
 }
 
 .user-input {
-  padding: 5px 10px;
+  padding: 10px 15px;
   
 }
