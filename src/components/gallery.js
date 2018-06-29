@@ -107,19 +107,15 @@ class Gallery extends Component {
                         onSelect={this.onSelect}
                         ref={r => (this.slider = r)}
                         version={4}
-                        >              <div style={{ height: 400 }}>
-                        <img
-                          style={{ width: "100%", height: "100%" }}
-                          src={cars}
-                        />
-                        <div className="carousel-caption">Image</div>
+                        >
+                        <div style={{ height: 500 }}>
+                            <img style={{ width: "100%", height: "100%" }} src={cars}/>
+                        <div className="carousel-caption">Test</div>
                       </div>
-                      <div style={{ ...styles, backgroundColor: "aqua" }}>
-                        <video className="carousel-center" controls style={{ width: "75%" }} height="250">
-                          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-                        </video>
-                        <div className="carousel-caption">Video</div>
-                      </div>
+                      <div style = {{ height: 500 }}>
+                            <img style={{ width: "100%", height: "100%"}} src = {car2}/>>
+                        <div className="carousel-caption">Test2</div>
+                      </div>  
                       <div
                         style={{
                           height: 400,
@@ -148,20 +144,9 @@ class Gallery extends Component {
                       </div>
                     </React_Bootstrap_Carousel>
                   </div>
-                  <div className="col-md-12" style={{ marginTop: 20 }}>
-                    <React_Bootstrap_Carousel version={4} className="carousel-fade">
-                      <div style={{ ...styles, backgroundColor: "darkcyan" }}>
-                        <div className="carousel-center">This carsouel transition is fade</div>
-                        <div className="carousel-caption">Text</div>
-                      </div>
-                      <div style={{ ...styles, backgroundColor: "yellowgreen" }}>
-                        <span className="carousel-center">This carsouel transition is fade</span>
-                        <div className="carousel-caption">Text</div>
-                      </div>
-                    </React_Bootstrap_Carousel>
+                  
                 </div>
 
-            </div>
          </div>   
         )
     }
