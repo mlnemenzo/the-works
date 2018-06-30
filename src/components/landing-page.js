@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import landing from '../assets/images/landing.jpg';
+import landing from '../assets/images/landing_banner.jpg';
 
 
 class LandingPage extends Component {
@@ -12,7 +12,7 @@ class LandingPage extends Component {
     render() {
         return(
             <div className="landing-page">
-                <div className="landing-image align-items-center">
+                <div className="landing-image">
                     <img src={landing}/>
                 </div>
                 <div className="appt">
@@ -22,7 +22,7 @@ class LandingPage extends Component {
                 <div className="why-choose col-10 offset-1">
                     <h2>WHY CHOOSE US?</h2>
                     <p>We are Certified Advance Auto Detailing and Auto Reconditioning Professionals.  We have extensive training and experience in the field of auto detailing, paint correction and R1 Ceramic Coatings.  We use eco-safe products and commercial grade equipment to ensure optimum results without harming the environment.  As an Auto Reconditioning Professional, we provide a systematic and efficient appropact to rejuvenate and protect various surfaces / components of your vehicle.</p>
-                    <Link className = "about-link btn" to = "/about-us">READ MORE...</Link> 
+                    <Link className = "about-link nav-link" to = "/about-us">READ MORE...</Link> 
                 </div>
                 <div className="vehicles-serviced col-10 offset-1">
                     <h2>VEHICLES SERVICED</h2>
@@ -56,10 +56,10 @@ class LandingPage extends Component {
                     <p>We offer a full range of Auto Detailing and Auto Reconditioning to vehicle owners. Our professionals know how to handle a wide range of services.</p>
                     <div className="service-images">
                     </div>
-                    <Link className = "about-link btn" to = "/services">VIEW ALL SERVICES</Link> 
+                    <Link className = "about-link nav-link" to = "/services">VIEW ALL SERVICES</Link> 
                 </div>
                 <div className="disclaimer-landing">
-                    <h2>The Works Auto Detailing And Reconditioning LLC</h2>
+                    <h6>The Works Auto Detailing And Reconditioning LLC</h6>
                     <Link className = "disclaimer-link text-center" to = "/disclaimer">guarantees & disclaimer</Link>
                 </div>
 

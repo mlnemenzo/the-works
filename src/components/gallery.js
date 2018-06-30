@@ -65,40 +65,15 @@ class Gallery extends Component {
 
         return (
             <div className="gallery-body">
-                {/* <h1 className="gallery-header">Gallery</h1>
-                <div className="carousel-inner">
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src={cars} alt="First slide"/>
-                    </div>
-                </div>
-                <div className="carousel-item">
-                    <img className="d-block w-100" src={car2} alt="Second slide"/>
-                </div>
-                <div className="carousel-item active">
-                    <img className="d-block w-100" src={car3}alt="Third slide"/>
-                </div>               
-                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>  */}
+                <h1 className="gallery-header" id= "gallery-header">Gallery</h1>
                 <div className="row">
                     <div className="col-md-12" style={{ marginTop: 20 }}>
                         <div className="btn-group">
-                            <button type="button" className="btn btn-outline-secondary" onClick={this._changeIcon}>
-                                Change Icon
-                            </button>
                             <button type="button" className="btn btn-outline-secondary" onClick={this.slidePrev}>
                                 Slider prev
                             </button>
                             <button type="button" className="btn btn-outline-secondary" onClick={this.slideNext}>
                                 Slider next
-                            </button>
-                            <button type="button" className="btn btn-outline-secondary" onClick={this.goToSlide}>
-                                Go to slide 4
                             </button>
                             <button type="button" className="btn btn-outline-secondary" onClick={this.autoplay}>
                                 {this.state.autoplay ? "Stop Autoplay" : "Start Autoplay"}
@@ -107,9 +82,10 @@ class Gallery extends Component {
                     </div>
                     <div className="col-md-12" style={{ marginTop: 20 }}>
                         <React_Bootstrap_Carousel
+                        className = "carousel-fade"
                         animation={true}
                         autoplay={this.state.autoplay}
-                        slideshowSpeed={7000}
+                        slideshowSpeed={3000}
                         leftIcon={leftIcon}
                         rightIcon={rightIcon}
                         onSelect={this.onSelect}
@@ -118,31 +94,31 @@ class Gallery extends Component {
                         >
                         <div style={{ height: 500 }}>
                             <img style={{ width: "500", height: "100%" }} src={theWorks}/>
-                        <div className="carousel-caption">Test</div>
+                        <div className="carousel-caption">Our mobile service vehicle</div>
                       </div>
                       <div style = {{ height: 500 }}>
                             <img style={{ width: "500", height: "100%"}} src = {tesla}/>
-                        <div className="carousel-caption">Test2</div>
+                        <div className="carousel-caption">Tesla</div>
                       </div>  
                       <div style = {{ height: 500 }}>
                             <img style={{ width: "500", height: "100%"}} src = {tesla2}/>
-                        <div className="carousel-caption">Test2</div>
+                        <div className="carousel-caption">Tesla and Mike</div>
                       </div>
                       <div style = {{ height: 500 }}>
                             <img style={{ width: "500", height: "100%"}} src = {tesla3}/>
-                        <div className="carousel-caption">Test2</div>
+                        <div className="carousel-caption">Tesla detailing</div>
                       </div>
                       <div style = {{ height: 500 }}>
                             <img style={{ width: "500", height: "100%"}} src = {tacoma}/>
-                        <div className="carousel-caption">Test2</div>
+                        <div className="carousel-caption">Toyota Tacoma</div>
                       </div> 
                       <div style = {{ height: 500 }}>
                             <img style={{ width: "500", height: "100%"}} src = {fj}/>
-                        <div className="carousel-caption">Test2</div>
+                        <div className="carousel-caption">Toyota FJ Cruiser</div>
                       </div>  
                       <div style = {{ height: 500 }}>
                             <img style={{ width: "500", height: "100%"}} src = {fj2}/>
-                        <div className="carousel-caption">Test2</div>
+                        <div className="carousel-caption">Toyota FJ Cruiser</div>
                       </div>        
                       {/* <div style={{ ...styles, backgroundColor: "lightblue" }}>
                         <span>text</span>
