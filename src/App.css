@@ -268,3 +268,19 @@ textarea, input {
 .appointments {
   padding: 15px
 }
+
+.client-info {
+  padding: 50px
+}
+
+.calendar-container {
+  padding: 55px
+}
+
+.apt-time {
+  margin-top: 55px
+}
+
+.service-type {
+  margin: 20px
+}

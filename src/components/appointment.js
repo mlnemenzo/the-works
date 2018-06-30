@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Calendar from 'react-calendar';
 
 class Appointment extends Component {
 
@@ -11,7 +12,7 @@ class Appointment extends Component {
                 phone : "",
                 comments : "",
                 service : null,
-                date : null,
+                date : new Date(),
                 time : null
             }
         
@@ -28,6 +29,8 @@ class Appointment extends Component {
         window.scrollTo(0,0);
     }
 
+    onChange = date => this.setState({ date })
+
     render() {
 
         const { name, email, phone, comments, service, date, time } = this.state;
@@ -36,15 +39,33 @@ class Appointment extends Component {
 
         return (
             <div className="appointment-body row">
-                <h1 className="appointments text-center col-12">Book an Appointment</h1>
+                <h1 className="appointments text-center col-12">Book an Appointment:</h1>
                 <div className="appointment-date col-6">
-                    <h1 className="calendar">calendar goes here</h1>
+                    <h1 className="calendar">Date</h1>
+                    <div className ="calendar-container">
+                        <Calendar
+                        onChange={this.onChange}
+                        value={this.state.date}
+                        />
+                    </div>
                 </div>
                 <div className="appointment-time col-6">
-                    <h1 className="time">preferred time</h1>
+                    <h1 className="time">Preferred Time</h1>
+                    <div className="time btn-group">
+                        <button type="button" className ="apt-time btn btn-danger darken-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hour:
+                        </button>
+                        <div className="dropdown-menu">
+                            <a className="dropdown-item" href="#">Action</a>
+                            <a className="dropdown-item" href="#">Another action</a>
+                            <a className="dropdown-item" href="#">Something else here</a>
+                            <div className="dropdown-divider"></div>
+                            <a className="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
                 </div>
                 <div className="service-type col-12">
-                    <h1 className="service">Service Tier</h1>
+                    <h1 className="service">Service Tier:</h1>
                     <div className="btn-group">
                         <button type="button" className ="btn btn-danger darken-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tier
@@ -58,14 +79,32 @@ class Appointment extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="client-info col-8  text-left">
-                    <h2 className="client">Client Info</h2>
-                    <input className = "row" value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Name"/>
-                    <input className = "row" value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Email"/>
-                    <input className = "row" value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Phone Number"/>
-                    <textarea className = "row" value = {comments} type = "textarea" onChange = { event => this.setState({comments: event.target.value})} placeholder = "comments" />
-                </div>
-                
+                    <form className = "client-info" onSubmit = {this.handleEvent.bind(this)}>
+                        <div className="row">
+                            <div className="user-input">
+                                <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name"/>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="user-input">
+                                <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Your Email"/>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="user-input">
+                                <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone"/>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="user-input">
+                                <textarea className = "" value = {comments} type = "textarea" onChange = { event => this.setState({message: event.target.value})} placeholder = "Message"/>
+                            </div>
+                        </div>
+                        <div className = "form-submit">
+                            {/* <button className = "btn">Submit</button> */}
+                        </div>
+                        <h6 className = "text-left">We will contact you within one business day.</h6>
+                    </form>              
             </div>
         )
     }
