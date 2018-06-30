@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 import { React_Bootstrap_Carousel } from 'react-bootstrap-carousel';
-import cars from '../assets/images/car.jpg';
-import car2 from '../assets/images/car2.jpg';
-import car3 from '../assets/images/car3.jpg';
+import theWorks from '../assets/images/the_works.jpg';
+import tesla from '../assets/images/tesla.jpg';
+import tesla2 from '../assets/images/tesla_mike.jpg';
+import tesla3 from '../assets/images/tesla_front.jpg';
+import tacoma from '../assets/images/tacoma_drivers_side.jpg';
+import fj from '../assets/images/fj_drivers.jpg';
+import fj2 from '../assets/images/fj_passenger.jpg';
 
 const styles = { height: 400, width: "100%" };
 
@@ -16,6 +20,10 @@ class Gallery extends Component {
         };
 
         
+    }
+
+    componentDidMount() {
+        window.scrollTo(0,0);
     }
 
     onSelect = (active, direction) => {
@@ -109,24 +117,34 @@ class Gallery extends Component {
                         version={4}
                         >
                         <div style={{ height: 500 }}>
-                            <img style={{ width: "100%", height: "100%" }} src={cars}/>
+                            <img style={{ width: "500", height: "100%" }} src={theWorks}/>
                         <div className="carousel-caption">Test</div>
                       </div>
                       <div style = {{ height: 500 }}>
-                            <img style={{ width: "100%", height: "100%"}} src = {car2}/>>
+                            <img style={{ width: "500", height: "100%"}} src = {tesla}/>
                         <div className="carousel-caption">Test2</div>
                       </div>  
-                      <div
-                        style={{
-                          height: 400,
-                          width: "100%",
-                          backgroundColor: "lightpink"
-                        }}
-                      >
-                        <div className="carousel-center">center Text</div>
-                        <div className="carousel-caption">Text</div>
+                      <div style = {{ height: 500 }}>
+                            <img style={{ width: "500", height: "100%"}} src = {tesla2}/>
+                        <div className="carousel-caption">Test2</div>
                       </div>
-                      <div style={{ ...styles, backgroundColor: "lightblue" }}>
+                      <div style = {{ height: 500 }}>
+                            <img style={{ width: "500", height: "100%"}} src = {tesla3}/>
+                        <div className="carousel-caption">Test2</div>
+                      </div>
+                      <div style = {{ height: 500 }}>
+                            <img style={{ width: "500", height: "100%"}} src = {tacoma}/>
+                        <div className="carousel-caption">Test2</div>
+                      </div> 
+                      <div style = {{ height: 500 }}>
+                            <img style={{ width: "500", height: "100%"}} src = {fj}/>
+                        <div className="carousel-caption">Test2</div>
+                      </div>  
+                      <div style = {{ height: 500 }}>
+                            <img style={{ width: "500", height: "100%"}} src = {fj2}/>
+                        <div className="carousel-caption">Test2</div>
+                      </div>        
+                      {/* <div style={{ ...styles, backgroundColor: "lightblue" }}>
                         <span>text</span>
                         <div className="carousel-caption">Text</div>
                       </div>
@@ -141,7 +159,7 @@ class Gallery extends Component {
                           />
                         </div>
                         <div className="carousel-caption">Youtube</div>
-                      </div>
+                      </div> */}
                     </React_Bootstrap_Carousel>
                   </div>
                   

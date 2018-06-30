@@ -106,6 +106,15 @@ tr:nth-child(even) {
   text-align: center;
 }
 
+.landing-image {
+  height: 500
+}
+
+/* .landing-image > img {
+  height: 100%;
+  width : 500
+} */
+
 .make-appt, .make-appt-link, .services-landing {
   display: inline-block;
   /* border: 1px solid white; */

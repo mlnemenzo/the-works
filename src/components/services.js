@@ -2,6 +2,11 @@ import React,  { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class Services extends Component {
+
+    componentDidMount() {
+        window.scrollTo(0,0);
+    }
+
     render() {
         return (
             <div className = "services-body">
