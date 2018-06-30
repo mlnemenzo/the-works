@@ -79,6 +79,9 @@ tr:nth-child(even) {
   box-shadow: 2px 2px 5px rgb(24, 24, 24);
 }
 
+.btn-danger {
+  background-color: rgb(199, 75, 75)
+}
 /* /////////////////////////////////// header ////////////////////////////////////////////// */
 .header-body {
   position: fixed;
@@ -88,7 +91,7 @@ tr:nth-child(even) {
 }
 
 .header {
-  padding: 12px 10px;
+  padding-top: 12px;
   margin: auto;
   font-size: 1.5rem
   

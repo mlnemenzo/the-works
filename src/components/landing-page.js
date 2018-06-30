@@ -13,7 +13,7 @@ class LandingPage extends Component {
         return(
             <div className="landing-page">
                 <div className="landing-image">
-                    <img src={landing}/>
+                    <img src={landing} alt = "img not available"/>
                 </div>
                 <div className="appt">
                     <h3 className="make-appt text-center">MAKE AN APPOINTMENT NOW WITH OUR ONLINE FORM:</h3>

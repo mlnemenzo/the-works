@@ -9,7 +9,7 @@ import tacoma from '../assets/images/tacoma_drivers_side.jpg';
 import fj from '../assets/images/fj_drivers.jpg';
 import fj2 from '../assets/images/fj_passenger.jpg';
 
-const styles = { height: 400, width: "100%" };
+// const styles = { height: 400, width: "100%" };
 
 class Gallery extends Component {
     constructor(props) {
@@ -93,49 +93,33 @@ class Gallery extends Component {
                         version={4}
                         >
                         <div style={{ height: 500 }}>
-                            <img style={{ width: "500", height: "100%" }} src={theWorks}/>
+                            <img style={{ width: "500", height: "100%" }} src={theWorks} alt = "img not available"/>
                         <div className="carousel-caption">Our mobile service vehicle</div>
                       </div>
                       <div style = {{ height: 500 }}>
-                            <img style={{ width: "500", height: "100%"}} src = {tesla}/>
+                            <img style={{ width: "500", height: "100%"}} src = {tesla} alt = "img not available"/>
                         <div className="carousel-caption">Tesla</div>
                       </div>  
                       <div style = {{ height: 500 }}>
-                            <img style={{ width: "500", height: "100%"}} src = {tesla2}/>
+                            <img style={{ width: "500", height: "100%"}} src = {tesla2} alt = "img not available"/>
                         <div className="carousel-caption">Tesla and Mike</div>
                       </div>
                       <div style = {{ height: 500 }}>
-                            <img style={{ width: "500", height: "100%"}} src = {tesla3}/>
+                            <img style={{ width: "500", height: "100%"}} src = {tesla3} alt = "img not available"/>
                         <div className="carousel-caption">Tesla detailing</div>
                       </div>
                       <div style = {{ height: 500 }}>
-                            <img style={{ width: "500", height: "100%"}} src = {tacoma}/>
+                            <img style={{ width: "500", height: "100%"}} src = {tacoma} alt = "img not available"/>
                         <div className="carousel-caption">Toyota Tacoma</div>
                       </div> 
                       <div style = {{ height: 500 }}>
-                            <img style={{ width: "500", height: "100%"}} src = {fj}/>
+                            <img style={{ width: "500", height: "100%"}} src = {fj} alt = "img not available"/>
                         <div className="carousel-caption">Toyota FJ Cruiser</div>
                       </div>  
                       <div style = {{ height: 500 }}>
-                            <img style={{ width: "500", height: "100%"}} src = {fj2}/>
+                            <img style={{ width: "500", height: "100%"}} src = {fj2} alt = "img not available"/>
                         <div className="carousel-caption">Toyota FJ Cruiser</div>
                       </div>        
-                      {/* <div style={{ ...styles, backgroundColor: "lightblue" }}>
-                        <span>text</span>
-                        <div className="carousel-caption">Text</div>
-                      </div>
-                      <div style={{ ...styles, backgroundColor: "lightblue" }}>
-                        <div className="carousel-center">
-                          <iframe
-                            style={{ width: 500 }}
-                            height="250"
-                            src="https://www.youtube.com/embed/MhkGQAoc7bc?showinfo=0"
-                            frameBorder="0"
-                            allowFullScreen
-                          />
-                        </div>
-                        <div className="carousel-caption">Youtube</div>
-                      </div> */}
                     </React_Bootstrap_Carousel>
                   </div>
                   
