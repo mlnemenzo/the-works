@@ -13,7 +13,7 @@
 
 .main-app-body {
   position: relative;
-  top: 125px;
+  top: 95px;
   padding-bottom: 150px
 }
 
@@ -75,17 +75,22 @@ tr:nth-child(even) {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
 }
 
+.btn, .btn-outline-secondary {
+  box-shadow: 2px 2px 5px rgb(24, 24, 24);
+}
+
 /* /////////////////////////////////// header ////////////////////////////////////////////// */
 .header-body {
   position: fixed;
   width: 100%;
   z-index: 10;
-  height: 125px
+  height: 85px
 }
 
 .header {
   padding: 12px 10px;
   margin: auto;
+  font-size: 1.5rem
   
 }
 
@@ -110,10 +115,11 @@ tr:nth-child(even) {
   height: 500
 }
 
-/* .landing-image > img {
-  height: 100%;
-  width : 500
-} */
+.landing-image > img {
+  height: 425px;
+  width: 100%;
+  box-shadow: 2px 3px 5px rgb(24, 24, 24);
+}
 
 .make-appt, .make-appt-link, .services-landing {
   display: inline-block;
@@ -157,7 +163,7 @@ tr:nth-child(even) {
 }
 
 #service-header {
-  padding: 20px
+  padding: 15px
 }
 
 #detail-cost {
@@ -224,7 +230,7 @@ tr:nth-child(even) {
 }
 
 .contact-header {
-  padding: 20px
+  padding: 15px
 }
 
 .contact-options {
@@ -234,4 +240,28 @@ tr:nth-child(even) {
 .user-input {
   padding: 10px 15px;
   
+}
+
+textarea {
+  height: 150px;
+  width: 350px;
+}
+
+textarea, input {
+  box-shadow: 2px 2px 5px rgb(24, 24, 24);
+  outline: none
+}
+
+/* ////////////////////////////////// gallery ///////////////////////////////////////// */
+
+
+#gallery-header {
+  padding-top: 15px;
+  margin: 0px;
+}
+
+/* ////////////////////////////////// appointments ///////////////////////////////////////// */
+
+.appointments {
+  padding: 15px
 }
