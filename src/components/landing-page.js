@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import car from '../assets/images/car.jpg';
+import landing from '../assets/images/landing.jpg';
 
 
 class LandingPage extends Component {
 
+    componentDidMount() {
+        window.scrollTo(0,0);
+    }
 
     render() {
         return(
             <div className="landing-page">
-                <div className="landing-image">
-                    <img src={car}/>
+                <div className="landing-image align-items-center">
+                    <img src={landing}/>
                 </div>
                 <div className="appt">
                     <h3 className="make-appt text-center">MAKE AN APPOINTMENT NOW WITH OUR ONLINE FORM:</h3>
