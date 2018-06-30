@@ -80,19 +80,19 @@ class Gallery extends Component {
                 <div className="row">
                     <div className="col-md-12" style={{ marginTop: 20 }}>
                         <div className="btn-group">
-                            <button type="button" className="btn btn-primary" onClick={this._changeIcon}>
+                            <button type="button" className="btn btn-outline-secondary" onClick={this._changeIcon}>
                                 Change Icon
                             </button>
-                            <button type="button" className="btn btn-primary" onClick={this.slidePrev}>
+                            <button type="button" className="btn btn-outline-secondary" onClick={this.slidePrev}>
                                 Slider prev
                             </button>
-                            <button type="button" className="btn btn-primary" onClick={this.slideNext}>
+                            <button type="button" className="btn btn-outline-secondary" onClick={this.slideNext}>
                                 Slider next
                             </button>
-                            <button type="button" className="btn btn-primary" onClick={this.goToSlide}>
+                            <button type="button" className="btn btn-outline-secondary" onClick={this.goToSlide}>
                                 Go to slide 4
                             </button>
-                            <button type="button" className="btn btn-primary" onClick={this.autoplay}>
+                            <button type="button" className="btn btn-outline-secondary" onClick={this.autoplay}>
                                 {this.state.autoplay ? "Stop Autoplay" : "Start Autoplay"}
                             </button>
                         </div>
