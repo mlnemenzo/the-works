@@ -82,16 +82,16 @@ class Gallery extends Component {
                     </div>
                     <div className="col-md-12" style={{ marginTop: 20 }}>
                         <React_Bootstrap_Carousel
-                        className = "carousel-fade"
-                        animation={true}
-                        autoplay={this.state.autoplay}
-                        slideshowSpeed={3000}
-                        leftIcon={leftIcon}
-                        rightIcon={rightIcon}
-                        onSelect={this.onSelect}
-                        ref={r => (this.slider = r)}
-                        version={4}
-                        >
+                            className = "carousel-fade"
+                            animation={true}
+                            autoplay={this.state.autoplay}
+                            slideshowSpeed={5000}
+                            leftIcon={leftIcon}
+                            rightIcon={rightIcon}
+                            onSelect={this.onSelect}
+                            ref={r => (this.slider = r)}
+                            version={4}
+                            >
                             <div style={{ height: 500 }}>
                                 <img style={{ width: "500", height: "100%" }} src={theWorks} alt = "img not available"/>
                             <div className="carousel-caption">Our mobile service vehicle</div>

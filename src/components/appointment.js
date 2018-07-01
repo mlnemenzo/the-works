@@ -39,7 +39,23 @@ class Appointment extends Component {
 
         return (
             <div className="appointment-body row">
-                <h1 className="appointments text-center col-12">Book an Appointment:</h1>
+            <div className="service-type col-12">
+            <h1 className="appointments text-center col-12">Book an Appointment:</h1>
+                    <h1 className="service">Service Tier:</h1>
+                    <div className="btn-group">
+                        <button type="button" className ="btn btn-danger darken-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tier
+                        </button>
+                        <div className="dropdown-menu">
+                            <a className="dropdown-item" href="">Action</a>
+                            <a className="dropdown-item" href="">Another action</a>
+                            <a className="dropdown-item" href="">Something else here</a>
+                            <div className="dropdown-divider"></div>
+                            <a className="dropdown-item" href="">Separated link</a>
+                        </div>
+                    </div>
+                </div>
+                
                 <div className="appointment-date col-6">
                     <h1 className="calendar">Date</h1>
                     <div className ="calendar-container">
@@ -56,26 +72,11 @@ class Appointment extends Component {
                             Hour:
                         </button>
                         <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">Action</a>
-                            <a className="dropdown-item" href="#">Another action</a>
-                            <a className="dropdown-item" href="#">Something else here</a>
+                            <a className="dropdown-item" href="">Action</a>
+                            <a className="dropdown-item" href="">Another action</a>
+                            <a className="dropdown-item" href="">Something else here</a>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">Separated link</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="service-type col-12">
-                    <h1 className="service">Service Tier:</h1>
-                    <div className="btn-group">
-                        <button type="button" className ="btn btn-danger darken-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Tier
-                        </button>
-                        <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">Action</a>
-                            <a className="dropdown-item" href="#">Another action</a>
-                            <a className="dropdown-item" href="#">Something else here</a>
-                            <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">Separated link</a>
+                            <a className="dropdown-item" href="">Separated link</a>
                         </div>
                     </div>
                 </div>

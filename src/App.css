@@ -222,6 +222,10 @@ tr:nth-child(even) {
   padding: 5px
 }
 
+.services-landing {
+  margin: 0
+}
+
 /* ////////////////////////////////// about us ///////////////////////////////////////// */
 
 .about-us-header {
@@ -243,7 +247,8 @@ tr:nth-child(even) {
 }
 
 .contact-options {
-  padding: 20px
+  padding: 20px;
+  border-top: 1px solid white
 }
 
 .user-input {
@@ -258,7 +263,17 @@ textarea {
 
 textarea, input {
   box-shadow: 2px 2px 5px rgb(24, 24, 24);
-  outline: none
+  outline: none;
+  border-radius: 3px
+}
+
+.contact-form {
+  margin-left: 20px;
+  padding-bottom: 15px
+}
+
+ul {
+  padding: 0
 }
 
 /* ////////////////////////////////// gallery ///////////////////////////////////////// */
@@ -289,4 +304,9 @@ textarea, input {
 
 .service-type {
   margin: 20px
+}
+
+.react-calendar {
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgb(24, 24, 24);
 }
