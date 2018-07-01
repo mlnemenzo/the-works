@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import Calendar from 'react-calendar';
 
 class Appointment extends Component {
@@ -7,6 +8,8 @@ class Appointment extends Component {
         super(props); 
         
             this.state = {
+                user : [],
+                store : [],
                 name : "",
                 email : "",
                 phone : "",
@@ -18,6 +21,23 @@ class Appointment extends Component {
         
     }
 
+    componentDidMount() {
+
+        window.scrollTo(0,0);
+
+        axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json#')
+        .then(json => console.log(json))
+       
+        // .then(newData => this.setState({user : newData, id : newData}))
+        // .catch( error => alert(error));
+        
+      }
+    
+      filterNames(e) {
+        this.state.store.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()))
+    
+      }
+
     handleEvent(event) {
         event.preventDefault();
         this.props.add(this.state);
@@ -25,18 +45,12 @@ class Appointment extends Component {
         this.setState({name: event.target.value}, {email: event.target.value}, {phone: event.target.value}, {comments: event.target.value}, {service : event.target.value}, {date: event.target.value}, {time: event.target.value});
     }
 
-    componentDidMount() {
-        window.scrollTo(0,0);
-    }
-
     onChange = date => this.setState({ date })
 
     render() {
 
-        const { name, email, phone, comments, service, date, time } = this.state;
-
-        console.log("event: ", this.value)
-
+        const { name, email, phone, comments } = this.state;
+        
         return (
             <div className="appointment-body row">
             <div className="service-type col-12">

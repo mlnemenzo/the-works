@@ -27,9 +27,20 @@ class App extends Component {
 
   componentDidMount() {
     axios.get('https://randomuser.me/api/?results=10&inc=name,registered&nat=fr')
-    .then(json => console.log(json.data.results[5].name.title));
+    .then(json => console.log(json.data.results.map(result => ({
+      name: `${result.name.first} ${result.name.last}`,
+      id: result.registered
+    }))))
+    .then(newData => this.setState({user : newData, id : newData}))
+    .catch( error => alert(error));
     
   }
+
+  filterNames(e) {
+    this.state.store.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()))
+
+  }
+  
 
   render() {
   return (
