@@ -11,9 +11,9 @@ class Appointment extends Component {
                 email : "",
                 phone : "",
                 comments : "",
-                service : null,
-                date : new Date(),
-                time : null
+                // service : null,
+                // date : new Date(),
+                // time : null
             }
         
     }
