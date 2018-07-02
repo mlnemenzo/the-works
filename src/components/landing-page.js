@@ -40,19 +40,18 @@ class LandingPage extends Component {
                         <li>Ford</li>
                         <li>General Motors</li>
                         <li>GMC</li>
-                        <li>Land Rover</li>
-                              
+                        <li>Infiniti</li>     
                     </ul>
                     <ul className = "text-center col-3">
+                        <li>Land Rover</li>
                         <li>Lexus</li>
                         <li>Lincoln</li> 
                         <li>Mazda</li>
                         <li>Mercedes-Benz</li>
-                        <li>Mitsubishi</li>
                     </ul>
                     <ul className = "text-center col-3">
+                        <li>Mitsubishi</li>
                         <li>Nissan</li>
-                        <li>Saab</li>
                         <li>Tesla</li>
                         <li>Toyota</li>
                         <li>Volkswagon</li>
