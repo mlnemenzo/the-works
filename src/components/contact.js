@@ -39,17 +39,17 @@ class Contact extends Component {
                     <h1 className="contact-header">Contact Us</h1>
                     <div className="d-flex justify-content-center">
                         <div className="user-input">
-                            <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name"/>
+                            <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete='name'/>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div className="user-input">
-                            <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Your Email"/>
+                            <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Your Email" autoComplete = "email"/>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div className="user-input">
-                            <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone"/>
+                            <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">

@@ -28,24 +28,23 @@ class Appointment extends Component {
         axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json#')
         .then(json => console.log(json))
        
-        // .then(newData => this.setState({user : newData, id : newData}))
-        // .catch( error => alert(error));
+        .then(newData => this.setState({user : newData, id : newData}))
+        .catch( error => alert(error));
         
-      }
+    }
     
-      filterNames(e) {
+    filterNames(e) {
         this.state.store.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()))
-    
-      }
+
+    }
 
     handleEvent(event) {
         event.preventDefault();
         this.props.add(this.state);
 
-        this.setState({name: event.target.value}, {email: event.target.value}, {phone: event.target.value}, {comments: event.target.value}, {service : event.target.value}, {date: event.target.value}, {time: event.target.value});
+        
     }
 
-    onChange = date => this.setState({ date })
 
     render() {
 
@@ -94,23 +93,23 @@ class Appointment extends Component {
                         </div>
                     </div>
                 </div>
-                    <form className = "client-info" onSubmit = {this.handleEvent.bind(this)}>
-                        <div className="row">
+                    <form className = "client-info row" onSubmit = {this.handleEvent.bind(this)}>
+                        <div className="col-12 text-center">
                             <div className="user-input">
-                                <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name"/>
+                                <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete = "name"/>
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="col-12 text-center">
                             <div className="user-input">
-                                <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Your Email"/>
+                                <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Your Email" autoComplete = "email"/>
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="col-12 text-center">
                             <div className="user-input">
-                                <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone"/>
+                                <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="col-12 text-center">
                             <div className="user-input">
                                 <textarea className = "" value = {comments} type = "textarea" onChange = { event => this.setState({message: event.target.value})} placeholder = "Message"/>
                             </div>
@@ -118,7 +117,7 @@ class Appointment extends Component {
                         <div className = "form-submit">
                             {/* <button className = "btn">Submit</button> */}
                         </div>
-                        <h6 className = "text-left">We will contact you within one business day.</h6>
+                        <h6 className = "col-12 text-center">We will contact you within one business day.</h6>
                     </form>              
             </div>
         )
