@@ -20,7 +20,7 @@
 
 .nav-item {
   display: inline-block;
-  margin: 5px 20px;
+  background-color: rgb(36, 36, 36)
 }
 
 li {
@@ -101,6 +101,26 @@ tr:nth-child(even) {
   border-bottom: 1px solid white;
   background-color: rgb(36, 36, 36);
   box-shadow: 0 2px 7px rgb(136, 42, 42), 0 4px 3px rgb(36, 36, 36)
+}
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  outline: none;
+}
+
+.navbar-collapse {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgb(39,39,39);
+  border-radius: 3px;
+}
+
+.navbar-nav .nav-link {
+  padding: 10px
 }
 
 /* ////////////////////////////////// footer ///////////////////////////////////////// */
