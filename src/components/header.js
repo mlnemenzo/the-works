@@ -21,8 +21,6 @@ class Header extends Component {
         });
     }
 
-
-
     render() {
 
         const {shown} = this.state;
@@ -38,8 +36,8 @@ class Header extends Component {
                     <button onClick={this.toggleNav} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    
                         <div className={btnClass} id="navbarContent">
+                        
                         <ul className="navbar-nav  nav-fill w-100 align-items-start">
                             <div className={btnClass} id="navbarContent">
                         <ul className="navbar-nav  nav-fill w-100 align-items-start">
