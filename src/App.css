@@ -92,6 +92,14 @@ tr:nth-child(even) {
   z-index: 10;
 }
 
+.overlay {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  opacity: 1
+}
+
 .header-body {
   position: fixed;
   width: 100%;
@@ -130,6 +138,10 @@ tr:nth-child(even) {
 
 .navbar-nav .nav-link {
   padding: 10px
+}
+
+.navbar-nav,  .nav-fill, .w-100, .align-items-start {
+  padding: 5px
 }
 
 /* ////////////////////////////////// footer ///////////////////////////////////////// */
@@ -268,7 +280,7 @@ tr:nth-child(even) {
   margin: 0 20px;
 }
 
-/* ////////////////////////////////// conact ///////////////////////////////////////// */
+/* ////////////////////////////////// contact ///////////////////////////////////////// */
 
 .call, .email, .availability {
   border-bottom: 1px solid rgb(36, 36, 36)
@@ -314,6 +326,10 @@ ul {
 #gallery-header {
   padding-top: 15px;
   margin: 0px;
+}
+
+img {
+  box-shadow: 3px 3px 5px rgb(24, 24, 24);
 }
 
 /* ////////////////////////////////// appointments ///////////////////////////////////////// */
