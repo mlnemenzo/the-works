@@ -14,6 +14,10 @@ class Appointment extends Component {
                 email : "",
                 phone : "",
                 comments : "",
+                carMake : "",
+                carModel : "",
+                carYear : "",
+                carInfo : ""
                 // service : null,
                 // date : new Date(),
                 // time : null
@@ -48,77 +52,103 @@ class Appointment extends Component {
 
     render() {
 
-        const { name, email, phone, comments } = this.state;
+        const { name, email, phone, comments, carMake, carModel, carYear, carInfo } = this.state;
         
         return (
             <div className="appointment-body row">
             <div className="service-type col-12">
-            <h1 className="appointments text-center col-12">Book an Appointment:</h1>
-                    <h1 className="service">Service Tier:</h1>
-                    <div className="btn-group">
-                        <button type="button" className ="btn btn-danger darken-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Tier
-                        </button>
-                        <div className="dropdown-menu">
-                            <a className="dropdown-item" href="">Action</a>
-                            <a className="dropdown-item" href="">Another action</a>
-                            <a className="dropdown-item" href="">Something else here</a>
-                            <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="">Separated link</a>
-                        </div>
+                <h1 className="appointments text-center col-12">Book an Appointment:</h1>
+                <h1 className="service">Service Tier:</h1>
+                <div className="btn-group">
+                    <button type="button" className ="btn btn-danger darken-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tier
+                    </button>
+                    <div className="dropdown-menu">
+                        <a className="dropdown-item" href="">Action</a>
+                        <a className="dropdown-item" href="">Another action</a>
+                        <a className="dropdown-item" href="">Something else here</a>
+                        <div className="dropdown-divider"></div>
+                        <a className="dropdown-item" href="">Separated link</a>
                     </div>
                 </div>
+            </div>
                 
-                <div className="appointment-date col-6">
-                    <h1 className="calendar">Date</h1>
-                    <div className ="calendar-container">
-                        <Calendar
-                        onChange={this.onChange}
-                        value={this.state.date}
-                        />
+            <div className="appointment-date col-6">
+                <h1 className="calendar">Date</h1>
+                <div className ="calendar-container">
+                    <Calendar
+                    onChange={this.onChange}
+                    value={this.state.date}
+                    />
+                </div>
+            </div>
+            <div className="appointment-time col-6">
+                <h1 className="time">Preferred Time</h1>
+                <div className="time btn-group">
+                    <button type="button" className ="apt-time btn btn-danger darken-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hour:
+                    </button>
+                    <div className="dropdown-menu">
+                        <a className="dropdown-item" href="">Action</a>
+                        <a className="dropdown-item" href="">Another action</a>
+                        <a className="dropdown-item" href="">Something else here</a>
+                        <div className="dropdown-divider"></div>
+                        <a className="dropdown-item" href="">Separated link</a>
                     </div>
                 </div>
-                <div className="appointment-time col-6">
-                    <h1 className="time">Preferred Time</h1>
-                    <div className="time btn-group">
-                        <button type="button" className ="apt-time btn btn-danger darken-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Hour:
-                        </button>
-                        <div className="dropdown-menu">
-                            <a className="dropdown-item" href="">Action</a>
-                            <a className="dropdown-item" href="">Another action</a>
-                            <a className="dropdown-item" href="">Something else here</a>
-                            <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="">Separated link</a>
+            </div>
+            <div className="text-area row">
+                <form className = "car-info row">
+                    <h2 className="car-info-header col-12 text-center">Car Make/Model</h2>
+                    <div className="col-12 text-center">
+                        <div className="user-input">
+                            <input value = {carMake} type = "text" onChange = { event => this.setState({carMake: event.target.value})} placeholder = "Car Make"/>
                         </div>
                     </div>
-                </div>
-                    <form className = "client-info row" onSubmit = {this.handleEvent.bind(this)}>
-                        <div className="col-12 text-center">
-                            <div className="user-input">
-                                <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete = "name"/>
-                            </div>
+                    <div className="col-12 text-center">
+                        <div className="user-input">
+                            <input value = {carModel} type = "text" onChange = { event => this.setState({carModel: event.target.value})} placeholder = "Car Model"/>
                         </div>
-                        <div className="col-12 text-center">
-                            <div className="user-input">
-                                <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Your Email" autoComplete = "email"/>
-                            </div>
+                    </div>
+                    <div className="col-12 text-center">
+                        <div className="user-input">
+                            <input value = {carYear} type = "number" onChange = { event => this.setState({carYear: event.target.value})} placeholder = "Car Year"/>
                         </div>
-                        <div className="col-12 text-center">
-                            <div className="user-input">
-                                <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
-                            </div>
+                    </div>
+                    <div className="col-12 text-center">
+                        <div className="user-input">
+                            <textarea className = "" value = {carInfo} type = "textarea" onChange = { event => this.setState({carInfo: event.target.value})} placeholder = "Car Details (Optional)."/>
                         </div>
-                        <div className="col-12 text-center">
-                            <div className="user-input">
-                                <textarea className = "" value = {comments} type = "textarea" onChange = { event => this.setState({message: event.target.value})} placeholder = "Message"/>
-                            </div>
+                    </div>
+                </form>
+                <form className = "client-info row text-center" onSubmit = {this.handleEvent.bind(this)}>
+                    <h2 className="contact-info col-12 text-center">Contact Information</h2>
+                    <div className="col-12 text-center">
+                        <div className="user-input">
+                            <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete = "name"/>
                         </div>
-                        <div className = "form-submit">
-                            {/* <button className = "btn">Submit</button> */}
+                    </div>
+                    <div className="col-12 text-center">
+                        <div className="user-input">
+                            <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Your Email" autoComplete = "email"/>
                         </div>
-                        <h6 className = "col-12 text-center">We will contact you within one business day.</h6>
-                    </form>              
+                    </div>
+                    <div className="col-12 text-center">
+                        <div className="user-input">
+                            <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
+                        </div>
+                    </div>
+                    <div className="col-12 text-center">
+                        <div className="user-input">
+                            <textarea className = "" value = {comments} type = "textarea" onChange = { event => this.setState({message: event.target.value})} placeholder = "Message"/>
+                        </div>
+                    </div>
+                    <div className = "form-submit">
+                        {/* <button className = "btn">Submit</button> */}
+                    </div>
+                    <h6 className = "col-12 text-center">We will contact you within one business day.</h6>
+                </form>
+                </div>              
             </div>
         )
     }
