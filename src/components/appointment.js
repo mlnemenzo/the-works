@@ -136,7 +136,7 @@ class Appointment extends Component {
                         </div>
                     </div>
                 </form>
-                <form className = "client-info col-12 col-s-12 col-m-6 col-lg-6 text-center" onSubmit = {this.handleEvent.bind(this)}>
+                <form className = "client-info col-12 col-s-12 col-m-6 col-lg-6 text-center" onSubmit = {this.setState.bind(this)}>
                     <h2 className="contact-info col-6 text-center">Contact Info</h2>
                     <div className="col-12 col-s-12 col-m-6 col-lg-6 text-left">
                         <div className="user-input">
@@ -159,7 +159,7 @@ class Appointment extends Component {
                         </div>
                     </div>
                     <div className = "form-submit">
-                        <input type="submit" value = "submit"/>
+                        <input className = "submit-button" type="submit" value = "submit"/>
                     </div>
                     
                 </form>
