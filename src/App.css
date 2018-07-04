@@ -2,7 +2,7 @@
   text-align: center;
   color: white;
   width: 100vw;
-  /* height: 100vh; */
+  height: 100%;
   margin: auto;
   background-color: rgb(73, 73, 73);
   text-shadow: 1px 1px 5px rgb(39, 39, 39);
@@ -320,6 +320,10 @@ ul {
   padding: 0
 }
 
+.contact-message {
+  padding-top: 20px
+}
+
 /* ////////////////////////////////// gallery ///////////////////////////////////////// */
 
 
@@ -357,6 +361,10 @@ img {
 .react-calendar {
   border-radius: 15px;
   box-shadow: 2px 2px 5px rgb(24, 24, 24);
+}
+
+.contact-time {
+  padding-top: 20px
 }
 
 /* ////////////////////////////////// footer ///////////////////////////////////////// */

@@ -9,9 +9,9 @@ class Services extends Component {
 
     render() {
         return (
-            <div className = "services-body">
-                <h1 className="services-header" id = "service-header">Our Services</h1>
-                <div className="service-info-body col-3">
+            <div className = "services-body row">
+                <h1 className="services-header col-12" id = "service-header">Our Services</h1>
+                <div className="service-info-body col-12 col-sm-12 col-md-3 col-lg-3">
                     <div className="service-level text-center">Bronze Detail</div>
                     <div className="service-pricing">
                         <h2 className = "service-pricing-number text-center" id = "detail-cost">50/70</h2>
@@ -27,7 +27,7 @@ class Services extends Component {
                         <Link className="service-appt text-center" to = "/appointment">Get Appointment Now!</Link>
                     </div>
                 </div>
-                <div className="service-info-body col-3">
+                <div className="service-info-body col-12 col-sm-12 col-md-3 col-lg-3">
                     <div className="service-level text-center">Siliver Detail</div>
                     <div className="service-pricing">
                         <h2 className = "service-pricing-number text-center" id = "detail-cost">90/110</h2>
@@ -46,7 +46,7 @@ class Services extends Component {
                         <Link className="service-appt" to = "/appointment">Get Appointment Now!</Link>
                     </div>
                 </div>
-                <div className="service-info-body col-3">
+                <div className="service-info-body col-12 col-sm-12 col-md-3 col-lg-3">
                     <div className="service-level text-center">Gold Detail</div>
                     <div className="service-pricing">
                         <h2 className = "service-pricing-number text-center" id = "detail-cost">130/150</h2>
@@ -67,7 +67,7 @@ class Services extends Component {
                         <Link className="service-appt" to = "/appointment">Get Appointment Now!</Link>
                     </div>
                 </div>
-                <div className="service-info-body col-3">
+                <div className="service-info-body col-12 col-sm-12 col-md-3 col-lg-3">
                     <div className="service-level text-center">Platinum Detail</div>
                     <div className="service-pricing">
                         <h2 className = "service-pricing-number text-center" id = "detail-cost">170/190</h2>
@@ -88,7 +88,7 @@ class Services extends Component {
                     </div>
                 </div>
                 <h2 className = "custom-work">Custom Work</h2>
-                <table className = "text-left col-8 offset-2">
+                <table className = "text-left col-12 col-sm-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
                     <tbody>
                         <tr>
                             <td><strong>Other Services</strong></td>
@@ -137,7 +137,7 @@ class Services extends Component {
                     </tbody>
                 </table>
                 <h6 className = "table-note">(Note: ALL prices may change depending on the Interior & Exterior condition, Size, Color, and Make of the vehicle).</h6>
-                <Link className = "disclaimer-link" to = "/disclaimer">guarantees & disclaimer</Link>
+                <Link className = "disclaimer-link col-12 text-center" to = "/disclaimer">guarantees & disclaimer</Link>
             </div>
         )
     }

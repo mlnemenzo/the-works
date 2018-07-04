@@ -58,9 +58,9 @@ class Contact extends Component {
                         </div>
                     </div>
                     <div className = "form-submit">
-                        {/* <button className = "btn">Submit</button> */}
+                        <input type="submit" value="Submit"/>  
                     </div>
-                    <h6 className = "text-center">We will contact you within one business day.</h6>
+                    <h6 className = "contact-message text-center">We will contact you within one business day.</h6>
                 </form>
                 <div className = "contact-options row">
                     <div className = "call col-4">
