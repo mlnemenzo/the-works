@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'; 
 import axios from 'axios';
 import Calendar from 'react-calendar';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
@@ -67,17 +68,19 @@ class Appointment extends Component {
             <div className="appointment-body row">
             <div className="service-type col-12">
                 <h1 className="appointments text-center col-12">Book an Appointment:</h1>
-                <h1 className="service">Service Tier:</h1>
-                <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
+                <h2 className="service">Service Level:</h2>
+                <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle.bind(this)}>
                     <DropdownToggle caret>
-                    Select Tier: 
+                    Tier 
                     </DropdownToggle>
                     <DropdownMenu>
-                    <DropdownItem header>Header</DropdownItem>
-                    <DropdownItem disabled>Action</DropdownItem>
-                    <DropdownItem>Another Action</DropdownItem>
+                    <DropdownItem >Bronze - 50/70</DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem>Another Action</DropdownItem>
+                    <DropdownItem >Silver - 90/110</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>Gold - 130/150</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>Platinum - 170/190</DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
             </div>
@@ -94,19 +97,23 @@ class Appointment extends Component {
             <div className="appointment-time col-6">
             <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
                 <DropdownToggle caret>
-                Dropdown
+                Time
                 </DropdownToggle>
                 <DropdownMenu>
-                <DropdownItem header>Header</DropdownItem>
-                <DropdownItem disabled>Action</DropdownItem>
-                <DropdownItem>Another Action</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Another Action</DropdownItem>
+                <DropdownItem>09:00 - 10:00</DropdownItem>
+                <DropdownItem>10:00 - 11:00</DropdownItem>
+                <DropdownItem>11:00 - 12:00</DropdownItem>
+                <DropdownItem>12:00 - 01:00</DropdownItem>
+                <DropdownItem>01:00 - 02:00</DropdownItem> 
+                <DropdownItem>02:00 - 03:00</DropdownItem>
+                <DropdownItem>03:00 - 04:00</DropdownItem>
+                <DropdownItem>04:00 - 05:00</DropdownItem>
+                <DropdownItem>05:00 - 06:00</DropdownItem>
                 </DropdownMenu>
             </Dropdown>
             </div>
             <div className="text-area col-12 row">
-                <form className = "car-info col-6">
+                <form className = "car-info col-12 col-s-12 col-m-6 col-lg-6">
                     <h2 className="car-info-header col-6 text-center">Car Make/Model</h2>
                     <div className="col-6 text-left">
                         <div className="user-input">
@@ -125,39 +132,40 @@ class Appointment extends Component {
                     </div>
                     <div className="col-6 text-center">
                         <div className="user-input">
-                            <textarea className = "" value = {carInfo} type = "textarea" onChange = { event => this.handleEvent({carInfo: event.target.value})} placeholder = "Car Details (Optional)."/>
+                            <textarea value = {carInfo} type = "text" onChange = { event => this.setState({carInfo: event.target.value})} placeholder = "Car Details (Optional)."/>
                         </div>
                     </div>
                 </form>
-                <form className = "client-info col-6 text-center" onSubmit = {this.handleEvent.bind(this)}>
+                <form className = "client-info col-12 col-s-12 col-m-6 col-lg-6 text-center" onSubmit = {this.handleEvent.bind(this)}>
                     <h2 className="contact-info col-6 text-center">Contact Info</h2>
-                    <div className="col-6 text-left">
+                    <div className="col-12 col-s-12 col-m-6 col-lg-6 text-left">
                         <div className="user-input">
-                            <input value = {name} type = "text" onChange = { event => this.handleEvent({name: event.target.value})} placeholder = "Your Name" autoComplete = "name"/>
+                            <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete = "name"/>
                         </div>
                     </div>
-                    <div className="col-6 text-left">
+                    <div className="col-12 col-s-12 col-m-6 col-lg-6 text-left">
                         <div className="user-input">
-                            <input value = {email} type = "email" onChange = { event => this.handleEvent({email: event.target.value})} placeholder = "Your Email" autoComplete = "email"/>
+                            <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Your Email" autoComplete = "email"/>
                         </div>
                     </div>
-                    <div className="col-6 text-left">
+                    <div className="col-12 col-s-12 col-m-6 col-lg-6 text-left">
                         <div className="user-input">
-                            <input value = {phone} type = "phone" onChange = { event => this.handleEvent({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
+                            <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
                         </div>
                     </div>
-                    <div className="col-6 text-center">
+                    <div className="col-12 col-s-12 col-m-6 col-lg-6 text-center">
                         <div className="user-input">
-                            <textarea className = "" value = {comments} type = "textarea" onChange = { event => this.handleEvent({message: event.target.value})} placeholder = "Message"/>
+                            <textarea className = "" value = {comments} type = "text" onChange = { event => this.setState({comments: event.target.value})} placeholder = "Message"/>
                         </div>
                     </div>
                     <div className = "form-submit">
-                        {/* <button className = "btn">Submit</button> */}
+                        <input type="submit" value = "submit"/>
                     </div>
                     
                 </form>
                 </div> 
-                <h6 className = "col-12 text-center">We will contact you within one business day.</h6>             
+                <h6 className = "contact-time col-12 text-center">We will contact you within one business day.</h6> 
+                <Link className = "disclaimer-link col-12 text-center" to = "/disclaimer">guarantees & disclaimer</Link>            
             </div>
         )
     }
