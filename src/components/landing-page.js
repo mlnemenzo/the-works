@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import landing from '../assets/images/landing_banner.jpg';
+import ceramic from '../assets/images/ceramic-coating.jpeg'
 
 
 class LandingPage extends Component {
@@ -28,28 +29,28 @@ class LandingPage extends Component {
                     <h2 className="text-center col-12">VEHICLES SERVICED</h2>
                     <p className = "text-center col-12">We provide top notch auto detailing and reconditioning services for all types of vehicles.</p>
                     <h4 className = "text-center col-12">We cater to all types of vehicles...</h4>
-                    <ul className = "text-center col-3">
+                    <ul className = "text-center col-6 col-sm-6 col-md-3 col-lg-3">
                         <li>Audi</li>
                         <li>Acura</li>
                         <li>BMW</li>
                         <li>Chevorlet</li>
                         <li>Corvette</li>  
                     </ul>
-                    <ul className="text-center col-3">
+                    <ul className="text-center col-6 col-sm-6 col-md-3 col-lg-3">
                         <li>Dodge</li>
                         <li>Ford</li>
                         <li>General Motors</li>
                         <li>GMC</li>
                         <li>Infiniti</li>     
                     </ul>
-                    <ul className = "text-center col-3">
+                    <ul className = "text-center col-6 col-sm-6 col-md-3 col-lg-3">
                         <li>Land Rover</li>
                         <li>Lexus</li>
                         <li>Lincoln</li> 
                         <li>Mazda</li>
                         <li>Mercedes-Benz</li>
                     </ul>
-                    <ul className = "text-center col-3">
+                    <ul className = "text-center col-6 col-sm-6 col-md-3 col-lg-3">
                         <li>Mitsubishi</li>
                         <li>Nissan</li>
                         <li>Tesla</li>
@@ -60,6 +61,9 @@ class LandingPage extends Component {
                 </div>
                 <div className= "services-landing col-10 offset-1 text-center">
                     <h2 className= "col-12 text-center">OUR SERVICES</h2>
+                    <div className="services-image">
+                        <img src={ceramic} alt = "img not available"/>
+                    </div>
                     <p className = "d-flex justify-content-center">We offer a full range of Auto Detailing and Auto Reconditioning to vehicle owners. Our professionals know how to handle a wide range of services.</p>
                     <div className="service-images">
                     </div>

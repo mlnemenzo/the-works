@@ -25,6 +25,8 @@
 
 li {
   list-style-type: none;
+  text-align: center;
+  border-bottom: 1px solid white
 }
 
 a {
@@ -52,10 +54,6 @@ p, h4 {
   padding: 15px
 }
 
-li {
-  text-align: center;
-}
-
 h5 {
   font-size: .75em;
 }
@@ -81,6 +79,14 @@ tr:nth-child(even) {
 
 .btn, .btn-outline-secondary {
   box-shadow: 2px 2px 5px rgb(24, 24, 24);
+}
+
+.btn-secondary, .submit-button {
+  border-radius: 1px;
+  color: #fff;
+  background-color: #828282;
+  border-color: #6c757d;
+  width: 110px;
 }
 
 .btn-danger {
@@ -169,6 +175,12 @@ tr:nth-child(even) {
   box-shadow: 2px 3px 5px rgb(24, 24, 24);
 }
 
+.services-image > img {
+  margin-top: 15px;
+  width: 70vw;
+  box-shadow: 2px 3px 5px rgb(24, 24, 24);
+}
+
 .make-appt, .make-appt-link, .services-landing {
   display: inline-block;
   /* border: 1px solid white; */
@@ -196,7 +208,7 @@ tr:nth-child(even) {
 
 .service-info-body {
   border: 1px solid white;
-  border-radius: 4px;
+  border-radius: 2px;
   box-sizing: border-box;
   display: inline-block;
   text-align: justify;
@@ -204,11 +216,9 @@ tr:nth-child(even) {
   padding: 0;
   box-shadow: 2px 2px 5px rgb(24, 24, 24);
   vertical-align: top;
-  font-size: 1rem
-}
-
-.service-info-body {
-    width: 23%
+  font-size: 1rem;
+  width: 20%;
+  height: 100%
 }
 
 #service-header {
@@ -225,7 +235,7 @@ tr:nth-child(even) {
 
 .service-level {
   background-color: rgb(199, 75, 75);
-  border-radius: 3px;
+  border-radius: 2px;
   padding: 20px;
 }
 
@@ -245,7 +255,7 @@ tr:nth-child(even) {
 
 .service-appt {
   background-color: rgb(199, 75, 75);
-  border-radius: 3px;
+  border-radius: 2px;
   width: 100%;
   font-size: .8em;
   padding: 0;
@@ -308,7 +318,7 @@ textarea {
 textarea, input {
   box-shadow: 2px 2px 5px rgb(24, 24, 24);
   outline: none;
-  border-radius: 3px
+  border-radius: 2px
 }
 
 .contact-form {
