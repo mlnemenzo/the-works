@@ -117,7 +117,7 @@ class Appointment extends Component {
                     </div>
                     <div className="col-6 text-center">
                         <div className="user-input">
-                            <textarea className = "" value = {carInfo} type = "textarea" onChange = { event => this.setState({carInfo: event.target.value})} placeholder = "Car Details (Optional)."/>
+                            <textarea className = "" value = {carInfo} type = "textarea" onChange = { event => this.handleEvent({carInfo: event.target.value})} placeholder = "Car Details (Optional)."/>
                         </div>
                     </div>
                 </form>
@@ -125,22 +125,22 @@ class Appointment extends Component {
                     <h2 className="contact-info col-6 text-center">Contact Info</h2>
                     <div className="col-6 text-left">
                         <div className="user-input">
-                            <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete = "name"/>
+                            <input value = {name} type = "text" onChange = { event => this.handleEvent({name: event.target.value})} placeholder = "Your Name" autoComplete = "name"/>
                         </div>
                     </div>
                     <div className="col-6 text-left">
                         <div className="user-input">
-                            <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Your Email" autoComplete = "email"/>
+                            <input value = {email} type = "email" onChange = { event => this.handleEvent({email: event.target.value})} placeholder = "Your Email" autoComplete = "email"/>
                         </div>
                     </div>
                     <div className="col-6 text-left">
                         <div className="user-input">
-                            <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
+                            <input value = {phone} type = "phone" onChange = { event => this.handleEvent({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
                         </div>
                     </div>
                     <div className="col-6 text-center">
                         <div className="user-input">
-                            <textarea className = "" value = {comments} type = "textarea" onChange = { event => this.setState({message: event.target.value})} placeholder = "Message"/>
+                            <textarea className = "" value = {comments} type = "textarea" onChange = { event => this.handleEvent({message: event.target.value})} placeholder = "Message"/>
                         </div>
                     </div>
                     <div className = "form-submit">
