@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Calendar from 'react-calendar';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 class Appointment extends Component {
 
     constructor(props) {
         super(props); 
-        
+
+            this.toggle = this.toggle.bind(this);
+
             this.state = {
+                dropDownOpen : false,
                 user : [],
                 store : [],
                 name : "",
@@ -21,8 +25,13 @@ class Appointment extends Component {
                 // service : null,
                 // date : new Date(),
                 // time : null
-            }
-        
+            }  
+    }
+
+    toggle() {
+        this.setState(prevState => ({
+            dropDownOpen : !prevState.dropDownOpen
+        }));
     }
 
     componentDidMount() {
@@ -59,18 +68,18 @@ class Appointment extends Component {
             <div className="service-type col-12">
                 <h1 className="appointments text-center col-12">Book an Appointment:</h1>
                 <h1 className="service">Service Tier:</h1>
-                <div className="btn-group">
-                    <button type="button" className ="btn btn-danger darken-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Tier
-                    </button>
-                    <div className="dropdown-menu">
-                        <a className="dropdown-item" href="">Action</a>
-                        <a className="dropdown-item" href="">Another action</a>
-                        <a className="dropdown-item" href="">Something else here</a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="">Separated link</a>
-                    </div>
-                </div>
+                <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
+                    <DropdownToggle caret>
+                    Select Tier: 
+                    </DropdownToggle>
+                    <DropdownMenu>
+                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem disabled>Action</DropdownItem>
+                    <DropdownItem>Another Action</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>Another Action</DropdownItem>
+                    </DropdownMenu>
+                </Dropdown>
             </div>
                 
             <div className="appointment-date col-6">
@@ -83,19 +92,18 @@ class Appointment extends Component {
                 </div>
             </div>
             <div className="appointment-time col-6">
-                <h1 className="time">Preferred Time</h1>
-                <div className="time btn-group">
-                    <button type="button" className ="apt-time btn btn-danger darken-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Hour:
-                    </button>
-                    <div className="dropdown-menu">
-                        <a className="dropdown-item" href="">Action</a>
-                        <a className="dropdown-item" href="">Another action</a>
-                        <a className="dropdown-item" href="">Something else here</a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="">Separated link</a>
-                    </div>
-                </div>
+            <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
+                <DropdownToggle caret>
+                Dropdown
+                </DropdownToggle>
+                <DropdownMenu>
+                <DropdownItem header>Header</DropdownItem>
+                <DropdownItem disabled>Action</DropdownItem>
+                <DropdownItem>Another Action</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>Another Action</DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
             </div>
             <div className="text-area col-12 row">
                 <form className = "car-info col-6">
