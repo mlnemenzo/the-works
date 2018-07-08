@@ -12,7 +12,7 @@ class Services extends Component {
             <div className = "services-body">
                 <h1 className="services-header col-12" id = "service-header">Our Services</h1>
                 <div className="service-list">
-                    <div className="service-info-body col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div className="service-info-body col-12 col-sm-6 col-md-6 col-lg-3">
                         <div className="service-level text-center">Bronze Detail</div>
                         <div className="service-pricing">
                             <h2 className = "service-pricing-number text-center" id = "detail-cost">50/70</h2>
@@ -28,7 +28,7 @@ class Services extends Component {
                             <Link className="service-appt text-center" to = "/appointment">Get Appointment Now!</Link>
                         </div>
                     </div>
-                    <div className="service-info-body col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div className="service-info-body col-12 col-sm-6 col-md-6 col-lg-3">
                         <div className="service-level text-center">Siliver Detail</div>
                         <div className="service-pricing">
                             <h2 className = "service-pricing-number text-center" id = "detail-cost">90/110</h2>
@@ -47,7 +47,7 @@ class Services extends Component {
                             <Link className="service-appt" to = "/appointment">Get Appointment Now!</Link>
                         </div>
                     </div>
-                    <div className="service-info-body col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div className="service-info-body col-12 col-sm-6 col-md-6 col-lg-3">
                         <div className="service-level text-center">Gold Detail</div>
                         <div className="service-pricing">
                             <h2 className = "service-pricing-number text-center" id = "detail-cost">130/150</h2>
@@ -68,7 +68,7 @@ class Services extends Component {
                             <Link className="service-appt" to = "/appointment">Get Appointment Now!</Link>
                         </div>
                     </div>
-                    <div className="service-info-body col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div className="service-info-body col-12 col-sm-6 col-md-6 col-lg-3">
                         <div className="service-level text-center">Platinum Detail</div>
                         <div className="service-pricing">
                             <h2 className = "service-pricing-number text-center" id = "detail-cost">170/190</h2>
