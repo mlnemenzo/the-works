@@ -122,7 +122,11 @@ tr:nth-child(even) {
 .header-body {
   border-bottom: 1px solid white;
   background-color: rgb(36, 36, 36);
-  box-shadow: 0 2px 7px rgb(136, 42, 42), 0 4px 3px rgb(36, 36, 36)
+  /* box-shadow: 0 2px 7px rgb(136, 42, 42), 0 4px 3px rgb(36, 36, 36) */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white
 }
 
 .navbar-toggler:not(:disabled):not(.disabled) {
@@ -278,7 +282,8 @@ tr:nth-child(even) {
 }
 
 .service-list {
-  width: 97%
+  width: 97%;
+  margin: auto
 }
 
 /* ////////////////////////////////// about us ///////////////////////////////////////// */
@@ -387,14 +392,27 @@ img {
 
 /* ////////////////////////////// media query ///////////////////////////////// */
 
+@media (min-width: 576px) {
+
+  .service-info-body {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 40%;
+    }
+  }
+
+
+
 @media (min-width: 768px) {
 
 .service-info-body {
     
-    max-width: 22%;
+    max-width: 23%;
   }
 
 }
+
+
 
 /* @media (min-width: 576px) {
 .service-info-body {
@@ -409,11 +427,3 @@ img {
   }
 } */
 
-@media (min-width: 576px) {
-
-.col-sm-6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 23%;
-  }
-}
