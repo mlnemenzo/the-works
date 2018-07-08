@@ -109,12 +109,14 @@ class Appointment extends Component {
                 <DropdownItem>03:00 - 04:00</DropdownItem>
                 <DropdownItem>04:00 - 05:00</DropdownItem>
                 <DropdownItem>05:00 - 06:00</DropdownItem>
+                <DropdownItem>06:00 - 07:00 (Thursdays Only)</DropdownItem>
+                <DropdownItem>Sundays Off</DropdownItem>
                 </DropdownMenu>
             </Dropdown>
             </div>
             <div className="text-area col-12 row">
                 <form className = "car-info col-12 col-s-12 col-m-6 col-lg-6">
-                    <h2 className="car-info-header col-6 text-center">Car Make/Model</h2>
+                    <h2 className="car-info-header col-6 text-left">Car Make/Model</h2>
                     <div className="col-6 text-left">
                         <div className="user-input">
                             <input value = {carMake} type = "text" onChange = { event => this.setState({carMake: event.target.value})} placeholder = "Car Make"/>
@@ -137,7 +139,7 @@ class Appointment extends Component {
                     </div>
                 </form>
                 <form className = "client-info col-12 col-s-12 col-m-6 col-lg-6 text-center" onSubmit = {this.setState.bind(this)}>
-                    <h2 className="contact-info col-6 text-center">Contact Info</h2>
+                    <h2 className="contact-info col-6 text-left">Contact Info</h2>
                     <div className="col-12 col-s-12 col-m-6 col-lg-6 text-left">
                         <div className="user-input">
                             <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete = "name"/>
@@ -153,7 +155,7 @@ class Appointment extends Component {
                             <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
                         </div>
                     </div>
-                    <div className="col-12 col-s-12 col-m-6 col-lg-6 text-center">
+                    <div className="col-12 col-s-12 col-m-6 col-lg-6 text-left">
                         <div className="user-input">
                             <textarea className = "" value = {comments} type = "text" onChange = { event => this.setState({comments: event.target.value})} placeholder = "Message"/>
                         </div>
