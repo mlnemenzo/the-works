@@ -7,7 +7,7 @@ class Header extends Component {
         super(props);
 
         this.state = {
-            shown: false
+            shown: false,
         };
 
         this.toggleNav = this.toggleNav.bind(this);
@@ -37,7 +37,7 @@ class Header extends Component {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                         <div className={btnClass} id="navbarContent"> 
-                            <div className = "overlay"onClick = {this.toggleNav}>
+                            <div className = "overlay" onClick = {this.toggleNav}>
                             </div>
                             <ul className="navbar-nav  nav-fill w-100 align-items-start">
                                 <div className={btnClass} id="navbarContent">
