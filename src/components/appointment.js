@@ -68,7 +68,7 @@ class Appointment extends Component {
             <div className="appointment-body row">
             <div className="service-type col-12">
                 <h1 className="appointments text-center col-12">Book an Appointment:</h1>
-                <h2 className="service">Service Level:</h2>
+                <h2 className="service col-12">Service Level:</h2>
                 <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle.bind(this)}>
                     <DropdownToggle caret>
                     Tier 
@@ -84,37 +84,38 @@ class Appointment extends Component {
                     </DropdownMenu>
                 </Dropdown>
             </div>
-                
-            <div className="appointment-date col-6">
-                <h1 className="calendar">Date</h1>
-                <div className ="calendar-container">
-                    <Calendar
-                    onChange={this.onChange}
-                    value={this.state.date}
-                    />
+            <div className="schedule col-12 row">   
+                <div className="appointment-date col-6">
+                    <h1 className="calendar">Date</h1>
+                    <div className ="calendar-container">
+                        <Calendar
+                        onChange={this.onChange}
+                        value={this.state.date}
+                        />
+                    </div>
+                </div>
+                <div className="appointment-time col-6">
+                <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
+                    <DropdownToggle caret>
+                    Time
+                    </DropdownToggle>
+                    <DropdownMenu>
+                    <DropdownItem>09:00 - 10:00</DropdownItem>
+                    <DropdownItem>10:00 - 11:00</DropdownItem>
+                    <DropdownItem>11:00 - 12:00</DropdownItem>
+                    <DropdownItem>12:00 - 01:00</DropdownItem>
+                    <DropdownItem>01:00 - 02:00</DropdownItem> 
+                    <DropdownItem>02:00 - 03:00</DropdownItem>
+                    <DropdownItem>03:00 - 04:00</DropdownItem>
+                    <DropdownItem>04:00 - 05:00</DropdownItem>
+                    <DropdownItem>05:00 - 06:00</DropdownItem>
+                    <DropdownItem>06:00 - 07:00 (Thursdays Only)</DropdownItem>
+                    <DropdownItem>Sundays Off</DropdownItem>
+                    </DropdownMenu>
+                </Dropdown>
                 </div>
             </div>
-            <div className="appointment-time col-6">
-            <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
-                <DropdownToggle caret>
-                Time
-                </DropdownToggle>
-                <DropdownMenu>
-                <DropdownItem>09:00 - 10:00</DropdownItem>
-                <DropdownItem>10:00 - 11:00</DropdownItem>
-                <DropdownItem>11:00 - 12:00</DropdownItem>
-                <DropdownItem>12:00 - 01:00</DropdownItem>
-                <DropdownItem>01:00 - 02:00</DropdownItem> 
-                <DropdownItem>02:00 - 03:00</DropdownItem>
-                <DropdownItem>03:00 - 04:00</DropdownItem>
-                <DropdownItem>04:00 - 05:00</DropdownItem>
-                <DropdownItem>05:00 - 06:00</DropdownItem>
-                <DropdownItem>06:00 - 07:00 (Thursdays Only)</DropdownItem>
-                <DropdownItem>Sundays Off</DropdownItem>
-                </DropdownMenu>
-            </Dropdown>
-            </div>
-            <div className="text-area col-12 row">
+            <div className="text-area col-8 offset-2 row">
                 <form className = "car-info col-12 col-s-12 col-m-6 col-lg-6">
                     <h2 className="car-info-header col-6 text-left">Car Make/Model</h2>
                     <div className="col-6 text-left">
