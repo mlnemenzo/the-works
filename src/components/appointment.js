@@ -85,7 +85,7 @@ class Appointment extends Component {
                 </Dropdown>
             </div>
             <div className="schedule col-12 row">   
-                <div className="appointment-date col-6">
+                <div className="appointment-date col-12">
                     <h1 className="calendar">Date</h1>
                     <div className ="calendar-container">
                         <Calendar
@@ -94,7 +94,7 @@ class Appointment extends Component {
                         />
                     </div>
                 </div>
-                <div className="appointment-time col-6">
+                <div className="appointment-time col-12">
                 <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle.bind(this)}>
                     <DropdownToggle caret>
                     Time
