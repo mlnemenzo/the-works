@@ -306,7 +306,8 @@ tr:nth-child(even) {
 /* ////////////////////////////////// contact ///////////////////////////////////////// */
 
 .call, .email, .availability {
-  border-bottom: 1px solid rgb(36, 36, 36)
+  border-bottom: 1px solid rgb(36, 36, 36);
+  padding-top: 15px
 }
 
 .contact-header {
@@ -392,7 +393,11 @@ img {
 }
 
 .text-area {
-  padding: 15px
+  padding: 15px;
+}
+
+textarea {
+  width: 250px
 }
 
 .schedule {
@@ -417,7 +422,9 @@ img {
       -ms-flex: 0 0 50%;
       flex: 0 0 50%;
       max-width: 40%;
-    }
+    };
+
+
   }
 
 
