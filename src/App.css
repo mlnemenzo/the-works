@@ -389,7 +389,6 @@ img {
 
 .contact-time {
   padding-top: 20px;
-  border-top: 1px solid white;
 }
 
 .text-area {
@@ -406,7 +405,10 @@ textarea {
   padding-top: 15px;
 }
 
-
+.car-info, .client-info {
+  border-bottom: 1px solid white;
+  padding: 15px 
+}
 /* ////////////////////////////////// footer ///////////////////////////////////////// */
 
 
