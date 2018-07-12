@@ -63,20 +63,20 @@ class Contact extends Component {
                     <h6 className = "contact-message text-center">We will contact you within one business day.</h6>
                 </form>
                 <div className = "contact-options row">
-                    <div className = "call col-4">
+                    <div className = "call col-12 col-sm-12 col-md-4 col-lg-4">
                         <h3 className = "d-flex justify-content-center">Call Us Now At</h3>
                         <ul>
                             <li className = "text-center"><span className="glyphicons glyphicons-call-outgoing"></span>(951)449-6383</li>                       
                             <li className = "text-center">(951)368-4899</li>
                         </ul>
                     </div>
-                    <div className = "email col-4">
+                    <div className = "email col-12 col-sm-12 col-md-4 col-lg-4">
                         <h3 className = "d-flex justify-content-center">Email Us</h3>
                         <ul>
                             <li className= "d-flex justify-content-center"><a href = "theworkscardetail@gmail.com">theworkscardetail@gmail.com</a></li>                       
                         </ul>
                     </div>
-                    <div className = "availability col-4">
+                    <div className = "availability col-12 col-sm-12 col-md-4 col-lg-4">
                         <h3>Availability</h3>
                         <ul>
                             <li className = "text-center"><strong>Mon-Wed: </strong>9AM-5PM</li>

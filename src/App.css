@@ -306,7 +306,8 @@ tr:nth-child(even) {
 /* ////////////////////////////////// contact ///////////////////////////////////////// */
 
 .call, .email, .availability {
-  border-bottom: 1px solid rgb(36, 36, 36)
+  border-bottom: 1px solid rgb(36, 36, 36);
+  padding-top: 15px
 }
 
 .contact-header {
@@ -388,11 +389,14 @@ img {
 
 .contact-time {
   padding-top: 20px;
-  border-top: 1px solid white;
 }
 
 .text-area {
-  padding: 15px
+  padding: 15px;
+}
+
+textarea {
+  width: 250px
 }
 
 .schedule {
@@ -401,7 +405,10 @@ img {
   padding-top: 15px;
 }
 
-
+.car-info, .client-info {
+  border-bottom: 1px solid white;
+  padding: 15px 
+}
 /* ////////////////////////////////// footer ///////////////////////////////////////// */
 
 
@@ -417,7 +424,9 @@ img {
       -ms-flex: 0 0 50%;
       flex: 0 0 50%;
       max-width: 40%;
-    }
+    };
+
+
   }
 
 
