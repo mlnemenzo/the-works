@@ -150,7 +150,6 @@ tr:nth-child(even) {
 
 .overlay {
   position: fixed;
-  /* display: none; */
   width: 100%; 
   height: 200%; 
   top: 0; 
