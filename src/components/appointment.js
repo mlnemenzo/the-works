@@ -10,9 +10,11 @@ class Appointment extends Component {
         super(props); 
 
             this.toggle = this.toggle.bind(this);
+            this.toggleTwo = this.toggleTwo.bind(this);
 
             this.state = {
                 dropDownOpen : false,
+                dropDownOpenTwo : false,
                 user : [],
                 store : [],
                 name : "",
@@ -30,9 +32,15 @@ class Appointment extends Component {
     }
 
     toggle() {
-        this.setState(prevState => ({
-            dropDownOpen : !prevState.dropDownOpen
-        }));
+        this.setState({
+            dropDownOpen : !this.state.dropDownOpen
+        });
+    }
+
+    toggleTwo() {
+        this.setState({
+            dropDownOpenTwo : !this.state.dropDownOpenTwo
+        });
     }
 
     componentDidMount() {
@@ -69,7 +77,7 @@ class Appointment extends Component {
             <div className="service-type col-12">
                 <h1 className="appointments text-center col-12">Book an Appointment:</h1>
                 <h2 className="service col-12">Service Level:</h2>
-                <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle.bind(this)}>
+                <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
                     <DropdownToggle caret>
                     Tier 
                     </DropdownToggle>
@@ -95,7 +103,7 @@ class Appointment extends Component {
                     </div>
                 </div>
                 <div className="appointment-time col-12">
-                <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle.bind(this)}>
+                <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo}>
                     <DropdownToggle caret>
                     Time
                     </DropdownToggle>
