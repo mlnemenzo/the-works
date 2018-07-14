@@ -408,6 +408,11 @@ textarea {
   border-bottom: 1px solid white;
   padding: 15px 
 }
+
+.dropdown {
+  padding: 15px
+}
+
 /* ////////////////////////////////// footer ///////////////////////////////////////// */
 
 
@@ -439,7 +444,13 @@ textarea {
 
 }
 
+@medi (min-width: 768px) {
 
+  .overlay {
+    display: none
+  }
+  
+}
 
 /* @media (min-width: 576px) {
 .service-info-body {
