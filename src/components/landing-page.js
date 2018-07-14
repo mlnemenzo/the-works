@@ -13,7 +13,7 @@ class LandingPage extends Component {
     render() {
         return(
             <div className="landing-page">
-                <div className="landing-image">
+                <div className="landing-image justify-content-center">
                     <img src={landing} alt = "img not available"/>
                 </div>
                 <div className="appt">
