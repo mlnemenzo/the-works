@@ -115,7 +115,7 @@ tr:nth-child(even) {
 }
 
 .header-body {
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid white; */
   background-color: rgb(36, 36, 36);
   /* box-shadow: 0 2px 7px rgb(136, 42, 42), 0 4px 3px rgb(36, 36, 36) */
 }
@@ -300,6 +300,12 @@ tr:nth-child(even) {
 
 .about-us-body {
   margin: 0 20px;
+}
+
+.about-img > img {
+  margin: 15px 15px;
+  width: 6-0vw;
+  box-shadow: 2px 3px 5px rgb(24, 24, 24);
 }
 
 /* ////////////////////////////////// contact ///////////////////////////////////////// */
