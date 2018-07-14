@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'; 
 import axios from 'axios';
-import Calendar from 'react-calendar';
+import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 class Appointment extends Component {
@@ -11,7 +11,6 @@ class Appointment extends Component {
 
             this.toggle = this.toggle.bind(this);
             this.toggleTwo = this.toggleTwo.bind(this);
-            this.toggleCalendar = this.toggleCalendar.bind(this);
 
             this.state = {
                 dropDownOpen : false,
@@ -25,7 +24,7 @@ class Appointment extends Component {
                 carMake : "",
                 carModel : "",
                 carYear : "",
-                carInfo : ""
+                carInfo : "",
                 // service : null,
                 // date : new Date(),
                 // time : null
@@ -41,12 +40,6 @@ class Appointment extends Component {
     toggleTwo() {
         this.setState({
             dropDownOpenTwo : !this.state.dropDownOpenTwo
-        });
-    }
-
-    toggleCalendar() {
-        this.setState({
-            dropdownCaldendar : !this.state.dropdownCaldendar
         });
     }
 
@@ -97,19 +90,11 @@ class Appointment extends Component {
                 </Dropdown>
             </div>
             
-            <div className="schedule col-12 row">  
+            <div className="schedule col-12">  
                     <div className="appointment-date col-12">
                         <h1 className="calendar">Date</h1>
-                        <div className ="calendar-container">
-                        <Dropdown isOpen={this.state.dropdownCaldendar} toggle={this.toggleCalendar}>
-                            <DropdownToggle caret>date</DropdownToggle>
-                            <DropdownMenu>
-                                <DropdownItem><Calendar
-                            onChange={this.onChange}
-                            value={this.state.date}
-                            /></DropdownItem>
-                            </DropdownMenu>
-                        </Dropdown>
+                        <div className ="calendar-container col-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
+                            <Calendar onChange={this.onChange} value={this.state.date}/>
                         </div>
                     </div>
                 
@@ -134,7 +119,7 @@ class Appointment extends Component {
                 </Dropdown>
                 </div>
             </div>
-            <div className="text-area col-12 row">
+            <div className="text-area col-12">
                 <form className = "car-info col-12 text-center">
                     <h2 className="car-info-header col-12 text-center">Car Make/Model</h2>
                     <div className="col-12 text-center">

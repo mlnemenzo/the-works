@@ -5,7 +5,7 @@
   height: 100%;
   margin: auto;
   background-color: rgb(73, 73, 73);
-  text-shadow: 1px 1px 5px rgb(39, 39, 39);
+  text-shadow: 1px 1px 1px rgb(39, 39, 39);
   font-family: 'Quattrocento Sans', sans-serif;
   font-size: 1rem
 
@@ -362,12 +362,8 @@ img {
   padding: 0
 }
 
-.calendar-container {
-  padding: 55px
-}
-
-.apt-time {
-  margin-top: 55px
+.appointment-time {
+  margin-top: 25px
 }
 
 .service-type {
@@ -404,6 +400,15 @@ textarea {
 
 .dropdown {
   padding: 15px
+}
+
+.react-calendar {
+  border-radius: 2px;
+  -webkit-box-shadow: 2px 2px 5px rgb(24, 24, 24);
+  box-shadow: 2px 2px 5px rgb(24, 24, 24);
+  background-color: white;
+  color: black;
+  height: 260px
 }
 
 /* ////////////////////////////////// footer ///////////////////////////////////////// */
