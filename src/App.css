@@ -159,11 +159,7 @@ tr:nth-child(even) {
   background-color: rgba(50,50,50, 0); 
   z-index: 0;
 }
-/* ////////////////////////////////// footer ///////////////////////////////////////// */
 
-.footer-body {
-  height: 85px
-}
 
 /* ////////////////////////////////// landing page ///////////////////////////////////////// */
 
@@ -200,15 +196,6 @@ tr:nth-child(even) {
   margin: 15px 20px;
   text-align: -webkit-auto;
 }
-
-.footer-body {
-  border-top: 1px solid white;
-  background-color: rgb(36, 36, 36);
-  padding-bottom: 75px;
-  margin-top: 80px
-}
-
-
 
 /* ////////////////////////////////// disclaimer ///////////////////////////////////////// */
 
@@ -303,8 +290,8 @@ tr:nth-child(even) {
 }
 
 .about-img > img {
-  margin: 15px 15px;
-  width: 6-0vw;
+  margin: 15px 65px;
+  width: 60vw;
   box-shadow: 2px 3px 5px rgb(24, 24, 24);
 }
 
@@ -421,8 +408,11 @@ textarea {
 
 /* ////////////////////////////////// footer ///////////////////////////////////////// */
 
-
 .footer-body {
+  background-color: rgb(36, 36, 36);
+  padding-bottom: 75px;
+  margin-top: 80px;
+  height: 85px;
   padding-top: 20px
 }
 

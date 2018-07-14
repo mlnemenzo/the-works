@@ -11,6 +11,7 @@ class Appointment extends Component {
 
             this.toggle = this.toggle.bind(this);
             this.toggleTwo = this.toggleTwo.bind(this);
+            this.toggleCalendar = this.toggleCalendar.bind(this);
 
             this.state = {
                 dropDownOpen : false,
@@ -43,6 +44,12 @@ class Appointment extends Component {
         });
     }
 
+    toggleCalendar() {
+        this.setState({
+            dropdownCaldendar : !this.state.dropdownCaldendar
+        });
+    }
+
     componentDidMount() {
 
         window.scrollTo(0,0);
@@ -63,10 +70,7 @@ class Appointment extends Component {
     handleEvent(event) {
         event.preventDefault();
         this.props.add(this.state);
-
-        
     }
-
 
     render() {
 
@@ -92,16 +96,23 @@ class Appointment extends Component {
                     </DropdownMenu>
                 </Dropdown>
             </div>
-            <div className="schedule col-12 row">   
-                <div className="appointment-date col-12">
-                    <h1 className="calendar">Date</h1>
-                    <div className ="calendar-container">
-                        <Calendar
-                        onChange={this.onChange}
-                        value={this.state.date}
-                        />
+            
+            <div className="schedule col-12 row">  
+                    <div className="appointment-date col-12">
+                        <h1 className="calendar">Date</h1>
+                        <div className ="calendar-container">
+                        <Dropdown isOpen={this.state.dropdownCaldendar} toggle={this.toggleCalendar}>
+                            <DropdownToggle caret>date</DropdownToggle>
+                            <DropdownMenu>
+                                <DropdownItem><Calendar
+                            onChange={this.onChange}
+                            value={this.state.date}
+                            /></DropdownItem>
+                            </DropdownMenu>
+                        </Dropdown>
+                        </div>
                     </div>
-                </div>
+                
                 <div className="appointment-time col-12">
                 <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo}>
                     <DropdownToggle caret>
