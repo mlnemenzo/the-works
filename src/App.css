@@ -295,6 +295,10 @@ tr:nth-child(even) {
   box-shadow: 2px 3px 5px rgb(24, 24, 24);
 }
 
+.statement {
+  margin-top: 15px
+}
+
 /* ////////////////////////////////// contact ///////////////////////////////////////// */
 
 .call, .email, .availability {
@@ -364,10 +368,6 @@ img {
 
 .appointment-time {
   margin-top: 25px
-}
-
-.service-type {
-  margin: 20px
 }
 
 .react-calendar {
