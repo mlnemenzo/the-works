@@ -9,7 +9,7 @@ const port = 9000;
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
-// Add headers
+// Add headersv middlware are configureables, 
 app.use(function (req, res, next) {
 
   // Website you wish to allow to connect
@@ -69,3 +69,5 @@ app.post('/email', (req, res) => {
 app.listen(port, () => {
   console.log('We are live on ' + port);
 });
+
+//wesboss node tutorials / mlab - mongodb setup //
