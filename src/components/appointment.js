@@ -25,13 +25,12 @@ class Appointment extends Component {
                 carModel : "",
                 carYear : "",
                 carInfo : "",
-                // service : null,
-                // date : new Date(),
-                // time : null
+                tier : null,
+                time : ["09:00 - 10:00","10:00 : 11:00", "11:00 - 12:00", "12:00 - 01:00", "01:00 - 02:00", "02:00 - 03:00", "03:00 - 04:00", "04:00 - 05:00", "05:00 - 06:00", "06:00 - 07:00 (Thursdays only.)",]
             }  
     }
 
-    toggle() {
+    toggle() {  
         this.setState({
             dropDownOpen : !this.state.dropDownOpen
         });
@@ -104,17 +103,17 @@ class Appointment extends Component {
                     Time
                     </DropdownToggle>
                     <DropdownMenu>
-                    <DropdownItem>09:00 - 10:00</DropdownItem>
-                    <DropdownItem>10:00 - 11:00</DropdownItem>
-                    <DropdownItem>11:00 - 12:00</DropdownItem>
-                    <DropdownItem>12:00 - 01:00</DropdownItem>
-                    <DropdownItem>01:00 - 02:00</DropdownItem> 
-                    <DropdownItem>02:00 - 03:00</DropdownItem>
-                    <DropdownItem>03:00 - 04:00</DropdownItem>
-                    <DropdownItem>04:00 - 05:00</DropdownItem>
-                    <DropdownItem>05:00 - 06:00</DropdownItem>
-                    <DropdownItem>06:00 - 07:00 (Thursdays Only)</DropdownItem>
-                    <DropdownItem>Sundays Off</DropdownItem>
+                    <DropdownItem >09:00 - 10:00</DropdownItem>
+                    <DropdownItem >10:00 - 11:00</DropdownItem>
+                    <DropdownItem >11:00 - 12:00</DropdownItem>
+                    <DropdownItem >12:00 - 01:00</DropdownItem>
+                    <DropdownItem >01:00 - 02:00</DropdownItem> 
+                    <DropdownItem >02:00 - 03:00</DropdownItem>
+                    <DropdownItem >03:00 - 04:00</DropdownItem>
+                    <DropdownItem >04:00 - 05:00</DropdownItem>
+                    <DropdownItem >05:00 - 06:00</DropdownItem>
+                    <DropdownItem >06:00 - 07:00 (Thursdays Only)</DropdownItem>
+                    <DropdownItem >Sundays Off</DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
                 </div>
