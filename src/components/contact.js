@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Contact extends Component {
     constructor(props) {
@@ -11,10 +12,20 @@ class Contact extends Component {
         }
     }
 
+    sendEmailToServer() {
+        const contact = this.state;
+        var devURL = "http://localhost:9000/email";
+        // var baseURL = "/email";
+        axios.post(devURL, {...contact}).then(function(response) {
+            console.log("Email request completed from server", response);
+        }).catch(function(err) {
+            console.log("Email request unsuccessful");
+        })
+    }
+
     handleEvent(event) {
         event.preventDefault();
-        this.props.add(this.state);
-        
+        this.sendEmailToServer();  
 
         this.setState({
             name : "",
