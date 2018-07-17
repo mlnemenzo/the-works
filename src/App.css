@@ -45,6 +45,10 @@ a:hover {
   text-decoration: underline;
 }
 
+input:hover {
+  cursor: pointer
+}
+
 .navbar-nav .nav-link:hover {
   color: rgba(255,75,75);
 }

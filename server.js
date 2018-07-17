@@ -50,9 +50,9 @@ app.post('/email', (req, res) => {
   // Four important options for our mailOptions
   const mailOptions = {
     from: 'msantostheworks@gmail.com',      // Sender of the email 
-    to: 'hardcoded to be his work',                              // Recipient of the email
+    to: 'mnemenzo82@gmail.com',                              // Recipient of the email
     subject: `${name} has contacted you`,   // Subject of the email
-    text: message + email,                          // Message of the email
+    text: `${name} has a question:  ${message} || email : ${email} phone number: ${phone}`                          // Message of the email
     // html: '<h1>SUP DOOOD</h1>'           // Can be used in place of the text
   };
 
