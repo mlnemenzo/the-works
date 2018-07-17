@@ -26,7 +26,7 @@ class Appointment extends Component {
                 carYear : "",
                 carInfo : "",
                 tier : null,
-                time : ["09:00 - 10:00","10:00 : 11:00", "11:00 - 12:00", "12:00 - 01:00", "01:00 - 02:00", "02:00 - 03:00", "03:00 - 04:00", "04:00 - 05:00", "05:00 - 06:00", "06:00 - 07:00 (Thursdays only.)",]
+                time : ["09:00 - 10:00", "10:00 : 11:00", "11:00 - 12:00", "12:00 - 01:00", "01:00 - 02:00", "02:00 - 03:00", "03:00 - 04:00", "04:00 - 05:00", "05:00 - 06:00", "06:00 - 07:00 (Thursdays only.)"]
             }  
     }
 
@@ -40,6 +40,10 @@ class Appointment extends Component {
         this.setState({
             dropDownOpenTwo : !this.state.dropDownOpenTwo
         });
+    }
+
+    scheduleAppointment() {
+        const appointment = time.map()
     }
 
     componentDidMount() {
@@ -102,8 +106,8 @@ class Appointment extends Component {
                     <DropdownToggle caret>
                     Time
                     </DropdownToggle>
-                    <DropdownMenu>
-                    <DropdownItem >09:00 - 10:00</DropdownItem>
+                    <DropdownMenu> 
+                    <DropdownItem ></DropdownItem>
                     <DropdownItem >10:00 - 11:00</DropdownItem>
                     <DropdownItem >11:00 - 12:00</DropdownItem>
                     <DropdownItem >12:00 - 01:00</DropdownItem>
