@@ -25,9 +25,9 @@ class Appointment extends Component {
                 carModel : "",
                 carYear : "",
                 carInfo : "",
-                tier : null,
-                time: null,
-                date: null
+                // tier : null,
+                // time: null,
+                // date: null
             }  
     }
 
@@ -91,7 +91,7 @@ class Appointment extends Component {
 
     render() {
 
-        const { name, email, phone, comments, carMake, carModel, carYear, carInfo } = this.state;
+        const { name, email, phone, message, carMake, carModel, carYear, carInfo } = this.state;
         
         return (
             <div className="appointment-body row">
@@ -186,7 +186,7 @@ class Appointment extends Component {
                     </div>
                     <div className="col-12 text-center">
                         <div className="user-input">
-                            <textarea className = "" value = {comments} type = "text" onChange = { event => this.setState({comments: event.target.value})} placeholder = "Message"/>
+                            <textarea className = "" value = {message} type = "text" onChange = { event => this.setState({message: event.target.value})} placeholder = "Message"/>
                         </div>
                     </div>
                     <div className = "form-submit">

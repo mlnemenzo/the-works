@@ -45,7 +45,7 @@ const transporter = nodemailer.createTransport({
 
 // HTTP POST route to accept POST data from 
 app.post('/email', (req, res) => {
-  const { name, email, phone, message, contacts, carMake, carModel, carYear, carInfo } = req.body;
+  const { name, email, phone, message } = req.body;
 
   // Four important options for our mailOptions
   const mailOptions = {
@@ -65,21 +65,6 @@ app.post('/email', (req, res) => {
   });
   res.end();
 });
-
-  // const appointmentOptions = {
-  //   from: 'msantostheworks@gmail.com',
-  //   to: 'mnemenzo82@gmail.com',
-   
-
-  // }
-
-  // transporter.sendMail(appointmentOptions, (error, info) => {
-  //   if(error) {
-  //     console.log(error)
-  //   } else {
-  //     console.log('Email sent successfully' + info.response)
-  //   }
-  // });
 
 app.listen(port, () => {
   console.log('We are live on ' + port);
