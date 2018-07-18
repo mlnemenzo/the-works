@@ -20,13 +20,14 @@ class Appointment extends Component {
                 name : "",
                 email : "",
                 phone : "",
-                comments : "",
+                message : "",
                 carMake : "",
                 carModel : "",
                 carYear : "",
                 carInfo : "",
                 tier : null,
-                time : ["09:00 - 10:00", "10:00 : 11:00", "11:00 - 12:00", "12:00 - 01:00", "01:00 - 02:00", "02:00 - 03:00", "03:00 - 04:00", "04:00 - 05:00", "05:00 - 06:00", "06:00 - 07:00 (Thursdays only.)"]
+                time: null,
+                date: null
             }  
     }
 
@@ -42,29 +43,49 @@ class Appointment extends Component {
         });
     }
 
-    scheduleAppointment() {
-        const appointment = time.map()
+    sendEmailToServer() {
+        const contact = this.state;
+        var devURL = 'http://localhost:9000/email';
+
+        axios.post(devURL,{...contact}).then(function(response) {
+            console.log("Email response received from server", response)
+        }).catch(function(err) {
+            console.log("Email request unsuccessful.")
+        })
     }
+
+    // scheduleAppointment() {
+    //     const time = [{
+    //         hour: "09:00 - 10:00",
+    //         hour:  "10:00 : 11:00",
+    //         hour:  "11:00 - 12:00",
+    //         hour: "12:00 - 01:00",
+    //         hour:  "01:00 - 02:00", 
+    //         hour: "02:00 - 03:00",
+    //         hour:  "03:00 - 04:00", 
+    //         hour: "04:00 - 05:00", 
+    //         hour: "05:00 - 06:00", 
+    //         hour: "06:00 - 07:00 (Thursdays only.)"
+    //     }];
+
+    //     const appointment = time.map(function(x){
+    //         return x.time;
+    //     });
+
+    //     console.log(appointment);
+
+        
+    // }
 
     componentDidMount() {
 
         window.scrollTo(0,0);
-
-        axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json#')
-        .then(json => console.log(json))
-       
-        .then(newData => this.setState({user : newData, id : newData}))
-        .catch( error => alert(error));
         
     }
-    
-    filterNames(e) {
-        this.state.store.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()))
-
-    }
-
+ 
     handleEvent(event) {
         event.preventDefault();
+        this.sendEmailToServer();
         this.props.add(this.state);
     }
 
