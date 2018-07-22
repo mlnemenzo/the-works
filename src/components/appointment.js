@@ -54,28 +54,28 @@ class Appointment extends Component {
         })
     }
 
-    // scheduleAppointment() {
-    //     const time = [{
-    //         hour: "09:00 - 10:00",
-    //         hour:  "10:00 : 11:00",
-    //         hour:  "11:00 - 12:00",
-    //         hour: "12:00 - 01:00",
-    //         hour:  "01:00 - 02:00", 
-    //         hour: "02:00 - 03:00",
-    //         hour:  "03:00 - 04:00", 
-    //         hour: "04:00 - 05:00", 
-    //         hour: "05:00 - 06:00", 
-    //         hour: "06:00 - 07:00 (Thursdays only.)"
-    //     }];
+    scheduleAppointment() {
+        const time = [
+            "09:00 - 10:00",
+            "10:00 : 11:00",
+            "11:00 - 12:00",
+            "12:00 - 01:00",
+            "01:00 - 02:00", 
+            "02:00 - 03:00",
+            "03:00 - 04:00", 
+            "04:00 - 05:00", 
+            "05:00 - 06:00", 
+            "06:00 - 07:00 (Thursdays only.)"
+        ];
 
-    //     const appointment = time.map(function(x){
-    //         return x.time;
-    //     });
+        const appointment = time.map(function(x){
+            return x.time;
+        });
 
-    //     console.log(appointment);
+        console.log(appointment);
 
         
-    // }
+    }
 
     componentDidMount() {
 
