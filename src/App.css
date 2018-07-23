@@ -89,9 +89,33 @@ tr:nth-child(even) {
   border-radius: 1px;
   color: #fff;
   font-size: .9em;
-  background-color: #828282;
-  border-color: #6c757d;
+  background-color: rgb(199, 75, 75);
+  border-color: rgb(199, 75, 75);
+  outline: none;
   width: 250px;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background-color: rgb(159, 44, 44);
+  border-color: rgb(120, 14, 14);
+}
+
+.show>.btn-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: rgb(159, 44, 44);
+  border-color: rgb(120, 14, 14);
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active {
+   color: white;
+   background-color: black;
+   border-color: black
+}
+
+.show>.btn-secondary.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5); */
 }
 
 .btn-danger {
