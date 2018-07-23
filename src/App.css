@@ -88,9 +88,10 @@ tr:nth-child(even) {
 .btn-secondary, .submit-button {
   border-radius: 1px;
   color: #fff;
+  font-size: .9em;
   background-color: #828282;
   border-color: #6c757d;
-  width: 110px;
+  width: 250px;
 }
 
 .btn-danger {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'; 
 import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, ButtonDropdown } from 'reactstrap';
 
 class Appointment extends Component {
 
@@ -11,10 +11,13 @@ class Appointment extends Component {
 
             this.toggle = this.toggle.bind(this);
             this.toggleTwo = this.toggleTwo.bind(this);
+            this.select = this.select.bind(this);
+            this.selectTier = this.selectTier.bind(this);
 
             this.state = {
                 dropDownOpen : false,
                 dropDownOpenTwo : false,
+                value : "Time",
                 user : [],
                 store : [],
                 name : "",
@@ -25,32 +28,44 @@ class Appointment extends Component {
                 carModel : "",
                 carYear : "",
                 carInfo : "",
-                tier : null,
-                time: [
-                    {id: 1,
-                    hour: "09:00 - 10:00"},
-                    {id: 2,
-                    hour: "10:00 : 11:00"},
-                    {id: 3,
-                    hour: "11:00 - 12:00"},
-                    {id: 4,
-                    hour: "12:00 - 01:00"},
-                    {id: 5, 
-                    hour: "01:00 - 02:00"}, 
-                    {id: 6,
-                    hour: "02:00 - 03:00"},
-                    {id: 7,
-                    hour: "03:00 - 04:00"}, 
-                    {id: 8,
-                    hour: "04:00 - 05:00"}, 
-                    {id: 9,
-                    hour: "05:00 - 06:00"}, 
-                    {id:k 10,
-                    hour: "06:00 - 07:00 (Thursdays only.)"}
-                ],
+                value2 : "Tier",
+                
+                //     {id: 1,
+                //     hour: "09:00 - 10:00"},
+                //     {id: 2,
+                //     hour: "10:00 : 11:00"},
+                //     {id: 3,
+                //     hour: "11:00 - 12:00"},
+                //     {id: 4,
+                //     hour: "12:00 - 01:00"},
+                //     {id: 5, 
+                //     hour: "01:00 - 02:00"}, 
+                //     {id: 6,
+                //     hour: "02:00 - 03:00"},
+                //     {id: 7,
+                //     hour: "03:00 - 04:00"}, 
+                //     {id: 8,
+                //     hour: "04:00 - 05:00"}, 
+                //     {id: 9,
+                //     hour: "05:00 - 06:00"}, 
+                //     {id: 10,
+                //     hour: "06:00 - 07:00 (Thursdays only.)"}
+                // ],
         
                 // date: null
             }  
+    }
+
+    select(event) {
+        this.setState({
+          value: event.target.innerText
+        });
+      }
+
+    selectTier(event) {
+        this.setState({
+          value2: event.target.innerText
+        });
     }
 
     toggle() {  
@@ -98,17 +113,17 @@ class Appointment extends Component {
                 <h1 className="appointments text-center col-12">Book an Appointment:</h1>
                 <h2 className="service col-12">Service Level:</h2>
                 <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
-                    <DropdownToggle caret>
-                    Tier 
+                    <DropdownToggle title = "Tier"caret>
+                    {this.state.value2}
                     </DropdownToggle>
                     <DropdownMenu>
-                    <DropdownItem >Bronze - 50/70</DropdownItem>
+                    <DropdownItem onClick = {this.selectTier}>Bronze - 50/70</DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem >Silver - 90/110</DropdownItem>
+                    <DropdownItem onClick = {this.selectTier}>Silver - 90/110</DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem>Gold - 130/150</DropdownItem>
+                    <DropdownItem onClick = {this.selectTier}>Gold - 130/150</DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem>Platinum - 170/190</DropdownItem>
+                    <DropdownItem onClick = {this.selectTier}>Platinum - 170/190</DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
             </div>
@@ -122,21 +137,21 @@ class Appointment extends Component {
                     </div>
                 
                 <div className="appointment-time col-12">
-                <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo}>
+                <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo} list = {this.state.time}>
                     <DropdownToggle caret>
-                    Time
+                    {this.state.value}
                     </DropdownToggle>
                     <DropdownMenu> 
-                    <DropdownItem ></DropdownItem>
-                    <DropdownItem >10:00 - 11:00</DropdownItem>
-                    <DropdownItem >11:00 - 12:00</DropdownItem>
-                    <DropdownItem >12:00 - 01:00</DropdownItem>
-                    <DropdownItem >01:00 - 02:00</DropdownItem> 
-                    <DropdownItem >02:00 - 03:00</DropdownItem>
-                    <DropdownItem >03:00 - 04:00</DropdownItem>
-                    <DropdownItem >04:00 - 05:00</DropdownItem>
-                    <DropdownItem >05:00 - 06:00</DropdownItem>
-                    <DropdownItem >06:00 - 07:00 (Thursdays Only)</DropdownItem>
+                    <DropdownItem onClick = {this.select}>09:00 - 10:00</DropdownItem>
+                    <DropdownItem onClick = {this.select}>10:00 - 11:00</DropdownItem>
+                    <DropdownItem onClick = {this.select}>11:00 - 12:00</DropdownItem>
+                    <DropdownItem onClick = {this.select}>12:00 - 01:00</DropdownItem>
+                    <DropdownItem onClick = {this.select}>01:00 - 02:00</DropdownItem> 
+                    <DropdownItem onClick = {this.select}>02:00 - 03:00</DropdownItem>
+                    <DropdownItem onClick = {this.select}>03:00 - 04:00</DropdownItem>
+                    <DropdownItem onClick = {this.select}>04:00 - 05:00</DropdownItem>
+                    <DropdownItem onClick = {this.select}>05:00 - 06:00</DropdownItem>
+                    <DropdownItem onClick = {this.select}>06:00 - 07:00 (Thursdays Only)</DropdownItem>
                     <DropdownItem >Sundays Off</DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
