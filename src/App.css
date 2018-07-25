@@ -113,8 +113,8 @@ tr:nth-child(even) {
    border-color: black
 }
 
-.show>.btn-secondary.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+.btn-secondary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0);
   /* box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5); */
 }
 
