@@ -18,8 +18,8 @@ class Appointment extends Component {
                 dropDownOpen : false,
                 dropDownOpenTwo : false,
                 value : "Time",
-                user : [],
-                store : [],
+                // user : [],
+                // store : [],
                 name : "",
                 email : "",
                 phone : "",
@@ -30,29 +30,6 @@ class Appointment extends Component {
                 carInfo : "",
                 value2 : "Tier",
                 
-                //     {id: 1,
-                //     hour: "09:00 - 10:00"},
-                //     {id: 2,
-                //     hour: "10:00 : 11:00"},
-                //     {id: 3,
-                //     hour: "11:00 - 12:00"},
-                //     {id: 4,
-                //     hour: "12:00 - 01:00"},
-                //     {id: 5, 
-                //     hour: "01:00 - 02:00"}, 
-                //     {id: 6,
-                //     hour: "02:00 - 03:00"},
-                //     {id: 7,
-                //     hour: "03:00 - 04:00"}, 
-                //     {id: 8,
-                //     hour: "04:00 - 05:00"}, 
-                //     {id: 9,
-                //     hour: "05:00 - 06:00"}, 
-                //     {id: 10,
-                //     hour: "06:00 - 07:00 (Thursdays only.)"}
-                // ],
-        
-                // date: null
             }  
     }
 
@@ -80,14 +57,14 @@ class Appointment extends Component {
         });
     }
 
-    sendEmailToServer() {
+    sendAppointment() {
         const contact = this.state;
-        var devURL = 'http://localhost:9000/email';
-
-        axios.post(devURL,{...contact}).then(function(response) {
-            console.log("Email response received from server", response)
+        var devURL = "http://localhost:9000/email";
+        // var baseURL = "/email";
+        axios.post(devURL, {...contact}).then(function(response) {
+            console.log("Email request completed from server", response);
         }).catch(function(err) {
-            console.log("Email request unsuccessful.")
+            console.log("Email request unsuccessful");
         })
     }
 
@@ -204,7 +181,7 @@ class Appointment extends Component {
                         </div>
                     </div>
                     <div className = "form-submit">
-                        <input className = "submit-button" type="submit" value = "submit"/>
+                        <input type="submit" value="Submit"/>  
                     </div>
                     
                 </form>
