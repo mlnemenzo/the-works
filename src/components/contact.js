@@ -9,7 +9,6 @@ class Contact extends Component {
             email : "",
             phone : "",
             message : "",
-            carInfo : ""
         }
     }
 
@@ -33,7 +32,6 @@ class Contact extends Component {
             email : "",
             phone : "",
             message : "",
-            carInfo : ""
         })
     }
 
@@ -43,7 +41,7 @@ class Contact extends Component {
 
     render() {
 
-        const {name, email, phone, message, carInfo} = this.state;
+        const {name, email, phone, message} = this.state;
 
         return (
             <div className="contact-body">
