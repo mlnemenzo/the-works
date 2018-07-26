@@ -33,6 +33,12 @@ class Appointment extends Component {
             }  
     }
 
+    componentDidMount() {
+
+        window.scrollTo(0,0);
+        
+    }
+
     select(event) {
         this.setState({
           value: event.target.innerText
@@ -68,15 +74,9 @@ class Appointment extends Component {
         })
     }
 
-    componentDidMount() {
-
-        window.scrollTo(0,0);
-        
-    }
- 
     handleEvent(event) {
         event.preventDefault();
-        this.sendEmailToServer();
+        this.sendAppointment();
         this.props.add(this.state);
     }
 
@@ -135,7 +135,7 @@ class Appointment extends Component {
                 </div>
             </div>
             <div className="text-area col-12">
-                <form className = "car-info col-12 text-center">
+                {/* <form className = "car-info col-12 text-center">
                     <h2 className="car-info-header col-12 text-center">Car Make/Model</h2>
                     <div className="col-12 text-center">
                         <div className="user-input">
@@ -157,7 +157,7 @@ class Appointment extends Component {
                             <textarea value = {carInfo} type = "text" onChange = { event => this.setState({carInfo: event.target.value})} placeholder = "Car Details (Optional)."/>
                         </div>
                     </div>
-                </form>
+                </form> */}
                 <form className = "client-info col-12 text-center" onSubmit = {this.setState.bind(this)}>
                     <h2 className="contact-info col-12 text-center">Contact Info</h2>
                     <div className="col-12 text-center">
