@@ -52,7 +52,7 @@ app.post('/email', (req, res) => {
     from: 'msantostheworks@gmail.com',      // Sender of the email 
     to: 'mnemenzo82@gmail.com',                              // Recipient of the email
     subject: `${name} has contacted you`,   // Subject of the email
-    text: `${name} ${carMake} ${carModel} ${carYear} ${carInfo} $has a question:  ${message} || email : ${email} phone number: ${phone}`                          // Message of the email
+    text: `${name} has a question:  ${message} || email : ${email} phone number: ${phone}`                          // Message of the email
     // html: '<h1>SUP DOOOD</h1>'           // Can be used in place of the text
   };
 

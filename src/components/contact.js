@@ -8,7 +8,7 @@ class Contact extends Component {
             name : "",
             email : "",
             phone : "",
-            message : ""
+            message : "",
         }
     }
 
@@ -31,7 +31,7 @@ class Contact extends Component {
             name : "",
             email : "",
             phone : "",
-            message : ""
+            message : "",
         })
     }
 
