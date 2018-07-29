@@ -63,7 +63,7 @@ class Appointment extends Component {
         });
     }
 
-    sendAppointment() {
+    sendEmailToServer() {
         const contact = this.state;
         var devURL = "http://localhost:9000/email";
         // var baseURL = "/email";
@@ -76,7 +76,7 @@ class Appointment extends Component {
 
     handleEvent(event) {
         event.preventDefault();
-        this.sendAppointment();
+        this.sendEmailToServer();
         this.props.add(this.state);
     }
 
@@ -90,7 +90,7 @@ class Appointment extends Component {
                 <div className="service-type col-12">
                     <h1 className="appointments text-center col-12">Book an Appointment:</h1>
                     <h2 className="service col-12">Service Level:</h2>
-                    <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
+                    {/* <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
                         <DropdownToggle title = "Tier"caret>
                         {this.state.value2}
                         </DropdownToggle>
@@ -103,7 +103,7 @@ class Appointment extends Component {
                         <DropdownItem divider />
                         <DropdownItem onClick = {this.selectTier}>Platinum - 170/190</DropdownItem>
                         </DropdownMenu>
-                    </Dropdown>
+                    </Dropdown> */}
                 </div>
             
                 <div className="schedule col-12">  
@@ -115,7 +115,7 @@ class Appointment extends Component {
                         </div>
                     
                     <div className="appointment-time col-12">
-                    <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo} list = {this.state.time}>
+                    {/* <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo} list = {this.state.time}>
                         <DropdownToggle caret>
                         {this.state.value}
                         </DropdownToggle>
@@ -132,7 +132,7 @@ class Appointment extends Component {
                         <DropdownItem onClick = {this.select}>06:00 - 07:00 (Thursdays Only)</DropdownItem>
                         <DropdownItem >Sundays Off</DropdownItem>
                         </DropdownMenu>
-                    </Dropdown>
+                    </Dropdown> */}
                     </div>
                 </div>
                 <div className="text-area col-12">
