@@ -124,16 +124,25 @@ tr:nth-child(even) {
 /* /////////////////////////////////// header ////////////////////////////////////////////// */
 
 #navbarContent {
-  position: relative;
+  position: fixed;
+  top: 85px;
   background-color: rgb(36, 36, 36);
-  width: 90%; 
+  width: 98%;
+  -webkit-animation-name: nav;
   animation-name: nav;
-  animation-duration: 0.25ms
+  -webkit-animation-duration: 0.25ms;
+  animation-duration: 0.25ms;
+  left: 2px;
 }
 
-@keyframes nav {
-  0% {left: 0px}
-  100% {left: 500px}
+.fixed-top {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0;
+  z-index: 1030;
+  width: 100%;
+  padding: 30px;
 }
 
 .header-body {
@@ -420,7 +429,7 @@ img {
 }
 
 textarea {
-  width: 250px
+  width: 230px
 }
 
 .schedule {
@@ -485,9 +494,12 @@ textarea {
 
   .overlay {
     display: none
-  }
-  
+  };
+
+ 
 }
+
+
 
 /* @media (min-width: 576px) {
 .service-info-body {
