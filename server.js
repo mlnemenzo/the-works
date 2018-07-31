@@ -1,6 +1,7 @@
 const express        = require('express');
 const MongoClient    = require('mongodb').MongoClient;
 const nodemailer     = require('nodemailer');
+const { resolve }    = require('path');
 const { USERNAME, PASSWORD } = require('./config/credentials');
 const app            = express();
 
@@ -8,6 +9,8 @@ const port = 9000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
+
+app.use(express.static(resolve(__dirname, 'public')));
 
 // Add headersv middlware are configureables, 
 app.use(function (req, res, next) {
@@ -44,8 +47,10 @@ const transporter = nodemailer.createTransport({
 });
 
 // HTTP POST route to accept POST data from 
-app.post('/email', (req, res) => {
+app.post('/api/email', (req, res) => {
   const { name, email, phone, message, carMake, carModel, carYear, carInfo } = req.body;
+
+  return res.send('Send the mail!!');
 
   // Four important options for our mailOptions
   const mailOptions = {
@@ -64,6 +69,36 @@ app.post('/email', (req, res) => {
     }
   });
   res.end();
+});
+
+app.post('/api/email/appointment', (req, res) => {
+  const { name, email, phone, message, carMake, carModel, carYear, carInfo } = req.body;
+
+  console.log('APPOINMENT BODY:', req.body);
+
+  return res.send('Send the mail for an appointment!!');
+
+  // Four important options for our mailOptions
+  const mailOptions = {
+    from: 'msantostheworks@gmail.com',      // Sender of the email 
+    to: 'mnemenzo82@gmail.com',                              // Recipient of the email
+    subject: `${name} has contacted you`,   // Subject of the email
+    text: `${name} has a question:  ${message} || email : ${email} phone number: ${phone}`                          // Message of the email
+    // html: '<h1>SUP DOOOD</h1>'           // Can be used in place of the text
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent successfully' + info.response);
+    }
+  });
+  res.end();
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(resolve(__dirname, 'public', 'index.html'));
 });
 
 app.listen(port, () => {
