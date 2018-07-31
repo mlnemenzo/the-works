@@ -13,6 +13,7 @@ class Appointment extends Component {
             this.toggleTwo = this.toggleTwo.bind(this);
             this.selectTime = this.selectTime.bind(this);
             this.selectTier = this.selectTier.bind(this);
+            this.onClickDay = this.onClickDay.bind(this);
 
             this.state = {
                 dropDownOpen : false,
@@ -28,7 +29,11 @@ class Appointment extends Component {
                 carYear : "",
                 carInfo : "",
                 tier : "",
-                time : ""
+                time : "", 
+                date : new Date(),
+                minDate : new Date(),
+                calendarType : "US"
+            
                 
             }  
     }
@@ -79,9 +84,16 @@ class Appointment extends Component {
         //.this.props.add(this.state);
     }
 
+    onClickDay(date) { 
+        this.setState({
+           apptDate : date
+        })
+        console.log('Appointment scheduled on: ', new Date())
+    }
+
     render() {
 
-        const { name, email, phone, message, carMake, carModel, carYear, carInfo } = this.state;
+        const { name, email, phone, message, carMake, carModel, carYear, carInfo, calendarType } = this.state;
         
         return (
             <div className="appointment-body row">
@@ -109,7 +121,7 @@ class Appointment extends Component {
                         <div className="appointment-date col-12">
                             <h1 className="calendar">Date</h1>
                             <div className ="calendar-container col-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
-                                <Calendar onChange={this.onChange} value={this.state.date}/>
+                                <Calendar onChange={this.onClickDay} value={this.state.date}/>
                             </div>
                         </div>
                     
