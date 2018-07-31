@@ -73,19 +73,33 @@ app.post('/api/email', (req, res) => {
 
 app.post('/api/email/appointment', (req, res) => {
 
-  const { name, email, phone, message, tier, time, carMake, carModel, carYear, carInfo } = req.body;
+  const { name, email, phone, message, tierLevel, appointmentTime, carMake, carModel, carYear, carInfo } = req.body;
 
   console.log('APPOINMENT BODY:', req.body);
 
-  return res.send('Send the mail for an appointment!!');
+  // return res.send('Send the mail for an appointment!!');
 
   // Four important options for our mailOptions
   const mailOptions = {
     from: 'msantostheworks@gmail.com',      // Sender of the email 
     to: 'mnemenzo82@gmail.com',                              // Recipient of the email
-    subject: `${name} has contacted you`,   // Subject of the email
-    text: `${name} has a question:  ${message} || email : ${email} phone number: ${phone}`                          // Message of the email
-    // html: '<h1>SUP DOOOD</h1>'           // Can be used in place of the text
+    subject: `${name} has scheduled an appointment!`,   // Subject of the email
+    // text: `${name} has scheduled an appointment on:  date:  at : ${appointmentTime} || SERVICE TYPE: ${tierLevel} car info: ${carMake} ${carModel} ${carYear}. extra notes: ${carInfo} || contact info: email : ${email} phone number: ${phone} message: ${message}`,                          // Message of the email
+    html: `<h1>${name} has scheduled an appointment on:</h1>
+          <br>
+          <p>Date: </p>
+          <p>Time: ${appointmentTime}</p>
+          <br>
+          <h2>Car Info:</h2>
+          <p>Make: ${carMake}</p>
+          <p>Model: ${carModel}</p>
+          <p>Year: ${carYear}</p>
+          <p>Notes: ${carInfo}</p>
+          <br>
+          <h2>Client Info:</h2>
+          <p>Email: ${email}</p>
+          <p>Phone: ${phone}</p>
+          <p>Message: ${message}</p>`         // Can be used in place of the text
   };
 
   transporter.sendMail(mailOptions, (error, info) => {

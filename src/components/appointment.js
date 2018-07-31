@@ -94,13 +94,13 @@ class Appointment extends Component {
                         {this.state.tierLevel}
                         </DropdownToggle>
                         <DropdownMenu>
-                        <DropdownItem onClick = {() => this.selectTier('Bronze - 50/70')}>Bronze - 50/70</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTier('BRONZE- 50/70')}>Bronze - 50/70</DropdownItem>
                         <DropdownItem divider />
-                        <DropdownItem onClick = {() => this.selectTier('Silver - 90/110')}>Silver - 90/110</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTier('SILVER - 90/110')}>Silver - 90/110</DropdownItem>
                         <DropdownItem divider />
-                        <DropdownItem onClick = {() => this.selectTier('Gold - 130/150')}>Gold - 130/150</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTier('GOLD - 130/150')}>Gold - 130/150</DropdownItem>
                         <DropdownItem divider />
-                        <DropdownItem onClick = {() => this.selectTier('Platinum - 170/190')}>Platinum - 170/190</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTier('PLATINUM - 170/190')}>Platinum - 170/190</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
                 </div>
