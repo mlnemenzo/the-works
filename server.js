@@ -75,6 +75,7 @@ app.post('/api/email', (req, res) => {
       console.log('Email sent successfully' + info.response);
     }
   });
+
   res.end();
 });
 
@@ -92,22 +93,22 @@ app.post('/api/email/appointment', (req, res) => {
     to: 'mnemenzo82@gmail.com',                              // Recipient of the email
     subject: `${name} has scheduled an appointment!`,   // Subject of the email
     html: `<h1>${name} has scheduled an appointment on:</h1>
-          <br>
-          <p>Date: </p>
-          <p>Time: ${appointmentTime}</p>
-          <br>
-          <h2>Tier Level</h2>
-          <h2>${tierLevel}</h2>
-          <h2>Car Info:</h2>
-          <p>Make: ${carMake}</p>
-          <p>Model: ${carModel}</p>
-          <p>Year: ${carYear}</p>
-          <p>Notes: ${carInfo}</p>
-          <br>
-          <h2>Client Info:</h2>
-          <p>Email: ${email}</p>
-          <p>Phone: ${phone}</p>
-          <p>Message: ${message}</p>`         // Can be used in place of the text
+            <br>
+            <p>Date: </p>
+            <p>Time: ${appointmentTime}</p>
+            <br>
+            <h2>Tier Level:</h2>
+            <h2>${tierLevel}</h2>
+            <h2>Car Info:</h2>
+            <p>Make: ${carMake}</p>
+            <p>Model: ${carModel}</p>
+            <p>Year: ${carYear}</p>
+            <p>Notes: ${carInfo}</p>
+            <br>
+            <h2>Client Info:</h2>
+            <p>Email: ${email}</p>
+            <p>Phone: ${phone}</p>
+            <p>Message: ${message}</p>`         // Can be used in place of the text
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
@@ -117,6 +118,7 @@ app.post('/api/email/appointment', (req, res) => {
       console.log('Email sent successfully' + info.response);
     }
   });
+  
   res.end();
 });
 
