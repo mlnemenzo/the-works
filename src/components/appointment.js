@@ -28,7 +28,7 @@ class Appointment extends Component {
                 carModel : "",
                 carYear : "",
                 carInfo : "",
-                value2 : "Tier",
+                tierLevel : "Tier",
                 
             }  
     }
@@ -45,9 +45,9 @@ class Appointment extends Component {
         });
       }
 
-    selectTier(event) {
+    selectTier(tier) {
         this.setState({
-          value2: event.target.innerText
+          tierLevel: tier
         });
     }
 
@@ -65,9 +65,8 @@ class Appointment extends Component {
 
     sendEmailToServer() {
         const contact = this.state;
-        var devURL = "http://localhost:9000/email";
         // var baseURL = "/email";
-        axios.post(devURL, {...contact}).then(function(response) {
+        axios.post('/api/email/appointment', {...contact}).then(function(response) {
             console.log("Email request completed from server", response);
         }).catch(function(err) {
             console.log("Email request unsuccessful");
@@ -77,7 +76,7 @@ class Appointment extends Component {
     handleEvent(event) {
         event.preventDefault();
         this.sendEmailToServer();
-        this.props.add(this.state);
+        //.this.props.add(this.state);
     }
 
     render() {
@@ -86,16 +85,16 @@ class Appointment extends Component {
         
         return (
             <div className="appointment-body row">
-            <form className = "client-info col-12 text-center" onSubmit = {this.setState.bind(this)}>
+            <form className = "client-info col-12 text-center" onSubmit = {this.handleEvent.bind(this)}>
                 <div className="service-type col-12">
                     <h1 className="appointments text-center col-12">Book an Appointment:</h1>
                     <h2 className="service col-12">Service Level:</h2>
-                    {/* <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
+                    <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
                         <DropdownToggle title = "Tier"caret>
                         {this.state.value2}
                         </DropdownToggle>
                         <DropdownMenu>
-                        <DropdownItem onClick = {this.selectTier}>Bronze - 50/70</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTier('Bronze - 50/70')}>Bronze - 50/70</DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem onClick = {this.selectTier}>Silver - 90/110</DropdownItem>
                         <DropdownItem divider />
@@ -103,7 +102,7 @@ class Appointment extends Component {
                         <DropdownItem divider />
                         <DropdownItem onClick = {this.selectTier}>Platinum - 170/190</DropdownItem>
                         </DropdownMenu>
-                    </Dropdown> */}
+                    </Dropdown>
                 </div>
             
                 <div className="schedule col-12">  

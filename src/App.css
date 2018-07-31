@@ -127,8 +127,11 @@ tr:nth-child(even) {
   position: fixed;
   top: 85px;
   background-color: rgb(36, 36, 36);
-  width: 100%;
-  z-index: 1;
+  width: 98%;
+  /* -webkit-animation-name: nav;
+  animation-name: nav;
+  -webkit-animation-duration: 0.25ms;
+  animation-duration: 0.25ms; */
   transition: 0.3s;
   left: 2px;
 }

@@ -1,6 +1,11 @@
 {
   "name": "the-works",
   "version": "0.1.0",
+  "proxy": {
+    "/api/*": {
+      "target": "http://localhost:9000"
+    }
+  },
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
@@ -21,13 +26,15 @@
     "reactstrap": "^6.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm-run-all --parallel dev:*",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "dev": "nodemon server.js"
+    "dev:client": "react-scripts start",
+    "dev:server": "nodemon server.js"
   },
   "devDependencies": {
-    "nodemon": "^1.18.0"
+    "nodemon": "^1.18.0",
+    "npm-run-all": "^4.1.3"
   }
 }
