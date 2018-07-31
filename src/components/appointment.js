@@ -11,13 +11,12 @@ class Appointment extends Component {
 
             this.toggle = this.toggle.bind(this);
             this.toggleTwo = this.toggleTwo.bind(this);
-            this.select = this.select.bind(this);
+            this.selectTime = this.selectTime.bind(this);
             this.selectTier = this.selectTier.bind(this);
 
             this.state = {
                 dropDownOpen : false,
                 dropDownOpenTwo : false,
-                value : "Time",
                 // user : [],
                 // store : [],
                 name : "",
@@ -28,7 +27,8 @@ class Appointment extends Component {
                 carModel : "",
                 carYear : "",
                 carInfo : "",
-                tierLevel : "Tier",
+                tier : "",
+                time : ""
                 
             }  
     }
@@ -39,9 +39,9 @@ class Appointment extends Component {
         
     }
 
-    select(event) {
+    selectTime(time) {
         this.setState({
-          value: event.target.innerText
+          appointmentTime: time
         });
       }
 
@@ -88,19 +88,19 @@ class Appointment extends Component {
             <form className = "client-info col-12 text-center" onSubmit = {this.handleEvent.bind(this)}>
                 <div className="service-type col-12">
                     <h1 className="appointments text-center col-12">Book an Appointment:</h1>
-                    <h2 className="service col-12">Service Level:</h2>
+                    <h2 className="service col-12">Service Type:</h2>
                     <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
-                        <DropdownToggle title = "Tier"caret>
-                        {this.state.value2}
+                        <DropdownToggle title = "Tier" caret>
+                        {this.state.tierLevel}
                         </DropdownToggle>
                         <DropdownMenu>
                         <DropdownItem onClick = {() => this.selectTier('Bronze - 50/70')}>Bronze - 50/70</DropdownItem>
                         <DropdownItem divider />
-                        <DropdownItem onClick = {this.selectTier}>Silver - 90/110</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTier('Silver - 90/110')}>Silver - 90/110</DropdownItem>
                         <DropdownItem divider />
-                        <DropdownItem onClick = {this.selectTier}>Gold - 130/150</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTier('Gold - 130/150')}>Gold - 130/150</DropdownItem>
                         <DropdownItem divider />
-                        <DropdownItem onClick = {this.selectTier}>Platinum - 170/190</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTier('Platinum - 170/190')}>Platinum - 170/190</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
                 </div>
@@ -114,24 +114,24 @@ class Appointment extends Component {
                         </div>
                     
                     <div className="appointment-time col-12">
-                    {/* <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo} list = {this.state.time}>
+                    <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo} list = {this.state.time}>
                         <DropdownToggle caret>
-                        {this.state.value}
+                        {this.state.appointmentTime}
                         </DropdownToggle>
                         <DropdownMenu> 
-                        <DropdownItem onClick = {this.select}>09:00 - 10:00</DropdownItem>
-                        <DropdownItem onClick = {this.select}>10:00 - 11:00</DropdownItem>
-                        <DropdownItem onClick = {this.select}>11:00 - 12:00</DropdownItem>
-                        <DropdownItem onClick = {this.select}>12:00 - 01:00</DropdownItem>
-                        <DropdownItem onClick = {this.select}>01:00 - 02:00</DropdownItem> 
-                        <DropdownItem onClick = {this.select}>02:00 - 03:00</DropdownItem>
-                        <DropdownItem onClick = {this.select}>03:00 - 04:00</DropdownItem>
-                        <DropdownItem onClick = {this.select}>04:00 - 05:00</DropdownItem>
-                        <DropdownItem onClick = {this.select}>05:00 - 06:00</DropdownItem>
-                        <DropdownItem onClick = {this.select}>06:00 - 07:00 (Thursdays Only)</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('09:00 - 10:00')}>09:00 - 10:00</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('10:00 - 11:00')}>10:00 - 11:00</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('11:00 - 12:00')}>11:00 - 12:00</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('12:00 - 01:00')}>12:00 - 01:00</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('01:00 - 02:00')}>01:00 - 02:00</DropdownItem> 
+                        <DropdownItem onClick = {() => this.selectTime('02:00 - 03:00')}>02:00 - 03:00</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('03:00 - 04:00')}>03:00 - 04:00</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('04:00 - 05:00')}>04:00 - 05:00</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('05:00 - 06:00')}>05:00 - 06:00</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('06:00 - 07:00')}>06:00 - 07:00 (Thursdays Only)</DropdownItem>
                         <DropdownItem >Sundays Off</DropdownItem>
                         </DropdownMenu>
-                    </Dropdown> */}
+                    </Dropdown>
                     </div>
                 </div>
                 <div className="text-area col-12">
