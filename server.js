@@ -48,9 +48,9 @@ const transporter = nodemailer.createTransport({
 
 // HTTP POST route to accept POST data from 
 app.post('/api/email', (req, res) => {
-  const { name, email, phone, message, carMake, carModel, carYear, carInfo } = req.body;
+  const { name, email, phone, message } = req.body;
 
-  return res.send('Send the mail!!');
+  // return res.send('Send the mail!!');
 
   // Four important options for our mailOptions
   const mailOptions = {
@@ -72,7 +72,8 @@ app.post('/api/email', (req, res) => {
 });
 
 app.post('/api/email/appointment', (req, res) => {
-  const { name, email, phone, message, carMake, carModel, carYear, carInfo } = req.body;
+
+  const { name, email, phone, message, tier, time, carMake, carModel, carYear, carInfo } = req.body;
 
   console.log('APPOINMENT BODY:', req.body);
 
