@@ -96,6 +96,8 @@ app.post('/api/email/appointment', (req, res) => {
           <p>Date: </p>
           <p>Time: ${appointmentTime}</p>
           <br>
+          <h2>Tier Level</h2>
+          <h2>${tierLevel}</h2>
           <h2>Car Info:</h2>
           <p>Make: ${carMake}</p>
           <p>Model: ${carModel}</p>
