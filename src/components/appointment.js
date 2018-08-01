@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'; 
 import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, ButtonDropdown } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 class Appointment extends Component {
 
@@ -18,6 +18,7 @@ class Appointment extends Component {
             this.state = {
                 dropDownOpen : false,
                 dropDownOpenTwo : false,
+                canBeClicked : true,
                 // user : [],
                 // store : [],
                 name : "",
@@ -32,9 +33,7 @@ class Appointment extends Component {
                 time : "", 
                 date : new Date(),
                 minDate : new Date(),
-                calendarType : "US"
-            
-                
+                                             
             }  
     }
 
@@ -87,13 +86,20 @@ class Appointment extends Component {
     onClickDay(date) { 
         this.setState({
            apptDate : date
-        })
-        console.log('Appointment scheduled on: ', new Date())
+        });
+        
+        if (date < new Date()) {
+            alert('Cannot schedule an appointment on past dates.')
+           this.setState({
+               apptDate : 'Not a valid date.'
+           })
+        }
     }
+
 
     render() {
 
-        const { name, email, phone, message, carMake, carModel, carYear, carInfo, calendarType } = this.state;
+        const { name, email, phone, message, carMake, carModel, carYear, carInfo } = this.state;
         
         return (
             <div className="appointment-body row">
@@ -121,7 +127,7 @@ class Appointment extends Component {
                         <div className="appointment-date col-12">
                             <h1 className="calendar">Date</h1>
                             <div className ="calendar-container col-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
-                                <Calendar onChange={this.onClickDay} value={this.state.date}/>
+                                <Calendar onChange={this.onClickDay} value={this.state.date} minDate={new Date()}/>
                             </div>
                         </div>
                     
