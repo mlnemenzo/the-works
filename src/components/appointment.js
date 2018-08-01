@@ -32,7 +32,7 @@ class Appointment extends Component {
                 tier : "",
                 time : "", 
                 date : new Date(),
-                minDate : new Date()
+                minDate : new Date(),
                                              
             }  
     }
@@ -99,7 +99,7 @@ class Appointment extends Component {
 
     render() {
 
-        const { name, email, phone, message, carMake, carModel, carYear, carInfo, minDate } = this.state;
+        const { name, email, phone, message, carMake, carModel, carYear, carInfo } = this.state;
         
         return (
             <div className="appointment-body row">
@@ -127,7 +127,7 @@ class Appointment extends Component {
                         <div className="appointment-date col-12">
                             <h1 className="calendar">Date</h1>
                             <div className ="calendar-container col-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
-                                <Calendar onChange={this.onClickDay} value={this.state.date}/>
+                                <Calendar onChange={this.onClickDay} value={this.state.date} minDate={new Date()}/>
                             </div>
                         </div>
                     
