@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'; 
 import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, ButtonDropdown } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 class Appointment extends Component {
 
@@ -18,6 +18,7 @@ class Appointment extends Component {
             this.state = {
                 dropDownOpen : false,
                 dropDownOpenTwo : false,
+                canBeClicked : true,
                 // user : [],
                 // store : [],
                 name : "",
@@ -31,10 +32,8 @@ class Appointment extends Component {
                 tier : "",
                 time : "", 
                 date : new Date(),
-                minDate : new Date(),
-                calendarType : "US"
-            
-                
+                minDate : new Date()
+                                             
             }  
     }
 
@@ -87,13 +86,20 @@ class Appointment extends Component {
     onClickDay(date) { 
         this.setState({
            apptDate : date
-        })
-        console.log('Appointment scheduled on: ', new Date())
+        });
+        
+        if (date < new Date()) {
+            alert('Cannot schedule an appointment on past dates.')
+           this.setState({
+               apptDate : 'Not a valid date.'
+           })
+        }
     }
+
 
     render() {
 
-        const { name, email, phone, message, carMake, carModel, carYear, carInfo, calendarType } = this.state;
+        const { name, email, phone, message, carMake, carModel, carYear, carInfo, minDate } = this.state;
         
         return (
             <div className="appointment-body row">

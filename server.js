@@ -81,7 +81,7 @@ app.post('/api/email', (req, res) => {
 
 app.post('/api/email/appointment', (req, res) => {
 
-  const { name, email, phone, message, tierLevel, appointmentTime, carMake, carModel, carYear, carInfo } = req.body;
+  const { name, email, phone, message, tierLevel, appointmentTime, carMake, carModel, carYear, carInfo, apptDate } = req.body;
 
   console.log('APPOINMENT BODY:', req.body);
 
@@ -94,7 +94,7 @@ app.post('/api/email/appointment', (req, res) => {
     subject: `${name} has scheduled an appointment!`,   // Subject of the email
     html: `<h1>${name} has scheduled an appointment on:</h1>
             <br>
-            <p>Date: </p>
+            <p>Date: ${apptDate}</p>
             <p>Time: ${appointmentTime}</p>
             <br>
             <h2>Tier Level:</h2>
