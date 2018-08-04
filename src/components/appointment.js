@@ -85,17 +85,20 @@ class Appointment extends Component {
 
     onClickDay(date) { 
         this.setState({
-           apptDate : date
+           apptDate : date.toLocaleDateString()
         });
         
         if (date < new Date()) {
-            alert('Cannot schedule an appointment on past dates.')
+            alert('Cannot same day appointments.')
            this.setState({
                apptDate : 'Not a valid date.'
            })
         }
     }
 
+    validation() {
+        
+    }
 
     render() {
 
@@ -103,10 +106,10 @@ class Appointment extends Component {
         
         return (
             <div className="appointment-body row">
-            <form className = "client-info col-12 text-center" onSubmit = {this.handleEvent.bind(this)}>
+            <form className = "client-info col-12 text-left" onSubmit = {this.handleEvent.bind(this)}>
                 <div className="service-type col-12">
-                    <h1 className="appointments text-center col-12">Book an Appointment:</h1>
-                    <h2 className="service col-12">Service Type:</h2>
+                    <h1 className="appointments text-left col-12">Book an Appointment:</h1>
+                    <h2 className="service col-12 text-left">Service Type:</h2>
                     <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
                         <DropdownToggle title = "Tier" caret>
                         {this.state.tierLevel}
@@ -123,15 +126,15 @@ class Appointment extends Component {
                     </Dropdown>
                 </div>
             
-                <div className="schedule col-12">  
-                        <div className="appointment-date col-12">
+                <div className="schedule col-12 text-left">  
+                        <div className="appointment-date col-12 align-items-left">
                             <h1 className="calendar">Date</h1>
                             <div className ="calendar-container col-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
-                                <Calendar onChange={this.onClickDay} value={this.state.date} minDate={new Date()}/>
+                                <Calendar onChange={this.onClickDay} value={this.state.date} minDate={new Date()} />
                             </div>
                         </div>
                     
-                    <div className="appointment-time col-12">
+                    <div className="appointment-time col-12 text-left">
                     <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo} list = {this.state.time}>
                         <DropdownToggle caret>
                         {this.state.appointmentTime}
@@ -152,54 +155,54 @@ class Appointment extends Component {
                     </Dropdown>
                     </div>
                 </div>
-                <div className="text-area col-12">
-                    <div className = "car-info col-12 text-center">
-                        <h2 className="car-info-header col-12 text-center">Car Make/Model</h2>
+                <div className="text-area col-12 text-left">
+                    <div className = "car-info col-12 text-left">
+                        <h2 className="car-info-header col-12 text-left">Car Make/Model</h2>
                         <div className="col-12 text-center">
-                            <div className="user-input">
+                            <div className="user-input text-left">
                                 <input value = {carMake} type = "text" onChange = { event => this.setState({carMake: event.target.value})} placeholder = "Car Make"/>
                             </div>
                         </div>
-                        <div className="col-12 text-center">
+                        <div className="col-12 text-left">
                             <div className="user-input">
                                 <input value = {carModel} type = "text" onChange = { event => this.setState({carModel: event.target.value})} placeholder = "Car Model"/>
                             </div>
                         </div>
-                        <div className="col-12 text-center">
+                        <div className="col-12 text-left">
                             <div className="user-input">
                                 <input value = {carYear} type = "number" onChange = { event => this.setState({carYear: event.target.value})} placeholder = "Car Year"/>
                             </div>
                         </div>
-                        <div className="col-12 text-center">
+                        <div className="col-12 text-left">
                             <div className="user-input">
                                 <textarea value = {carInfo} type = "text" onChange = { event => this.setState({carInfo: event.target.value})} placeholder = "Car Details (Optional)."/>
                             </div>
                         </div>
                     </div>
-                    <div className = "client-info col-12 text-center" onSubmit = {this.setState.bind(this)}>
-                        <h2 className="contact-info col-12 text-center">Contact Info</h2>
-                        <div className="col-12 text-center">
+                    <div className = "client-info col-12 text-left" onSubmit = {this.setState.bind(this)}>
+                        <h2 className="contact-info col-12 text-left">Contact Info</h2>
+                        <div className="col-12 text-left">
                             <div className="user-input">
                                 <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete = "name"/>
                             </div>
                         </div>
-                        <div className="col-12 text-center">
+                        <div className="col-12 text-left">
                             <div className="user-input">
                                 <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Your Email" autoComplete = "email"/>
                             </div>
                         </div>
-                        <div className="col-12 text-center">
+                        <div className="col-12 text-left">
                             <div className="user-input">
                                 <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
                             </div>
                         </div>
-                        <div className="col-12 text-center">
+                        <div className="col-12 text-left">
                             <div className="user-input">
                                 <textarea className = "" value = {message} type = "text" onChange = { event => this.setState({message: event.target.value})} placeholder = "Message"/>
                             </div>
                         </div>
-                        <div className = "form-submit">
-                            <input type="submit" value="Submit"/>  
+                        <div className = "form-submit text-left">
+                            <input type="submit" className = "text-right" value="Submit"/>  
                         </div>
                         
                     </div>
