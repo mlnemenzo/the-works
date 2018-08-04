@@ -131,3 +131,5 @@ app.listen(port, () => {
 });
 
 //wesboss node tutorials / mlab - mongodb setup //
+
+//mlab node connect to mongoose//
