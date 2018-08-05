@@ -92,7 +92,8 @@ tr:nth-child(even) {
   background-color: rgb(199, 75, 75);
   border-color: rgb(199, 75, 75);
   outline: none;
-  width: 250px;
+  width: 175px;
+  height: 30px
 }
 
 .btn-secondary:hover {
@@ -445,7 +446,7 @@ textarea {
 }
 
 .dropdown {
-  padding: 15px
+  padding: 0
 }
 
 .react-calendar {
