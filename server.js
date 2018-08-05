@@ -81,7 +81,7 @@ app.post('/api/email', (req, res) => {
 
 app.post('/api/email/appointment', (req, res) => {
 
-  const { name, email, phone, message, tierLevel, appointmentTime, carMake, carModel, carYear, carInfo, apptDate } = req.body;
+  const { name, email, phone, message, tierLevel, selectServices, appointmentTime, carMake, carModel, carYear, carInfo, apptDate } = req.body;
 
   console.log('APPOINMENT BODY:', req.body);
 
@@ -99,6 +99,7 @@ app.post('/api/email/appointment', (req, res) => {
             <br>
             <h2>Tier Level:</h2>
             <h2>${tierLevel}</h2>
+            <h2>${selectServices}</h2>
             <h2>Car Info:</h2>
             <p>Make: ${carMake}</p>
             <p>Model: ${carModel}</p>
