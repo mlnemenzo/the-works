@@ -89,7 +89,7 @@ class Appointment extends Component {
         });
         
         if (date < new Date()) {
-            alert('Cannot same day appointments.')
+            alert('Cannot schedule same day appointments.')
            this.setState({
                apptDate : 'Not a valid date.'
            })
@@ -97,7 +97,9 @@ class Appointment extends Component {
     }
 
     validation() {
-        
+        if(!this.name) {
+            alert("missing form input.")
+        }
     }
 
     render() {
@@ -160,21 +162,25 @@ class Appointment extends Component {
                         <h2 className="car-info-header col-12 text-left">Car Make/Model</h2>
                         <div className="col-12 text-center">
                             <div className="user-input text-left">
+                                Car Make:
                                 <input value = {carMake} type = "text" onChange = { event => this.setState({carMake: event.target.value})} placeholder = "Car Make"/>
                             </div>
                         </div>
                         <div className="col-12 text-left">
                             <div className="user-input">
+                                Car Model:
                                 <input value = {carModel} type = "text" onChange = { event => this.setState({carModel: event.target.value})} placeholder = "Car Model"/>
                             </div>
                         </div>
                         <div className="col-12 text-left">
                             <div className="user-input">
+                                Car Year:
                                 <input value = {carYear} type = "number" onChange = { event => this.setState({carYear: event.target.value})} placeholder = "Car Year"/>
                             </div>
                         </div>
                         <div className="col-12 text-left">
                             <div className="user-input">
+                                Extra Requests:
                                 <textarea value = {carInfo} type = "text" onChange = { event => this.setState({carInfo: event.target.value})} placeholder = "Car Details (Optional)."/>
                             </div>
                         </div>
@@ -202,7 +208,7 @@ class Appointment extends Component {
                             </div>
                         </div>
                         <div className = "form-submit text-left">
-                            <input type="submit" className = "text-right" value="Submit"/>  
+                            <input type="submit" value="Submit"/>  
                         </div>
                         
                     </div>
