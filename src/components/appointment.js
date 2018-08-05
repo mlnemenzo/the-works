@@ -33,7 +33,6 @@ class Appointment extends Component {
                 time : "", 
                 date : new Date(),
                 minDate : new Date(),
-                extraServices : []
                                              
             }  
     }
@@ -56,12 +55,6 @@ class Appointment extends Component {
         });
     }
 
-    selectExtraServices(extraServices) {
-        this.setState({
-            selectServices : services
-        })
-    }
-
     toggle() {  
         this.setState({
             dropDownOpen : !this.state.dropDownOpen
@@ -72,12 +65,6 @@ class Appointment extends Component {
         this.setState({
             dropDownOpenTwo : !this.state.dropDownOpenTwo
         });
-    }
-
-    toggleThree() {
-        this.setState({
-            dropDownThree : !this.state.dropdown
-        })
     }
 
     sendEmailToServer() {
@@ -186,26 +173,14 @@ class Appointment extends Component {
                             <DropdownToggle title = "Tier" caret>
                             {this.state.tierLevel}
                             </DropdownToggle>
-                                <DropdownMenu>
-                                <DropdownItem onClick = {() => this.selectTier('BRONZE- 50/70')}>Bronze - 50/70</DropdownItem>
-                                <DropdownItem divider />
-                                <DropdownItem onClick = {() => this.selectTier('SILVER - 90/110')}>Silver - 90/110</DropdownItem>
-                                <DropdownItem divider />
-                                <DropdownItem onClick = {() => this.selectTier('GOLD - 130/150')}>Gold - 130/150</DropdownItem>
-                                <DropdownItem divider />
-                                <DropdownItem onClick = {() => this.selectTier('PLATINUM - 170/190')}>Platinum - 170/190</DropdownItem>
-                            </DropdownMenu>
-                        </Dropdown>
-                    </div>
-                    <div className="extraServices tier col-12 col-sm-12 col-md-4 col-lg-4 text-left">
-                        <p className = "info-titles col-12 text-left">Extra Services:</p>
-                        <Dropdown isOpen ={this.state.dropDownThree} toggle={this.toggleThree}>
-                            <DropdownToggle>
-                                {this.setState.selectServices}
-                            </DropdownToggle>
-                                <DropdownItem onClick= {this.selectExtraServices('Engine Detail')}>Engine Detail</DropdownItem>
                             <DropdownMenu>
-
+                            <DropdownItem onClick = {() => this.selectTier('BRONZE- 50/70')}>Bronze - 50/70</DropdownItem>
+                            <DropdownItem divider />
+                            <DropdownItem onClick = {() => this.selectTier('SILVER - 90/110')}>Silver - 90/110</DropdownItem>
+                            <DropdownItem divider />
+                            <DropdownItem onClick = {() => this.selectTier('GOLD - 130/150')}>Gold - 130/150</DropdownItem>
+                            <DropdownItem divider />
+                            <DropdownItem onClick = {() => this.selectTier('PLATINUM - 170/190')}>Platinum - 170/190</DropdownItem>
                             </DropdownMenu>
                         </Dropdown>
                     </div>
