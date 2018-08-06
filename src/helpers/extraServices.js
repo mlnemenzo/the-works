@@ -7,14 +7,17 @@ class extraServices extends Component {
     constructor(props) {
         super(props);
 
+        this.toggle = this.toggle.bind(this)
+
         this.state = {
-            selectServices : []
+            DropDownOpen : false,
+            selectServices : ""
         }
     }
 
-    selectService(selectServices) {
+    selectService(selectServices ) {
         this.setState({
-            serviceSelected : service
+            extraService : selectServices
         }) 
     }
 
@@ -25,10 +28,19 @@ class extraServices extends Component {
     }
 
     render() {
+
+        const { selectServices } = this.state;
+
         return(
             <div className="servicesBody col-12 col-sm-12 col-md-4 col-lg-4 text-left ">
                 <p className="extraServices">Extra Services</p>
-                <DropdownToggle isOpen={this.state.dropDownOpen}></DropdownToggle>
+                <Dropdown isOpen={this.state.dropDownOpen} toggle = {this.toggle}>
+                <DropdownToggle title =  "extra Services" caret>{this.selectServices}</DropdownToggle>
+                {this.state.selectServices}
+                <DropdownMenu>
+                    <DropdownItem onClick = {() => this.selectService('Engine Detail - $55.00')}></DropdownItem>
+                </DropdownMenu>
+                </Dropdown>
             </div>
         ) 
     }

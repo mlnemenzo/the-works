@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import ExtraServices from '../helpers/extraServices';
 
 class Appointment extends Component {
 
@@ -18,7 +19,6 @@ class Appointment extends Component {
             this.state = {
                 dropDownOpen : false,
                 dropDownOpenTwo : false,
-                canBeClicked : true,
                 // user : [],
                 // store : [],
                 name : "",
@@ -184,6 +184,9 @@ class Appointment extends Component {
                             </DropdownMenu>
                         </Dropdown>
                     </div>
+                </div>
+                <div className="extra">
+                    <ExtraServices/>                
                 </div>
             
                 <div className="schedule col-12 text-left">  
