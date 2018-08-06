@@ -33,6 +33,7 @@ class Appointment extends Component {
                 time : "", 
                 date : new Date(),
                 minDate : new Date(),
+                
                                              
             }  
     }
@@ -167,7 +168,7 @@ class Appointment extends Component {
                             </div>
                         </div>
                     </div> 
-                    <div className="tier col-12 col-sm-12 col-md-4 col-lg-4 text-left">
+                    <div className="tier col-12 col-sm-12 col-md-6 col-lg-6 text-left">
                         <p className ="info-titles col-12 text-left">Service Type:</p>
                         <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
                             <DropdownToggle title = "Tier" caret>
@@ -184,10 +185,11 @@ class Appointment extends Component {
                             </DropdownMenu>
                         </Dropdown>
                     </div>
-                </div>
-                <div className="extra">
+                    <div className="extra col-12 col-sm-12 col-md-6 col-lg-6">
                     <ExtraServices/>                
                 </div>
+                </div>
+                
             
                 <div className="schedule col-12 text-left">  
                         <div className="appointment-date col-12 align-items-left">
