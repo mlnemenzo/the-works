@@ -412,8 +412,13 @@ img {
 .client-info, .car-info, .extraServices {
   padding: 0
 }
-.extraServices {
+.extraServices, .schedule {
   margin: 0
+}
+
+.calendar {
+  margin-bottom: 0;
+  padding-left: 0
 }
 
 .appointment-time {
@@ -438,8 +443,6 @@ textarea {
 }
 
 .schedule {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
   padding-top: 15px;
 }
 
@@ -448,7 +451,7 @@ textarea {
   padding: 15px 
 }
 
-.dropdown {
+.dropdown, .schedule, .servicesBody {
   padding: 0
 }
 
@@ -466,6 +469,15 @@ textarea {
   padding: 0
 }
 
+.form-submit {
+  margin-top: 25px
+}
+
+.react-calendar__tile:active {
+  color: white;
+  background-color: rgb(159, 44, 44);
+  outline: none
+}
 
 /* ////////////////////////////////// footer ///////////////////////////////////////// */
 
@@ -510,6 +522,13 @@ textarea {
  
 }
 
+@media (min-width: 768px) {
+
+  .offset-md-3 {
+      margin-left: 0;
+  }
+
+}
 
 
 /* @media (min-width: 576px) {

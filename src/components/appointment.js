@@ -186,20 +186,21 @@ class Appointment extends Component {
                         </Dropdown>
                     </div>
                     <div className="extra col-12 col-sm-12 col-md-6 col-lg-6">
-                    <ExtraServices/>                
-                </div>
+                        <ExtraServices/>                
+                    </div>
                 </div>
                 
             
-                <div className="schedule col-12 text-left">  
-                        <div className="appointment-date col-12 align-items-left">
-                            <h3 className="calendar">Date</h3>
-                            <div className ="calendar-container col-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
-                                <Calendar onChange={this.onClickDay} value={this.state.date} minDate={new Date()} />
-                            </div>
+                <div className="schedule col-12 row text-left">  
+                    <div className="appointment-date col-12 col-sm-12 col-md-6 col-lg-6 align-items-left">
+                        <p className="calendar text-left">Date:</p>
+                        <div className ="calendar-container col-12">
+                            <Calendar onChange={this.onClickDay} value={this.state.date} minDate={new Date()} />
                         </div>
+                    </div>
                     
-                    <div className="appointment-time col-12 text-left">
+                    <div className="appointment-time col-12 col-sm-13 col-md-6 col-lg-6 text-left">
+                    <p className ="schedule col-12 text-left">Time:</p>
                     <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo} list = {this.state.time}>
                         <DropdownToggle caret>
                         {this.state.appointmentTime}
@@ -220,11 +221,13 @@ class Appointment extends Component {
                     </Dropdown>
                     </div>
                 </div>
-                    <div className = "form-submit text-left">
+                    <div className = "form-submit col-12 text-center">
                         <input type="submit" value="Submit"/>  
                     </div>
                     <h6 className = "contact-time col-12 text-center">We will contact you within one business day.</h6> 
-                    <Link className = "disclaimer-link col-12 text-center" to = "/disclaimer">guarantees & disclaimer</Link>   
+                    <div className = "col-12">                    
+                        <Link className = "disclaimer-link col-12 text-center" to = "/disclaimer">guarantees & disclaimer</Link>   
+                    </div>
             </form>         
             </div>
         )
