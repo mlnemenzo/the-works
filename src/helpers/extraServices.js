@@ -12,8 +12,19 @@ class extraServices extends Component {
         this.state = {
             DropDownOpen : false,
             multiSelect : ['Engine Detail - $55.00', 'Headlight Restoration - $55.00', 'Aluminum and/or Chrome Polish - $35.00', 'Concentrated Scratch Correction - $55.00/Panel', 'Water Spots Removal - $55.00/Panel', 'Trim & Plastic Coating - $55.00', 'Fabric & Leather Protection & Restoration (Interior & Exterior) - $55.00', 'Ozone Decontamination - $75.00', 'Glass Polishing and Restoration - $75.00', 'R1 Ceramic Coating - $650.00' ],
-            selectServices : ""
+            // selectServices : ""
         }
+    }
+
+    serviceList() {
+        const services = this.multiSelect;
+        const serviceMap = services.map((service) => 
+            <ServiceMap key={service} value={service}/>
+        )
+
+        return(
+            <ul>{serviceMap}</ul>
+        )    
     }
 
     selectService(selectServices ) {
@@ -29,6 +40,8 @@ class extraServices extends Component {
     }
 
     render() {
+
+        const { multiSelect } = this.state;
 
         const selectedOptionsStyles = {
             color: "#3c763d",
@@ -70,7 +83,6 @@ class extraServices extends Component {
                 </Dropdown> */}
                 <MultiSelectReact 
                 options={this.state.multiSelect}
-                key = {this.multiSelect.id}
                 optionClicked={this.optionClicked.bind(this)}
                 selectedBadgeClicked={this.selectedBadgeClicked.bind(this)}
                 selectedOptionsStyles={selectedOptionsStyles}
@@ -80,12 +92,12 @@ class extraServices extends Component {
         ) 
     }
 
-    optionClicked(optionsList) {
-        this.setState({ multiSelect: optionsList });
-  }
-  selectedBadgeClicked(optionsList) {
-        this.setState({ multiSelect: optionsList });
-  }
+        optionClicked(optionsList) {
+            this.setState({ multiSelect: optionsList });
+    }
+        selectedBadgeClicked(optionsList) {
+            this.setState({ multiSelect: optionsList });
+    }
 
 }
 
