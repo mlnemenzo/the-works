@@ -409,10 +409,10 @@ img {
   padding: 15px
 }
 
-.client-info, .car-info, .extraServices {
+.client-info, .car-info, .extraServices, .appointment-time {
   padding: 0
 }
-.extraServices, .schedule {
+.extraServices, .schedule, .appointment-time {
   margin: 0
 }
 

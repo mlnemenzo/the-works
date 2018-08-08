@@ -122,6 +122,7 @@ app.post('/api/email/appointment', (req, res) => {
   
   res.end();
 });
+// app.post('/api/email/appointment', (req, res) =>
 
 app.get('*', (req, res) => {
   res.sendFile(resolve(__dirname, 'public', 'index.html'));
