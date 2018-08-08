@@ -11,7 +11,7 @@ class extraServices extends Component {
 
         this.state = {
             DropDownOpen : false,
-            multiSelect : [],
+            multiSelect : ['Engine Detail - $55.00', 'Headlight Restoration - $55.00', 'Aluminum and/or Chrome Polish - $35.00', 'Concentrated Scratch Correction - $55.00/Panel', 'Water Spots Removal - $55.00/Panel', 'Trim & Plastic Coating - $55.00', 'Fabric & Leather Protection & Restoration (Interior & Exterior) - $55.00', 'Ozone Decontamination - $75.00', 'Glass Polishing and Restoration - $75.00', 'R1 Ceramic Coating - $650.00' ],
             selectServices : ""
         }
     }
@@ -29,10 +29,20 @@ class extraServices extends Component {
     }
 
     render() {
+
+        const selectedOptionsStyles = {
+            color: "#3c763d",
+            backgroundColor: "#dff0d8"
+        };
+        const optionsListStyles = {
+            backgroundColor: "#dff0d8",
+            color: "#3c763d"
+        };
         
         return(
             <div className="servicesBody col-12 col-sm-12 col-md-6 col-lg-6 text-left ">
                 <p className="extraServices">Extra Services:</p>
+                
                 {/* <Dropdown isOpen={this.state.dropDownOpen} toggle = {this.toggle}>
                 <DropdownToggle title =  "extra services" caret>{this.state.extraService}</DropdownToggle>
                 {this.state.selectServices}
@@ -60,9 +70,12 @@ class extraServices extends Component {
                 </Dropdown> */}
                 <MultiSelectReact 
                 options={this.state.multiSelect}
+                key = {this.multiSelect.id}
                 optionClicked={this.optionClicked.bind(this)}
                 selectedBadgeClicked={this.selectedBadgeClicked.bind(this)}
-                isTextWrap={true} >test</MultiSelectReact>
+                selectedOptionsStyles={selectedOptionsStyles}
+                optionsListStyles={optionsListStyles}
+                isTextWrap={true}/>
             </div>
         ) 
     }
