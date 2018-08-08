@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import MultiSelectReact from 'multi-select-react';
 
 class extraServices extends Component {
 
@@ -10,6 +11,7 @@ class extraServices extends Component {
 
         this.state = {
             DropDownOpen : false,
+            multiSelect : [],
             selectServices : ""
         }
     }
@@ -31,7 +33,7 @@ class extraServices extends Component {
         return(
             <div className="servicesBody col-12 col-sm-12 col-md-6 col-lg-6 text-left ">
                 <p className="extraServices">Extra Services:</p>
-                <Dropdown isOpen={this.state.dropDownOpen} toggle = {this.toggle}>
+                {/* <Dropdown isOpen={this.state.dropDownOpen} toggle = {this.toggle}>
                 <DropdownToggle title =  "extra services" caret>{this.state.extraService}</DropdownToggle>
                 {this.state.selectServices}
                 <DropdownMenu>
@@ -55,10 +57,23 @@ class extraServices extends Component {
                     <DropdownItem divider />
                     <DropdownItem onClick = {() => this.selectService('R1 Ceramic Coating - $650.00')}>R1 Ceramic Coating - $650.00</DropdownItem>    
                 </DropdownMenu>
-                </Dropdown>
+                </Dropdown> */}
+                <MultiSelectReact 
+                options={this.state.multiSelect}
+                optionClicked={this.optionClicked.bind(this)}
+                selectedBadgeClicked={this.selectedBadgeClicked.bind(this)}
+                isTextWrap={true} >test</MultiSelectReact>
             </div>
         ) 
     }
+
+    optionClicked(optionsList) {
+        this.setState({ multiSelect: optionsList });
+  }
+  selectedBadgeClicked(optionsList) {
+        this.setState({ multiSelect: optionsList });
+  }
+
 }
 
 export default extraServices;
