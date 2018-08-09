@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import ExtraServices from '../helpers/extraServices';
+import MultiSelectReact from 'multi-select-react';
 
 class Appointment extends Component {
 
@@ -33,9 +33,20 @@ class Appointment extends Component {
                 time : "", 
                 date : new Date(),
                 minDate : new Date(),
-                
-                                             
+                extraServices : [{item :'Engine Detail - $55.00'}, 
+                {item :'Headlight Restoration - $55.00'},
+                {item : 'Aluminum and/or Chrome Polish - $35.00'}, 
+                {item : 'Concentrated Scratch Correction - $55.00/Panel'},
+                {item : 'Water Spots Removal - $55.00/Panel'},
+                {item : 'Trim & Plastic Coating - $55.00'}, 
+                {item : 'Fabric & Leather Protection & Restoration (Interior & Exterior) - $55.00'}, 
+                {item : 'Ozone Decontamination - $75.00'}, 
+                {item : 'Glass Polishing and Restoration - $75.00'},
+                {item : 'R1 Ceramic Coating - $650.00' }]
+                                                            
             }  
+
+            
     }
 
     componentDidMount() {
@@ -97,16 +108,27 @@ class Appointment extends Component {
         }
     }
 
-    validation() {
-        if(!this.state) {
-            alert("missing form input.")
-        }
-    }
+    // iDunno(extraServices){
+    //     const services = extraServices.map((item, index) => {
+    //         return (
+    //             <div className="extra-services" key={index} item={item}>{services}</div>
+    //         )
+    //     })
+    // }
 
     render() {
 
         const { name, email, phone, message, carMake, carModel, carYear, carInfo } = this.state;
-        
+
+        const selectedOptionsStyles = {
+            color: "#3c763d",
+            backgroundColor: "#dff0d8"
+        };
+        const optionsListStyles = {
+            backgroundColor: "#dff0d8",
+            color: "#3c763d"
+        };
+                
         return (
             <div className="appointment-body row">
             <form className = "client-info col-12 text-left" onSubmit = {this.handleEvent.bind(this)}>
@@ -186,7 +208,13 @@ class Appointment extends Component {
                         </Dropdown>
                     </div>
                     <div className="extra col-12 col-sm-12 col-md-6 col-lg-6">
-                        <ExtraServices/>                
+                        <MultiSelectReact 
+                        options={this.state.extraServices}
+                        optionClicked={this.optionClicked.bind(this)}
+                        selectedBadgeClicked={this.selectedBadgeClicked.bind(this)}
+                        selectedOptionsStyles={selectedOptionsStyles}
+                        optionsListStyles={optionsListStyles}
+                        isTextWrap={true}/>
                     </div>
                 </div>
                 
@@ -232,6 +260,16 @@ class Appointment extends Component {
             </div>
         )
     }
+
+    optionClicked(optionsList) {
+                    this.setState({ multiSelect: optionsList });
+            }
+    selectedBadgeClicked(optionsList) {
+        this.setState({ multiSelect: optionsList });
+            }
+
+
+
 }
 
 export default Appointment;
