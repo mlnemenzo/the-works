@@ -4,7 +4,7 @@ import ExtraServices from './extraServices';
 
 export default props => {
     const services = serviceList.map((item, index) => {
-        return <ExtraServices key = {index} about = {item}/>
+        return <ExtraServices key = {index} service = {item}/>
     });
 
     return (
