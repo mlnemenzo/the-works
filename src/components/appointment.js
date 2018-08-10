@@ -4,7 +4,6 @@ import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import MultiSelectReact from 'multi-select-react';
-import ServiceDropDown from '../helpers/serviceDropDown';
 
 class Appointment extends Component {
 
@@ -112,6 +111,15 @@ class Appointment extends Component {
     render() {
 
         const { name, email, phone, message, carMake, carModel, carYear, carInfo } = this.state;
+
+        const selectedOptionsStyles = {
+            color: "#3c763d",
+            backgroundColor: "#dff0d8"
+        };
+        const optionsListStyles = {
+            backgroundColor: "#dff0d8",
+            color: "#3c763d"
+        };
                 
         return (
             <div className="appointment-body row">
@@ -198,7 +206,7 @@ class Appointment extends Component {
                         selectedBadgeClicked={this.selectedBadgeClicked.bind(this)}
                         selectedOptionsStyles={selectedOptionsStyles}
                         optionsListStyles={optionsListStyles}
-                        />
+                        isTextWrap={true}/>
                     </div>
                 </div>
                 
