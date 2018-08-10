@@ -31,7 +31,7 @@ li {
 
 a {
   color: white;
-  text-shadow: 1px 2px 4px rgb(135, 135, 135);
+  /* text-shadow: 1px 2px 4px rgb(135, 135, 135); */
   outline-color: none
 }
 
@@ -83,6 +83,13 @@ tr:nth-child(even) {
 
 .btn, .btn-outline-secondary {
   box-shadow: 2px 2px 5px rgb(24, 24, 24);
+  color: white;
+  background-color: #81959e;
+  outline: none
+}
+
+.btn-outline-secondary:hover {
+  background-color: #505d63;
 }
 
 .btn-secondary, .submit-button {
@@ -229,7 +236,7 @@ tr:nth-child(even) {
 
 .services-image > img {
   margin-top: 15px;
-  width: 70vw;
+  width: 60vw;
   box-shadow: 2px 3px 5px rgb(24, 24, 24);
 }
 
@@ -250,6 +257,19 @@ tr:nth-child(even) {
   margin-top: 15px;
   background-color: #81959e;
   border-radius: 2px
+}
+
+.make-appt-link {
+  text-shadow: 1px 1px 1px black
+}
+
+.make-appt-link:hover {
+  color: black;
+  text-shadow: 1px 1px 1px white
+}
+
+.disclaimer-landing {
+  margin-top: 15px
 }
 
 /* ////////////////////////////////// disclaimer ///////////////////////////////////////// */
