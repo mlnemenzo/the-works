@@ -5,7 +5,7 @@
   height: 100%;
   margin: auto;
   background-color: rgb(73, 73, 73);
-  text-shadow: 1px 1px 1px rgb(39, 39, 39);
+  text-shadow: 1px 1px 1px black;
   font-family: 'Quattrocento Sans', sans-serif;
   font-size: 1rem
 
@@ -244,6 +244,14 @@ tr:nth-child(even) {
   text-align: -webkit-auto;
 }
 
+.vehicles-serviced, .about, .mission-statement, .appt, .why-choose {
+  box-shadow: 0px 0px 17px black;
+  padding-top: 15px;
+  margin-top: 15px;
+  background-color: #81959e;
+  border-radius: 2px
+}
+
 /* ////////////////////////////////// disclaimer ///////////////////////////////////////// */
 
 
@@ -329,7 +337,8 @@ tr:nth-child(even) {
 /* ////////////////////////////////// about us ///////////////////////////////////////// */
 
 .about-us-header {
-  padding: 20px
+  padding: 20px;
+  margin: 0
 }
 
 .about-us-body {

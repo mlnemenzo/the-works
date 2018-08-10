@@ -4,7 +4,6 @@ import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import MultiSelectReact from 'multi-select-react';
-import ServiceDropDown from '../helpers/serviceDropDown';
 
 class Appointment extends Component {
 
@@ -111,7 +110,7 @@ class Appointment extends Component {
 
     render() {
 
-        const { name, email, phone, message, carMake, carModel, carYear, carInfo, id, item } = this.state;
+        const { name, email, phone, message, carMake, carModel, carYear, carInfo } = this.state;
 
         const selectedOptionsStyles = {
             color: "#3c763d",
