@@ -46,29 +46,29 @@ class Contact extends Component {
             <div className="contact-body">
                 
                 <form className = "contact-form container-fluid wrap animated fast fadeInUp" onSubmit = {this.handleEvent.bind(this)}>
-                    <h1 className="contact-header">Contact Us</h1>
-                    <div className="d-flex justify-content-center">
+                    <h1 className="contact-header text-left">Contact Us</h1>
+                    <div className="col-12 text-left">
                         <div className="user-input">
                             <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete='name'/>
                         </div>
                     </div>
-                    <div className="d-flex justify-content-center">
+                    <div className="col-12 text-left">
                         <div className="user-input">
                             <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} placeholder = "Your Email" autoComplete = "email"/>
                         </div>
                     </div>
-                    <div className="d-flex justify-content-center">
+                    <div className="col-12 text-left">
                         <div className="user-input">
                             <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
                         </div>
                     </div>
-                    <div className="d-flex justify-content-center">
+                    <div className="col-12 text-left">
                         <div className="user-input">
                             <textarea className = "" value = {message} type = "textarea" onChange = { event => this.setState({message: event.target.value})} placeholder = "Message"/>
                         </div>
                     </div>
-                    <div className = "form-submit">
-                        <input type="submit" value="Submit"/>  
+                    <div className = "form-submit text-left">
+                        <input type="submit" id = "contact-submit" value="Submit"/>  
                     </div>
                     <h6 className = "contact-message text-center">We will contact you within one business day. </h6>
                 </form>
