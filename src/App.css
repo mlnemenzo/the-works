@@ -499,13 +499,26 @@ textarea {
 }
 
 .form-submit {
-  margin-top: 25px
+  margin-top: 25px;
+  padding-left: 29px
 }
 
 .react-calendar__tile:active {
   color: white;
   background-color: rgb(159, 44, 44);
   outline: none
+}
+
+#contact-submit {
+  width: 100px;
+  background-color: rgb(199, 75, 75);
+  color: white;
+  border: none
+}
+
+#contact-submit:hover {
+  background-color: rgb(159, 44, 44);
+  color: white
 }
 
 /* ////////////////////////////////// footer ///////////////////////////////////////// */
