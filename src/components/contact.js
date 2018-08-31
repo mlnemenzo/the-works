@@ -70,7 +70,7 @@ class Contact extends Component {
                     <div className = "form-submit">
                         <input type="submit" value="Submit"/>  
                     </div>
-                    <h6 className = "contact-message text-center">We will contact you within one business day.</h6>
+                    <h6 className = "contact-message text-center">We will contact you within one business day. </h6>
                 </form>
                 <div className = "contact-options row">
                     <div className = "call col-12 col-sm-12 col-md-4 col-lg-4">
