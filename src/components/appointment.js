@@ -242,7 +242,7 @@ class Appointment extends Component {
                     </div>
                 </div>
                     <div className = "form-submit col-12 text-center">
-                        <input type="submit" value="Submit"/>  
+                        <input type="submit" id = "appointment-submit" value="Submit"/>  
                     </div>
                     <h6 className = "contact-time col-12 text-center">We will contact you within one business day.</h6> 
                     <div className = "col-12">                    
