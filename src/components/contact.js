@@ -12,6 +12,15 @@ class Contact extends Component {
         }
     }
 
+    validate(name, email, phone, message) {
+        return {
+            email: email.length === 0,
+            name: name.length === 0,
+            phone: phone.length === 0,
+            message: message.length === 0 
+        }
+    }
+
     sendEmailToServer() {
         const contact = this.state;
         // var baseURL = "/email";
@@ -38,9 +47,17 @@ class Contact extends Component {
         window.scrollTo(0,0);
     }
 
+    
+
     render() {
 
         const {name, email, phone, message} = this.state;
+
+        const isEnabled = 
+            name.length > 0 &&
+            email.length > 0 &&
+            phone.length > 0 &&
+            message.length > 0;
 
         return (
             <div className="contact-body">
@@ -68,7 +85,7 @@ class Contact extends Component {
                         </div>
                     </div>
                     <div className = "form-submit text-left">
-                        <input type="submit" id = "contact-submit" value="Submit"/>  
+                        <button type="submit" disabled ={!isEnabled} id = "contact-submit" value="Submit">Submit</button>
                     </div>
                     <h6 className = "contact-message text-center">We will contact you within one business day. </h6>
                 </form>

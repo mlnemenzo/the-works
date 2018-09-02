@@ -434,6 +434,11 @@ img {
 
 /* ////////////////////////////////// appointments ///////////////////////////////////////// */
 
+.react-calendar__tile:focus {
+  background-color: rgb(199, 75, 75);
+  color: white
+}
+
 .appointments {
   padding: 15px
 }
