@@ -59,6 +59,10 @@ class Contact extends Component {
             phone.length > 0 &&
             message.length > 0;
 
+        const errors  = this.validate(this.state.email, this.state.name, this.state.phone, this.state.message)
+
+        // const isEnabled = !Object.keys(errors).some(x => errors[x]);
+
         return (
             <div className="contact-body">
                 
@@ -66,7 +70,7 @@ class Contact extends Component {
                     <h1 className="contact-header text-left">Contact Us</h1>
                     <div className="col-12 text-left">
                         <div className="user-input">
-                            <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete='name'/>
+                            <input className= {errors.name ? "error" : ""} value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete='name'/>
                         </div>
                     </div>
                     <div className="col-12 text-left">
