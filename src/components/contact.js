@@ -11,17 +11,16 @@ class Contact extends Component {
                 email : "",
                 phone : "",
                 message : "",
-                error : {}
-            
+                errors : {},
+                formIsValid : true
         }
     }
 
     validation() {
         let errors = {};
-        let formIsValid = true;
-
-        if(!this.name) {
-            formIsValid = false;
+        
+        if(this.name === 0) {
+            this.formIsValid = false;
             errors[this.name] = "Please enter name"
         }
 
