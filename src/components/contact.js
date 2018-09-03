@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name : "",
-            email : "",
-            phone : "",
-            message : "",
+
+                name : "",
+                email : "",
+                phone : "",
+                message : "",
+                error : {}
+            
         }
     }
 
-    validate(name, email, phone, message) {
-        return {
-            email: email.length === 0,
-            name: name.length === 0,
-            phone: phone.length === 0,
-            message: message.length === 0 
+    validation() {
+        let errors = {};
+        let formIsValid = true;
+
+        if(!this.name) {
+            formIsValid = false;
+            errors[this.name] = "Please enter name"
         }
+
     }
+
 
     sendEmailToServer() {
         const contact = this.state;
@@ -34,6 +41,10 @@ class Contact extends Component {
     handleEvent(event) {
         event.preventDefault();
         this.sendEmailToServer();  
+
+        if(this.validation) {
+            alert("Your message has been sent!")
+        }
 
         this.setState({
             name : "",
@@ -53,16 +64,6 @@ class Contact extends Component {
 
         const {name, email, phone, message} = this.state;
 
-        const isEnabled = 
-            name.length > 0 &&
-            email.length > 0 &&
-            phone.length > 0 &&
-            message.length > 0;
-
-        const errors  = this.validate(this.state.email, this.state.name, this.state.phone, this.state.message)
-
-        // const isEnabled = !Object.keys(errors).some(x => errors[x]);
-
         return (
             <div className="contact-body">
                 
@@ -70,7 +71,7 @@ class Contact extends Component {
                     <h1 className="contact-header text-left">Contact Us</h1>
                     <div className="col-12 text-left">
                         <div className="user-input">
-                            <input className= {errors.name ? "error" : ""} value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete='name'/>
+                            <input  value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} placeholder = "Your Name" autoComplete='name'/>
                         </div>
                     </div>
                     <div className="col-12 text-left">
@@ -85,11 +86,11 @@ class Contact extends Component {
                     </div>
                     <div className="col-12 text-left">
                         <div className="user-input">
-                            <textarea className = "" value = {message} type = "textarea" onChange = { event => this.setState({message: event.target.value})} placeholder = "Message"/>
+                            <textarea value = {message} type = "textarea" onChange = { event => this.setState({message: event.target.value})} placeholder = "Message"/>
                         </div>
                     </div>
                     <div className = "form-submit text-left">
-                        <button type="submit" disabled ={!isEnabled} id = "contact-submit" value="Submit">Submit</button>
+                        <button className = "btn btn-lg pro" type="submit" id = "contact-submit" value="Submit">Submit</button>
                     </div>
                     <h6 className = "contact-message text-center">We will contact you within one business day. </h6>
                 </form>
@@ -104,7 +105,9 @@ class Contact extends Component {
                     <div className = "email col-12 col-sm-12 col-md-4 col-lg-4">
                         <h3 className = "d-flex justify-content-center">Email Us</h3>
                         <ul>
-                            <li className= "d-flex justify-content-center"><a href = "theworkscardetail@gmail.com">theworkscardetail@gmail.com</a></li>                       
+                            <li className= "d-flex justify-content-center">
+                            <Link className = "contacdt-link text-center" to = "/contact">theworkscardetail@gmail.com</Link>
+                            </li>                       
                         </ul>
                     </div>
                     <div className = "availability col-12 col-sm-12 col-md-4 col-lg-4">
