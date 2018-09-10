@@ -21,7 +21,8 @@ class Contact extends Component {
         
         if(this.name === 0) {
             this.formIsValid = false;
-            errors[this.name] = "Please enter name"
+            errors[this.name] = "Please enter name."
+            console.log("error.")
         }
 
     }
@@ -40,10 +41,6 @@ class Contact extends Component {
     handleEvent(event) {
         event.preventDefault();
         this.sendEmailToServer();  
-
-        if(this.validation) {
-            alert("Your message has been sent!")
-        }
 
         this.setState({
             name : "",
