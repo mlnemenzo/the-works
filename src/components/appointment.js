@@ -4,6 +4,7 @@ import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import MultiSelectReact from 'multi-select-react';
+import MultiSelect from '@kenshooui/react-multi-select';
 
 class Appointment extends Component {
 
@@ -15,6 +16,7 @@ class Appointment extends Component {
             this.selectTime = this.selectTime.bind(this);
             this.selectTier = this.selectTier.bind(this);
             this.onClickDay = this.onClickDay.bind(this);
+            this.handleChange = this.handleChange.bind(this)
 
             this.state = {
                 dropDownOpen : false,
@@ -33,7 +35,7 @@ class Appointment extends Component {
                 time : "", 
                 date : new Date(),
                 minDate : new Date(),
-                extraServices : [{_id: 1, item :'Engine Detail - $55.00'}, 
+                items : [{_id: 1, item :'Engine Detail - $55.00'}, 
                     {_id : 2, item :'Headlight Restoration - $55.00'},
                     {_id : 3, item : 'Aluminum and/or Chrome Polish - $35.00'}, 
                     {_id : 4, item : 'Concentrated Scratch Correction - $55.00/Panel'},
@@ -42,7 +44,8 @@ class Appointment extends Component {
                     {_id : 7, item : 'Fabric & Leather Protection & Restoration (Interior & Exterior) - $55.00'}, 
                     {_id : 8, item : 'Ozone Decontamination - $75.00'}, 
                     {_id : 9, item : 'Glass Polishing and Restoration - $75.00'},
-                    {_id : 10, item : 'R1 Ceramic Coating - $650.00' }]
+                    {_id : 10, item : 'R1 Ceramic Coating - $650.00' }],
+                selectedItems : []
                                                          
             }  
 
@@ -54,6 +57,10 @@ class Appointment extends Component {
         window.scrollTo(0,0);
         
     }
+
+    handleChange(selectedItems) {
+        this.setState({ selectedItems });
+      }
 
     selectTime(time) {
         this.setState({
@@ -110,16 +117,7 @@ class Appointment extends Component {
 
     render() {
 
-        const { name, email, phone, message, carMake, carModel, carYear, carInfo, extraServices } = this.state;
-
-        const selectedOptionsStyles = {
-            color: "#3c763d",
-            backgroundColor: "#dff0d8"
-        };
-        const optionsListStyles = {
-            backgroundColor: "#dff0d8",
-            color: "#3c763d"
-        };
+        const { name, email, phone, message, carMake, carModel, carYear, carInfo, items, selectedItems } = this.state;
                 
         return (
             <div className="appointment-body row">
@@ -200,13 +198,12 @@ class Appointment extends Component {
                         </Dropdown>
                     </div>
                     <div className="extra col-12 col-sm-12 col-md-6 col-lg-6">
-                        <MultiSelectReact 
-                        options={this.state.extraServices}
-                        optionClicked={this.optionClicked.bind(this)}
-                        selectedBadgeClicked={this.selectedBadgeClicked.bind(this)}
-                        selectedOptionsStyles={selectedOptionsStyles}
-                        optionsListStyles={optionsListStyles}
-                        isTextWrap={true}/>
+                    <MultiSelect
+                        items={items}
+                        selectedItems={selectedItems}
+                        onChange={this.handleChange}
+                        showSearch ={true}
+                    />
                     </div>
                 </div>
                 
