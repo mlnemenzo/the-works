@@ -201,8 +201,9 @@ class Appointment extends Component {
                     <MultiSelect
                         items={items}
                         selectedItems={selectedItems}
-                        onChange={this.handleChange}
+                        onClick = {()=> this.items(this.items.item)}
                         showSearch ={true}
+                        showSelectedItems ={true}
                     />
                     </div>
                 </div>
