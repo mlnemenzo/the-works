@@ -59,7 +59,8 @@ class Appointment extends Component {
     }
 
     handleChange(selectedItems) {
-        this.setState({ selectedItems });
+        this.setState({ 
+            customWork: selectedItems });
       }
 
     selectTime(time) {
@@ -198,6 +199,7 @@ class Appointment extends Component {
                         </Dropdown>
                     </div>
                     <div className="extra col-12 col-sm-12 col-md-6 col-lg-6">
+                    <p className="calendar text-left">Custom Work:</p>
                     <MultiSelect
                         items={items}
                         selectedItems={selectedItems}
@@ -250,16 +252,6 @@ class Appointment extends Component {
             </div>
         )
     }
-
-    optionClicked(optionsList) {
-                    this.setState({ multiSelect: optionsList });
-            }
-    selectedBadgeClicked(optionsList) {
-        this.setState({ multiSelect: optionsList });
-            }
-
-
-
 }
 
 export default Appointment;
