@@ -59,7 +59,7 @@ class Appointment extends Component {
     handleChange(selectedItems) {     
         this.setState({ 
             customWork: selectedItems });
-            console.log('items:', Object.values(selectedItems))
+            console.log('items:', selectedItems  )
       }
 
     selectTime(time) {
@@ -116,7 +116,7 @@ class Appointment extends Component {
 
     render() {
 
-        const { name, email, phone, message, carMake, carModel, carYear, carInfo, items, selectedItems } = this.state;
+        const { name, email, phone, message, carMake, carModel, carYear, carInfo, items } = this.state;
                 
         return (
             <div className="appointment-body row">
@@ -200,7 +200,6 @@ class Appointment extends Component {
                     <p className="calendar text-left">Custom Work:</p>
                     <MultiSelect
                         items={items}
-                        selectedItems={selectedItems.label}
                         onChange={this.handleChange}
                         showSearch ={false}
                         showSelectedItems ={false}
