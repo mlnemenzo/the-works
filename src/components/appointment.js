@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import MultiSelectReact from 'multi-select-react';
+// import MultiSelectReact from 'multi-select-react';
 import MultiSelect from '@kenshooui/react-multi-select';
 
 class Appointment extends Component {
