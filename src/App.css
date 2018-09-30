@@ -123,7 +123,14 @@ tr:nth-child(even) {
 
 .btn-secondary:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0);
-  /* box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5); */
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
 }
 
 .btn-danger {
@@ -528,6 +535,15 @@ textarea {
   box-shadow: 2px 2px 3px black;
   color: white;
   border: none
+}
+
+#appointment-submit:hover {
+  color: #fff;
+  background-color: rgb(159, 44, 44);
+}
+
+#appointment-submit:active {
+  background-color: black
 }
 
 #contact-submit:hover {
