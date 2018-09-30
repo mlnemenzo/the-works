@@ -290,6 +290,14 @@ tr:nth-child(even) {
   height: 100%;
 }
 
+.kn-item_label__label___2fJ5p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 14px;
+  white-space: nowrap;
+  color: black;
+}
+
 #service-header {
   padding: 15px
 }
@@ -517,6 +525,7 @@ textarea {
 #contact-submit, #appointment-submit {
   width: 100px;
   background-color: rgb(199, 75, 75);
+  box-shadow: 2px 2px 3px black;
   color: white;
   border: none
 }
