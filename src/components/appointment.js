@@ -53,14 +53,13 @@ class Appointment extends Component {
     }
 
     componentDidMount() {
-
-        window.scrollTo(0,0);
-        
+         window.scrollTo(0,0);   
     }
 
-    handleChange(selectedItems) {
+    handleChange(selectedItems) {     
         this.setState({ 
             customWork: selectedItems });
+            console.log('items:', Object.values(selectedItems))
       }
 
     selectTime(time) {
@@ -100,7 +99,6 @@ class Appointment extends Component {
     handleEvent(event) {
         event.preventDefault();
         this.sendEmailToServer();
-        //.this.props.add(this.state);
     }
 
     onClickDay(date) { 
@@ -202,7 +200,7 @@ class Appointment extends Component {
                     <p className="calendar text-left">Custom Work:</p>
                     <MultiSelect
                         items={items}
-                        selectedItems={selectedItems}
+                        selectedItems={selectedItems.label}
                         onChange={this.handleChange}
                         showSearch ={false}
                         showSelectedItems ={false}
