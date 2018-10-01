@@ -21,8 +21,6 @@ class Appointment extends Component {
             this.state = {
                 dropDownOpen : false,
                 dropDownOpenTwo : false,
-                // user : [],
-                // store : [],
                 name : "",
                 email : "",
                 phone : "",
@@ -59,7 +57,7 @@ class Appointment extends Component {
     handleChange(selectedItems) {     
         this.setState({ 
             customWork: selectedItems });
-            console.log('items:', selectedItems  )
+            console.log('items:', selectedItems )
       }
 
     selectTime(time) {
