@@ -141,11 +141,13 @@ class Appointment extends Component {
                                     <p className =" info-titles col-12 text-left">Telephone:</p>
                                     <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "tel"/>
                                 </div>
-                            </div>
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Message:</p>
                                     <textarea className = "" value = {message} type = "text" onChange = { event => this.setState({message: event.target.value})} placeholder = "(Optional.)"/>
                                 </div>
+                            </div>
+                                
+
                             <h3 className="car-info-header col-12 text-left">Car Info</h3>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-center">
                                 <div className="user-input text-left">
@@ -172,7 +174,7 @@ class Appointment extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className = "client-info col-12 col-sm-12 col-md-6 col-lg-6 text-left" onSubmit = {this.setState.bind(this)}>
+                        <div className = "client-info col-12 text-left" onSubmit = {this.setState.bind(this)}>
                         </div>
                     </div> 
                     <div className="tier col-12 text-left">
@@ -210,10 +212,7 @@ class Appointment extends Component {
                         <div className ="calendar-container col-12">
                             <Calendar onChange={this.onClickDay} value={this.state.date} minDate={new Date()} />
                         </div>
-                    </div>
-                    
-                    <div className="appointment-time col-12 text-left">
-                    <p className ="schedule col-12 text-left">Time:</p>
+                        <p className ="schedule col-12 text-left">Time:</p>
                     <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo} list = {this.state.time}>
                         <DropdownToggle caret>
                         {this.state.appointmentTime}
@@ -233,9 +232,13 @@ class Appointment extends Component {
                         </DropdownMenu>
                     </Dropdown>
                     </div>
+                    
+                    <div className="appointment-time col-12 text-left">
+                    
+                    </div>
                 </div>
                     <div className = "form-submit col-12 text-center">
-                        <button type="submit" id = "appointment-submit" value="Submit">Submit</button>  
+                        <button type="submit" id = "appointment-submit" value="Submit">SUBMIT</button>  
                     </div>
                     <h6 className = "contact-time col-12 text-center">We will contact you within one business day.</h6> 
                     <div className = "col-12 text-center">                    

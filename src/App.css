@@ -524,16 +524,22 @@ textarea {
 }
 
 #contact-submit, #appointment-submit {
-  width: 100px;
+  width: 150px;
   background-color: rgb(199, 75, 75);
   box-shadow: 2px 2px 3px black;
   color: white;
-  border: none
+  border: none;
+  height: 65px;
+  font-size: 2em;
 }
 
 #contact-submit:hover {
   background-color: rgb(159, 44, 44);
   color: white
+}
+
+.calendar-container {
+  padding-bottom: 15px
 }
 
 /* ////////////////////////////////// footer ///////////////////////////////////////// */
