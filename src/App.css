@@ -123,14 +123,7 @@ tr:nth-child(even) {
 
 .btn-secondary:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0);
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-button:focus {
-  outline: none;
+  /* box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5); */
 }
 
 .btn-danger {
@@ -419,7 +412,8 @@ textarea {
 textarea, input {
   box-shadow: 2px 2px 5px rgb(24, 24, 24);
   outline: none;
-  border-radius: 2px
+  border-radius: 2px;
+  width: 300px
 }
 
 .contact-form {
@@ -488,7 +482,7 @@ img {
 }
 
 textarea {
-  width: 230px
+  width: 400px
 }
 
 .schedule {
@@ -535,15 +529,6 @@ textarea {
   box-shadow: 2px 2px 3px black;
   color: white;
   border: none
-}
-
-#appointment-submit:hover {
-  color: #fff;
-  background-color: rgb(159, 44, 44);
-}
-
-#appointment-submit:active {
-  background-color: black
 }
 
 #contact-submit:hover {

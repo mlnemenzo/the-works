@@ -122,7 +122,30 @@ class Appointment extends Component {
                 <div className="service-type col-12 row">
                     <h1 className="appointments text-center col-12">Book an Appointment:</h1>
                     <div className="text-area row col-12 text-left">
-                        <div className = "car-info col-12 col-sm-12 col-md-6 col-lg-6 text-left">
+                        <div className = "car-info col-12 text-left">
+                        <h3 className="contact-info col-12 text-left">Contact Info</h3>
+                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
+                                <div className="user-input">
+                                    <p className =" info-titles col-12 text-left">Name:</p>
+                                    <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} autoComplete = "name"/>
+                                </div>
+                            </div>
+                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
+                                <div className="user-input">
+                                    <p className =" info-titles col-12 text-left">Email:</p>
+                                    <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} autoComplete = "email"/>
+                                </div>
+                            </div>
+                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
+                                <div className="user-input">
+                                    <p className =" info-titles col-12 text-left">Telephone:</p>
+                                    <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "tel"/>
+                                </div>
+                            </div>
+                                <div className="user-input">
+                                    <p className =" info-titles col-12 text-left">Message:</p>
+                                    <textarea className = "" value = {message} type = "text" onChange = { event => this.setState({message: event.target.value})} placeholder = "(Optional.)"/>
+                                </div>
                             <h3 className="car-info-header col-12 text-left">Car Info</h3>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-center">
                                 <div className="user-input text-left">
@@ -150,34 +173,9 @@ class Appointment extends Component {
                             </div>
                         </div>
                         <div className = "client-info col-12 col-sm-12 col-md-6 col-lg-6 text-left" onSubmit = {this.setState.bind(this)}>
-                            <h3 className="contact-info col-12 text-left">Contact Info</h3>
-                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
-                                <div className="user-input">
-                                    <p className =" info-titles col-12 text-left">Name:</p>
-                                    <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} autoComplete = "name"/>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
-                                <div className="user-input">
-                                    <p className =" info-titles col-12 text-left">Email:</p>
-                                    <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} autoComplete = "email"/>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
-                                <div className="user-input">
-                                    <p className =" info-titles col-12 text-left">Telephone:</p>
-                                    <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "tel"/>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
-                                <div className="user-input">
-                                    <p className =" info-titles col-12 text-left">Message:</p>
-                                    <textarea className = "" value = {message} type = "text" onChange = { event => this.setState({message: event.target.value})} placeholder = "(Optional.)"/>
-                                </div>
-                            </div>
                         </div>
                     </div> 
-                    <div className="tier col-12 col-sm-12 col-md-6 col-lg-6 text-left">
+                    <div className="tier col-12 text-left">
                         <p className ="info-titles col-12 text-left">Service Type:</p>
                         <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
                             <DropdownToggle title = "Tier" caret>
@@ -194,7 +192,7 @@ class Appointment extends Component {
                             </DropdownMenu>
                         </Dropdown>
                     </div>
-                    <div className="extra col-12 col-sm-12 col-md-6 col-lg-6">
+                    <div className="extra col-12">
                     <p className="calendar text-left">Custom Work:</p>
                     <MultiSelect
                         items={items}
@@ -214,7 +212,7 @@ class Appointment extends Component {
                         </div>
                     </div>
                     
-                    <div className="appointment-time col-12 col-sm-13 col-md-6 col-lg-6 text-left">
+                    <div className="appointment-time col-12 text-left">
                     <p className ="schedule col-12 text-left">Time:</p>
                     <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo} list = {this.state.time}>
                         <DropdownToggle caret>
@@ -240,7 +238,7 @@ class Appointment extends Component {
                         <button type="submit" id = "appointment-submit" value="Submit">Submit</button>  
                     </div>
                     <h6 className = "contact-time col-12 text-center">We will contact you within one business day.</h6> 
-                    <div className = "col-12">                    
+                    <div className = "col-12 text-center">                    
                         <Link className = "disclaimer-link col-12 text-center" to = "/disclaimer">guarantees & disclaimer</Link>   
                     </div>
             </form>         
