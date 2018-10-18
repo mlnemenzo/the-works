@@ -4,7 +4,7 @@ import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 // import MultiSelectReact from 'multi-select-react';
-import MultiSelect from '@kenshooui/react-multi-select';
+import MultiSelect from 'multi-select-react';
 
 class Appointment extends Component {
 
@@ -86,12 +86,18 @@ class Appointment extends Component {
 
     sendEmailToServer() {
         const contact = this.state;
-        // var baseURL = "/email";
-        axios.post('/api/email/appointment', {...contact}).then(function(response) {
+        const customWork = this.getCustomOptions();
+
+        var baseURL = "/email";
+        axios.post('/api/email/appointment', {...contact, customWork}).then(function(response) {
             console.log("Email request completed from server", response);
         }).catch(function(err) {
             console.log("Email request unsuccessful");
         })
+    }
+
+    getCustomOptions(){
+        return this.state.items.filter(item => item.value);
     }
 
     handleEvent(event) {
@@ -110,6 +116,16 @@ class Appointment extends Component {
                apptDate : 'Not a valid date.'
            })
         }
+    }
+
+    selectedBadgeClicked = (optionsList) => {
+        console.log('Badge Clicked:', optionsList);
+    
+           this.setState({ items: optionsList });
+    }
+
+    optionClicked = (optionsList) => {
+        this.setState({ items: optionsList});
     }
 
     render() {
@@ -197,8 +213,9 @@ class Appointment extends Component {
                     <div className="extra col-12">
                     <p className="calendar text-left">Custom Work:</p>
                     <MultiSelect
-                        items={items}
-                        onChange={this.handleChange}
+                        options={items}
+                        optionClicked={this.optionClicked}
+                        selectedBadgeClicked={this.selectedBadgeClicked}
                         showSearch ={false}
                         showSelectedItems ={false}
                     />
