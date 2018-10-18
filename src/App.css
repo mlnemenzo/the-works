@@ -448,6 +448,12 @@ img {
   color: white
 }
 
+.selected-options-badges, .margin-top-right, .react-calendar__month-view__weekdays__weekday {
+  color: rgb(60, 118, 61);
+  background-color: rgb(223, 240, 216);
+  text-shadow: none;
+}
+
 .appointments {
   padding: 15px
 }

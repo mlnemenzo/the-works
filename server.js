@@ -100,6 +100,11 @@ app.post('/api/email/appointment', (req, res) => {
     subject: `${name} has scheduled an appointment!`,   // Subject of the email
     html: `<h1>${name} has scheduled an appointment on:</h1>
             <br>
+            <h2>Client Info:</h2>
+            <p>Name: ${name}</p>
+            <p>Email: ${email}</p>
+            <p>Phone: ${phone}</p>
+            <p>Message: ${message}</p>
             <p>Date: ${apptDate}</p>
             <p>Time: ${appointmentTime}</p>
             <br>
@@ -113,10 +118,7 @@ app.post('/api/email/appointment', (req, res) => {
             <p>Year: ${carYear}</p>
             <p>Notes: ${carInfo}</p>
             <br>
-            <h2>Client Info:</h2>
-            <p>Email: ${email}</p>
-            <p>Phone: ${phone}</p>
-            <p>Message: ${message}</p>`         // Can be used in place of the text
+            `         // Can be used in place of the text
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
