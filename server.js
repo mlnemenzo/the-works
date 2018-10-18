@@ -85,6 +85,12 @@ app.post('/api/email/appointment', (req, res) => {
 
   console.log('APPOINMENT BODY:', req.body);
 
+  let customOptions = '';
+  
+  customWork.map(option => {
+    customOptions += `<li>${option.label}</li>`;
+  });
+
   // return res.send('Send the mail for an appointment!!');
 
   // Four important options for our mailOptions
@@ -100,7 +106,7 @@ app.post('/api/email/appointment', (req, res) => {
             <h2>Tier Level:</h2>
             <h2>${tierLevel}</h2>
             <h2>Custom Work:</h2>
-            <p>${customWork}</p>
+            <ol>${customOptions}</ol>
             <h2>Car Info:</h2>
             <p>Make: ${carMake}</p>
             <p>Model: ${carModel}</p>
