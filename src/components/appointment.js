@@ -218,6 +218,7 @@ class Appointment extends Component {
                         selectedBadgeClicked={this.selectedBadgeClicked}
                         showSearch ={false}
                         showSelectedItems ={false}
+                        showSelectAll ={true}
                     />
                     </div>
                 </div>
