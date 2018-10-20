@@ -143,19 +143,19 @@ class Appointment extends Component {
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Name:</p>
-                                    <input value = {name} type = "text" onChange = { event => this.setState({name: event.target.value})} autoComplete = "name"/>
+                                    <input value = {name} type = "text" placeholder = "Enter name" onChange = { event => this.setState({name: event.target.value})} autoComplete = "name"/>
                                 </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Email:</p>
-                                    <input value = {email} type = "email" onChange = { event => this.setState({email: event.target.value})} autoComplete = "email"/>
+                                    <input value = {email} type = "email" placeholder = "Enter email" onChange = { event => this.setState({email: event.target.value})} autoComplete = "email"/>
                                 </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Telephone:</p>
-                                    <input value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "tel"/>
+                                    <input value = {phone} placeholder = "Enter phone number" type = "phone" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "tel"/>
                                 </div>
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Message:</p>
@@ -168,19 +168,19 @@ class Appointment extends Component {
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-center">
                                 <div className="user-input text-left">
                                     <p className =" info-titles col-12 text-left">Car Make:</p>
-                                    <input value = {carMake} type = "text" onChange = { event => this.setState({carMake: event.target.value})} />
+                                    <input value = {carMake} placeholder = "Enter car make" type = "text" onChange = { event => this.setState({carMake: event.target.value})} />
                                 </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Car Model:</p>
-                                    <input value = {carModel} type = "text" onChange = { event => this.setState({carModel: event.target.value})} />
+                                    <input value = {carModel} placeholder = "Enter car model" type = "text" onChange = { event => this.setState({carModel: event.target.value})} />
                                 </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Car Year:</p>
-                                    <input value = {carYear} type = "number" onChange = { event => this.setState({carYear: event.target.value})} />
+                                    <input value = {carYear} placeholder = "Enter car year" type = "number" onChange = { event => this.setState({carYear: event.target.value})} />
                                 </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
