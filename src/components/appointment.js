@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-// import MultiSelectReact from 'multi-select-react';
 import MultiSelect from 'multi-select-react';
 
 class Appointment extends Component {
@@ -19,6 +18,7 @@ class Appointment extends Component {
             this.handleChange = this.handleChange.bind(this)
 
             this.state = {
+                value : "",
                 dropDownOpen : false,
                 dropDownOpenTwo : false,
                 name : "",
@@ -161,9 +161,7 @@ class Appointment extends Component {
                                     <p className =" info-titles col-12 text-left">Message:</p>
                                     <textarea className = "" value = {message} type = "text" onChange = { event => this.setState({message: event.target.value})} placeholder = "(Optional.)"/>
                                 </div>
-                            </div>
-                                
-
+                            </div>>             
                             <h3 className="car-info-header col-12 text-left">Car Info</h3>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-center">
                                 <div className="user-input text-left">
