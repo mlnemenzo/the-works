@@ -4,7 +4,7 @@ import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import MultiSelect from 'multi-select-react';
-import { Form, Text } from 'react-form';
+// import { Form, Text } from 'react-form';
 
 class Appointment extends Component {
 
