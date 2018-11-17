@@ -5,7 +5,6 @@
   height: 100%;
   margin: auto;
   background-color: rgb(73, 73, 73);
-  text-shadow: 1px 1px 1px black;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1rem
 
@@ -31,7 +30,6 @@ li {
 
 a {
   color: white;
-  /* text-shadow: 1px 2px 4px rgb(135, 135, 135); */
   outline-color: none
 }
 
@@ -59,7 +57,7 @@ p, h4 {
 }
 
 h5 {
-  font-size: .75em;
+  font-size: .9em;
 }
 
 td {
@@ -317,9 +315,9 @@ tr:nth-child(even) {
 }
 
 .service-info {
-  background-color: white;
+  background-color: #fff;
   color: black;
-  font-size: .75em;
+  font-size: .9em;
   border-bottom: 1px solid rgb(135, 135, 135);
   padding: 15px
 }
