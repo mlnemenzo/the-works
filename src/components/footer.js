@@ -10,7 +10,11 @@ class Footer extends Component {
                     <h5 className="contact-us">contact us:</h5>
                     <Link className = "contacdt-link text-center" to = "/contact">theworkscardetail@gmail.com</Link>
                 </div>
-                <div className="footer-number col-4">business number</div>
+                <div className="footer-number col-4">
+                    <h5 className="number">business number</h5>
+                    <h5>(951)449-6383</h5>
+                </div>
+                
             </div>
         )
     }
