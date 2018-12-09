@@ -82,7 +82,7 @@ tr:nth-child(even) {
 .btn, .btn-outline-secondary {
   box-shadow: 2px 2px 5px rgb(24, 24, 24);
   color: white;
-  background-color: #90b5c5;
+  background-color: #678c9b;
   outline: none
 }
 
