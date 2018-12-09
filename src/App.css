@@ -428,6 +428,17 @@ img {
 
 /* ////////////////////////////////// appointments ///////////////////////////////////////// */
 
+.multi-select .arrow {
+  margin: auto;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 12px;
+  width: 20px;
+  display: inline-block;
+  cursor: pointer;
+  color: grey;
+}
+
 .react-calendar__tile:focus {
   background-color: rgb(199, 75, 75);
   color: white
@@ -548,7 +559,7 @@ textarea {
   background-color: rgb(36, 36, 36);
   padding-bottom: 75px;
   margin-top: 80px;
-  height: 85px;
+  height: 140px;
   padding-top: 20px
 }
 

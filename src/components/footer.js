@@ -10,8 +10,13 @@ class Footer extends Component {
                     <Link className = "contacdt-link text-center" to = "/contact">theworkscardetail@gmail.com</Link>
                 </div>
                 <div className="social-media col-4">
-                    <h5 className="contact-us">contact us:</h5>
-                    
+                    <h5 className="contact-us">hours</h5>
+                        <ul>
+                            <li>Mon-Wed: 9am - 5pm</li>
+                            <li>Thursday: 9am - 7pm</li>
+                            <li>Fri-Sat: By appointment only</li>
+                            <li>Sunday: Closed</li>
+                        </ul>
                 </div>
                 <div className="footer-number col-4">
                     <h5 className="number">business number</h5>
