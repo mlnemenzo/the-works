@@ -391,14 +391,17 @@ tr:nth-child(even) {
 
 textarea {
   height: 150px;
-  width: 350px;
+  width: 250px;
 }
 
 textarea, input {
   box-shadow: 2px 2px 5px rgb(24, 24, 24);
   outline: none;
   border-radius: 2px;
-  width: 300px
+}
+
+input {
+  width: 200px
 }
 
 .contact-form {
@@ -491,10 +494,10 @@ img {
 .text-area {
   padding: 15px;
 }
-
+/* 
 textarea {
   width: 400px
-}
+} */
 
 .schedule {
   padding-top: 15px;
