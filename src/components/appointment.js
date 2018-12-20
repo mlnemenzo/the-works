@@ -6,6 +6,9 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap
 import MultiSelect from 'multi-select-react';
 // import { Form, Text } from 'react-form';
 
+const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const phoneRegex = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$/;
+
 class Appointment extends Component {
 
     constructor(props) {
@@ -19,6 +22,7 @@ class Appointment extends Component {
             this.handleChange = this.handleChange.bind(this)
 
             this.state = {
+                errors: {},
                 value : "",
                 dropDownOpen : false,
                 dropDownOpenTwo : false,
@@ -103,7 +107,36 @@ class Appointment extends Component {
 
     handleEvent(event) {
         event.preventDefault();
-        this.sendEmailToServer();
+
+        if(this.validateForm()){
+            this.sendEmailToServer();
+        }
+    }
+
+    validateForm(){
+        const { name, email, phone, message, carMake, carModel, carYear, carInfo, items } = this.state;
+        const errors = {};
+
+        if(!name){
+            errors.name = 'Please enter your name';
+        }
+
+        if(!email){
+            errors.email = 'Please enter your email';
+        } else if(!emailRegex.test(email)){
+            errors.email = 'Please enter a valid email address, ex: john@mail.com';
+        }
+
+        if(!phone){
+            errors.phone = 'Please enter your phone number';
+        } else {
+            errors.phone = 'Please enter a valid US phone number, ex: (555) 555-5555';
+        }
+        
+        this.setState({errors: errors});
+
+        return Object.keys(errors).length === 0;
+
     }
 
     onClickDay(date) { 
@@ -131,7 +164,7 @@ class Appointment extends Component {
 
     render() {
 
-        const { name, email, phone, message, carMake, carModel, carYear, carInfo, items } = this.state;
+        const { errors, name, email, phone, message, carMake, carModel, carYear, carInfo, items } = this.state;
                 
         return (
             <div className="appointment-body row">
@@ -145,18 +178,21 @@ class Appointment extends Component {
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Name:</p>
                                     <input value = {name} type = "text" placeholder = "Enter name" onChange = { event => this.setState({name: event.target.value})} autoComplete = "name"/>
+                                    <p className="text-danger">{errors.name}</p>
                                 </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Email:</p>
                                     <input value = {email} type = "email" placeholder = "Enter email" onChange = { event => this.setState({email: event.target.value})} autoComplete = "email"/>
+                                    <p className="text-danger">{errors.email}</p>
                                 </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Telephone:</p>
                                     <input value = {phone} placeholder = "Enter phone number" type = "phone" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "tel"/>
+                                    <p className="text-danger">{errors.phone}</p>
                                 </div>
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Message:</p>
