@@ -114,7 +114,7 @@ class Appointment extends Component {
     }
 
     validateForm(){
-        const { name, email, phone, message, carMake, carModel, carYear, carInfo, items } = this.state;
+        const { name, email, phone, carMake, carModel, carYear, tierLevel, appointmentTime} = this.state;
         const errors = {};
 
         if(!name){
@@ -129,10 +129,30 @@ class Appointment extends Component {
 
         if(!phone){
             errors.phone = 'Please enter your phone number';
-        } else {
+        } else if (!phoneRegex.test(phone)){
             errors.phone = 'Please enter a valid US phone number, ex: (555) 555-5555';
         }
         
+        if(!carMake) {
+            errors.carMake = "Please enter car manufacturer"
+        }
+
+        if(!carModel) {
+            errors.carModel = "Please enter car model"
+        }
+
+        if(!carYear) {
+            errors.carYear = "Please enter car models year"
+        }
+
+        if(!tierLevel) {
+            errors.tierLevel = "Please select service type"
+        }
+
+        if(!appointmentTime) {
+            errors.appointmentTime = "Please schedule time"
+        }
+
         this.setState({errors: errors});
 
         return Object.keys(errors).length === 0;
@@ -204,18 +224,21 @@ class Appointment extends Component {
                                 <div className="user-input text-left">
                                     <p className =" info-titles col-12 text-left">Car Make:</p>
                                     <input value = {carMake} placeholder = "Enter car make" type = "text" onChange = { event => this.setState({carMake: event.target.value})} />
+                                    <p className="text-danger">{errors.carMake}</p>
                                 </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Car Model:</p>
                                     <input value = {carModel} placeholder = "Enter car model" type = "text" onChange = { event => this.setState({carModel: event.target.value})} />
+                                    <p className="text-danger">{errors.carModel}</p>
                                 </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
                                 <div className="user-input">
                                     <p className =" info-titles col-12 text-left">Car Year:</p>
                                     <input value = {carYear} placeholder = "Enter car year" type = "number" onChange = { event => this.setState({carYear: event.target.value})} />
+                                    <p className="text-danger">{errors.carYear}</p>
                                 </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
@@ -243,6 +266,7 @@ class Appointment extends Component {
                             <DropdownItem divider />
                             <DropdownItem onClick = {() => this.selectTier('PLATINUM - 170/190')}>Platinum - 170/190</DropdownItem>
                             </DropdownMenu>
+                            <p className="text-danger">{errors.tierLevel}</p>
                         </Dropdown>
                     </div>
                     <div className="extra col-12">
@@ -283,7 +307,9 @@ class Appointment extends Component {
                         <DropdownItem onClick = {() => this.selectTime('06:00 - 07:00')}>06:00 - 07:00 (Thursdays Only)</DropdownItem>
                         <DropdownItem >Sundays Off</DropdownItem>
                         </DropdownMenu>
+                        <p className="text-danger">{errors.appointmentTime}</p>
                     </Dropdown>
+                    
                     </div>
                     
                     <div className="appointment-time col-12 text-left">
