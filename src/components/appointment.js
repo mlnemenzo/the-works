@@ -189,8 +189,47 @@ class Appointment extends Component {
         return (
             <div className="appointment-body row">
             <form className = "client-info col-12 text-left" onSubmit = {this.handleEvent.bind(this)}>
+                <h1 className="appointments text-center col-12">Book an Appointment:</h1>
+                <div className="form-group">
+                    <label htmlFor="enter-name col-12" className="enter-name">Name</label>
+                    <input className="form-control" value = {name} type = "text" placeholder = "Enter name" onChange = { event => this.setState({name: event.target.value})} autoComplete = "name"/>
+                    <p className="text-danger">{errors.name}</p>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="enter-email col-12" className="enter-email">Email</label>
+                    <input className="form-control" value = {email} type = "text" placeholder = "Enter email" onChange = { event => this.setState({email: event.target.value})} autoComplete = "email"/>
+                    <p className="text-danger">{errors.email}</p>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="enter-phone col-12" className="enter-phone">Telephone</label>
+                    <input className="form-control" value = {phone} type = "text" placeholder = "Enter phone number" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "phone"/>
+                    <p className="text-danger">{errors.phone}</p>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Additional information</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" value = {message} type = "text" onChange = { event => this.setState({message: event.target.value})} placeholder = "Optional." rows="3"></textarea>
+                </div>
+                <h1 className="car-info text-center col-12">Vehicle Info</h1>
+                <div className="form-group">
+                    <label htmlFor="enter-carmake col-12" className="enter-carmake">Car Make</label>
+                    <input className="form-control" value = {carMake} type = "text" placeholder = "Car Make" onChange = { event => this.setState({carMake: event.target.value})} autoComplete = "phone"/>
+                    <p className="text-danger">{errors.carMake}</p>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="enter-carmodel col-12" className="enter-carmodel">Car Model</label>
+                    <input className="form-control" value = {carModel} type = "text" placeholder = "Car Model" onChange = { event => this.setState({carModel: event.target.value})} autoComplete = "phone"/>
+                    <p className="text-danger">{errors.carModel}</p>
+                </div><div className="form-group">
+                    <label htmlFor="enter-caryear col-12" className="enter-caryear">Car Model</label>
+                    <input className="form-control" value = {carYear} type = "text" placeholder = "Car Year" onChange = { event => this.setState({carYear: event.target.value})} autoComplete = "phone"/>
+                    <p className="text-danger">{errors.carYear}</p>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Additional requests</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" value = {carInfo} type = "text" onChange = { event => this.setState({carInfo: event.target.value})} placeholder = "Optional." rows="3"></textarea>
+                </div>
+
                 <div className="service-type col-12 row">
-                    <h1 className="appointments text-center col-12">Book an Appointment:</h1>
                     <div className="text-area row col-12 text-left">
                         <div className = "car-info col-12 text-left">
                         <h3 className="contact-info col-12 text-left">Contact Info</h3>
