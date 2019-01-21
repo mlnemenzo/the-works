@@ -4,7 +4,6 @@ import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import MultiSelect from 'multi-select-react';
-// import { Form, Text } from 'react-form';
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const phoneRegex = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$/;
@@ -130,7 +129,7 @@ class Appointment extends Component {
         if(!phone){
             errors.phone = 'Please enter your phone number';
         } else if (!phoneRegex.test(phone)){
-            errors.phone = 'Please enter a valid US phone number, ex: (555) 555-5555';
+            errors.phone = 'Please enter a valid US phone number, and/or, valid formats ex: (555) 555-5555';
         }
         
         if(!carMake) {
@@ -185,11 +184,11 @@ class Appointment extends Component {
     render() {
 
         const { errors, name, email, phone, message, carMake, carModel, carYear, carInfo, items } = this.state;
-                
+        console.log("list of errors", errors)
         return (
             <div className="appointment-body row">
             <form className = "client-info col-12 text-left" onSubmit = {this.handleEvent.bind(this)}>
-                <h1 className="appointments text-center col-12">Book an Appointment:</h1>
+                <h1 className="appointments text-center col-12">Book an Appointment</h1>
                 <div className="form-group">
                     <label htmlFor="enter-name col-12" className="enter-name">Name</label>
                     <input className="form-control" value = {name} type = "text" placeholder = "Enter name" onChange = { event => this.setState({name: event.target.value})} autoComplete = "name"/>
@@ -202,12 +201,13 @@ class Appointment extends Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="enter-phone col-12" className="enter-phone">Telephone</label>
+                    <small id="phoneHelp" class="form-text text-muted">Please use valid US format, ex: (555) 555-5555</small>
                     <input className="form-control" value = {phone} type = "text" placeholder = "Enter phone number" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "phone"/>
                     <p className="text-danger">{errors.phone}</p>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Additional information</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" value = {message} type = "text" onChange = { event => this.setState({message: event.target.value})} placeholder = "Optional." rows="3"></textarea>
+                <div className="form-group">
+                    <label htmlFor="exampleFormControlTextarea1">Additional information</label>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" value = {message} type = "text" onChange = { event => this.setState({message: event.target.value})} placeholder = "Optional." rows="3"></textarea>
                 </div>
                 <h1 className="car-info text-center col-12">Vehicle Info</h1>
                 <div className="form-group">
@@ -219,80 +219,23 @@ class Appointment extends Component {
                     <label htmlFor="enter-carmodel col-12" className="enter-carmodel">Car Model</label>
                     <input className="form-control" value = {carModel} type = "text" placeholder = "Car Model" onChange = { event => this.setState({carModel: event.target.value})} autoComplete = "phone"/>
                     <p className="text-danger">{errors.carModel}</p>
-                </div><div className="form-group">
+                </div>
+                <div className="form-group">
                     <label htmlFor="enter-caryear col-12" className="enter-caryear">Car Model</label>
                     <input className="form-control" value = {carYear} type = "text" placeholder = "Car Year" onChange = { event => this.setState({carYear: event.target.value})} autoComplete = "phone"/>
                     <p className="text-danger">{errors.carYear}</p>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Additional requests</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" value = {carInfo} type = "text" onChange = { event => this.setState({carInfo: event.target.value})} placeholder = "Optional." rows="3"></textarea>
+                <div className="form-group">
+                    <label htmlFor="exampleFormControlTextarea1">Additional Requests</label>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" value = {carInfo} type = "text" onChange = { event => this.setState({carInfo: event.target.value})} placeholder = "Optional." rows="3"></textarea>
                 </div>
+                <h1 className="services text-center col-12">Services</h1>
 
-                <div className="service-type col-12 row">
-                    <div className="text-area row col-12 text-left">
-                        <div className = "car-info col-12 text-left">
-                        <h3 className="contact-info col-12 text-left">Contact Info</h3>
-                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
-                                <div className="user-input">
-                                    <p className =" info-titles col-12 text-left">Name:</p>
-                                    <input value = {name} type = "text" placeholder = "Enter name" onChange = { event => this.setState({name: event.target.value})} autoComplete = "name"/>
-                                    <p className="text-danger">{errors.name}</p>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
-                                <div className="user-input">
-                                    <p className =" info-titles col-12 text-left">Email:</p>
-                                    <input value = {email} type = "email" placeholder = "Enter email" onChange = { event => this.setState({email: event.target.value})} autoComplete = "email"/>
-                                    <p className="text-danger">{errors.email}</p>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
-                                <div className="user-input">
-                                    <p className =" info-titles col-12 text-left">Telephone:</p>
-                                    <input value = {phone} placeholder = "Enter phone number" type = "phone" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "tel"/>
-                                    <p className="text-danger">{errors.phone}</p>
-                                </div>
-                                <div className="user-input">
-                                    <p className =" info-titles col-12 text-left">Message:</p>
-                                    <textarea className = "" value = {message} type = "text" onChange = { event => this.setState({message: event.target.value})} placeholder = "(Optional.)"/>
-                                </div>
-                            </div>             
-                            <h3 className="car-info-header col-12 text-left">Car Info</h3>
-                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                <div className="user-input text-left">
-                                    <p className =" info-titles col-12 text-left">Car Make:</p>
-                                    <input value = {carMake} placeholder = "Enter car make" type = "text" onChange = { event => this.setState({carMake: event.target.value})} />
-                                    <p className="text-danger">{errors.carMake}</p>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
-                                <div className="user-input">
-                                    <p className =" info-titles col-12 text-left">Car Model:</p>
-                                    <input value = {carModel} placeholder = "Enter car model" type = "text" onChange = { event => this.setState({carModel: event.target.value})} />
-                                    <p className="text-danger">{errors.carModel}</p>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
-                                <div className="user-input">
-                                    <p className =" info-titles col-12 text-left">Car Year:</p>
-                                    <input value = {carYear} placeholder = "Enter car year" type = "number" onChange = { event => this.setState({carYear: event.target.value})} />
-                                    <p className="text-danger">{errors.carYear}</p>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-left">
-                                <div className="user-input">
-                                    <p className =" info-titles col-12 text-left">Extra Requests:</p>
-                                    <textarea value = {carInfo} type = "text" onChange = { event => this.setState({carInfo: event.target.value})} placeholder = "(Optional.)"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className = "client-info col-12 text-left" onSubmit = {this.setState.bind(this)}>
-                        </div>
-                    </div> 
+                <div className="form-group service-type col-12 row">
+                    
                     <div className="tier col-12 text-left">
-                        <p className ="info-titles col-12 text-left">Service Type:</p>
-                        <Dropdown isOpen={this.state.dropDownOpen} toggle={this.toggle}>
+                        <label htmlFor="exampleFormControlTextarea1">Service Type</label>
+                        <Dropdown className= "col-12" isOpen={this.state.dropDownOpen} toggle={this.toggle}>
                             <DropdownToggle title = "Tier" caret>
                             {this.state.tierLevel}
                             </DropdownToggle>
@@ -356,7 +299,7 @@ class Appointment extends Component {
                     </div>
                 </div>
                     <div className = "form-submit col-12 text-center">
-                        <button type="submit" id = "appointment-submit" value="Submit">SUBMIT</button>  
+                        <button type="submit" id = "appointment-submit" value="Submit">SUBMIT</button> 
                     </div>
                     <h6 className = "contact-time col-12 text-center">We will contact you within one business day.</h6> 
                     <div className = "col-12 text-center">                    

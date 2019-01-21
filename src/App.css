@@ -126,6 +126,19 @@ tr:nth-child(even) {
 .btn-danger {
   background-color: rgb(199, 75, 75)
 }
+
+.text-danger {
+  margin: 0;
+  padding: 0
+}
+
+.text-muted {
+  text-shadow: 1px 1px 1px black
+}
+
+.was-validated:invalid {
+  border: 2px solid red
+}
 /* /////////////////////////////////// header ////////////////////////////////////////////// */
 
 #navbarContent {
@@ -494,16 +507,12 @@ img {
 .text-area {
   padding: 15px;
 }
-/* 
-textarea {
-  width: 400px
-} */
 
 .schedule {
   padding-top: 15px;
 }
 
-.car-info, .client-info {
+.car-info, .client-info, .services {
   border-bottom: 1px solid white;
   padding: 15px 
 }
