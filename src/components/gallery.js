@@ -8,6 +8,10 @@ import tesla3 from '../assets/images/tesla_front.jpg';
 import tacoma from '../assets/images/tacoma_drivers_side.jpg';
 import fj from '../assets/images/fj_drivers.jpg';
 import fj2 from '../assets/images/fj_passenger.jpg';
+import acura from '../assets/images/acura.jpg';
+import before from '../assets/images/before.jpg';
+import after from '../assets/images/after.jpg';
+import mike from '../assets/images/mike.jpg'
 
 // const styles = { height: 400, width: "100%" };
 
@@ -119,7 +123,19 @@ class Gallery extends Component {
                             <div style = {{ height: 500 }}>
                                 <img style={{ width: "500", height: "100%"}} src = {fj2} alt = "img not available"/>
                             <div className="carousel-caption">Toyota FJ Cruiser Paint Correction</div>
-                            </div>        
+                            </div>
+                            <div style = {{ height: 500 }}>
+                                <img style={{ width: "500", height: "100%"}} src = {before} alt = "img not available"/>
+                            <div className="carousel-caption">Acura TSX before headlight restoration</div>
+                            </div> 
+                            <div style = {{ height: 500 }}>
+                                <img style={{ width: "500", height: "100%"}} src = {after} alt = "img not available"/>
+                            <div className="carousel-caption">Acura TSX after headlight restoration</div>
+                            </div> 
+                            <div style = {{ height: 500 }}>
+                                <img style={{ width: "500", height: "100%"}} src = {acura} alt = "img not available"/>
+                            <div className="carousel-caption">Acura TSX Polish/ Paint Correction</div>
+                            </div>            
                         </React_Bootstrap_Carousel>
                   </div>
                   
