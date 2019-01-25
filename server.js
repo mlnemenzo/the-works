@@ -10,7 +10,7 @@ const port = 9000;
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
-app.use(express.static(resolve(__dirname, 'public')));
+app.use(express.static(resolve(__dirname, 'build')));
 
 // Add headersv middlware are configureables, 
 app.use(function (req, res, next) {
@@ -134,7 +134,7 @@ app.post('/api/email/appointment', (req, res) => {
 // app.post('/api/email/appointment', (req, res) =>
 
 app.get('*', (req, res) => {
-  res.sendFile(resolve(__dirname, 'public', 'index.html'));
+  res.sendFile(resolve(__dirname, 'build', 'index.html'));
 });
 
 app.listen(port, () => {
