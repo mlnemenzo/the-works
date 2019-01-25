@@ -136,9 +136,6 @@ tr:nth-child(even) {
   text-shadow: 1px 1px 1px black
 }
 
-.was-validated:invalid {
-  border: 2px solid red
-}
 /* /////////////////////////////////// header ////////////////////////////////////////////// */
 
 #navbarContent {

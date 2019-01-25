@@ -107,9 +107,11 @@ class Appointment extends Component {
     handleEvent(event) {
         event.preventDefault();
 
-        if(this.validateForm()){
-            this.sendEmailToServer();
-        }
+        console.log('Is Valid:', this.validateForm());
+
+        // if(this.validateForm()){
+        //     this.sendEmailToServer();
+        // }
     }
 
     validateForm(){
@@ -201,7 +203,7 @@ class Appointment extends Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="enter-phone col-12" className="enter-phone">Telephone</label>
-                    <small id="phoneHelp" class="form-text text-muted">Please use valid US format, ex: (555) 555-5555</small>
+                    <small id="phoneHelp" className="form-text text-muted">Please use valid US format, ex: (555) 555-5555</small>
                     <input className="form-control" value = {phone} type = "text" placeholder = "Enter phone number" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "phone"/>
                     <p className="text-danger">{errors.phone}</p>
                 </div>
@@ -299,7 +301,7 @@ class Appointment extends Component {
                     </div>
                 </div>
                     <div className = "form-submit col-12 text-center">
-                        <button type="submit" id = "appointment-submit" value="Submit">SUBMIT</button> 
+                        <button id="appointment-submit">SUBMIT</button> 
                     </div>
                     <h6 className = "contact-time col-12 text-center">We will contact you within one business day.</h6> 
                     <div className = "col-12 text-center">                    

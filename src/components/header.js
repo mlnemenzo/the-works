@@ -56,9 +56,6 @@ class Header extends Component {
                                                 <Link className="nav-link nav-link-text boldLink" to="/appointment" onClick={this.toggleNav}>Appointments</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link nav-link-text" to="/payments" onClick = {this.toggleNav}>Payments</Link>
-                                            </li>
-                                            <li className="nav-item">
                                                 <Link className="nav-link nav-link-text boldLink" to="/contact" onClick={this.toggleNav}>Contact</Link>
                                             </li>
                                             <li className="nav-item">

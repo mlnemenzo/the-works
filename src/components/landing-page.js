@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import landing from '../assets/images/landing_banner.jpg';
-import ceramic from '../assets/images/ceramic-coating.jpeg'
+import tesla from '../assets/images/tesla.jpg'
 
 
 class LandingPage extends Component {
@@ -57,9 +57,10 @@ class LandingPage extends Component {
                 </div>
                 <div className= "services-landing col-10 offset-1 text-center">
                     <h2 className= "col-12 text-center">OUR SERVICES</h2>
-                    <div className="services-image">
-                        <img src={ceramic} alt = "img not available"/>
-                    </div>
+                    <div style = {{ height: 500 }}>
+                        <img style={{ width: "500", height: "100%"}} src = {tesla} alt = "img not available"/>
+                    <div className="carousel-caption">Tesla Ceramic Coating</div>
+                    </div>  
                     <p className = "d-flex justify-content-center">We offer a full range of Auto Detailing and Auto Reconditioning to vehicle owners. Our professionals know how to handle a wide range of services.</p>
                     <div className="service-images">
                     </div>

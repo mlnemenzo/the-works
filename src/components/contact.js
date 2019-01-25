@@ -62,17 +62,17 @@ class Contact extends Component {
 
     handleEvent(event) {
         event.preventDefault();
-        this.sendEmailToServer();  
-
-        this.setState({
-            name : "",
-            email : "",
-            phone : "",
-            message : "",
-        })
+        
 
         if(this.validateForm()){
-            this.sendEmailToServer();
+            this.sendEmailToServer();  
+
+            this.setState({
+                name : "",
+                email : "",
+                phone : "",
+                message : "",
+            });
         }
     }
 
