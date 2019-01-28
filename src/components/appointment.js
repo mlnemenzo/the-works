@@ -109,9 +109,30 @@ class Appointment extends Component {
 
         console.log('Is Valid:', this.validateForm());
 
-        // if(this.validateForm()){
-        //     this.sendEmailToServer();
-        // }
+        if(this.validateForm()) {
+            this.sendEmailToServer();
+
+            this.setState({
+                errors: {},
+                value : "",
+                dropDownOpen : false,
+                dropDownOpenTwo : false,
+                name : "",
+                email : "",
+                phone : "",
+                message : "",
+                carMake : "",
+                carModel : "",
+                carYear : "",
+                carInfo : "",
+                tier : "",
+                time : "", 
+                date : new Date(),
+                minDate : new Date(),
+            })
+        }
+
+      
     }
 
     validateForm(){
