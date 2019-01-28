@@ -1,6 +1,6 @@
 // Replace the following
 
 module.exports = {
-    USERNAME: 'msantostheworks@gmail.com',
-    PASSWORD: 'bananaRacecarGreenTea23'
+    USERNAME: 'theworkscardetail@gmail.com',
+    PASSWORD: '112271*msss'
 }
