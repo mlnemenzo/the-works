@@ -55,7 +55,7 @@ app.post('/api/email', (req, res) => {
   // Four important options for our mailOptions
   const mailOptions = {
     from: 'msantostheworks@gmail.com',      // Sender of the email 
-    to: 'mnemenzo82@gmail.com',                              // Recipient of the email
+    to: 'theworkscardetail@gmail.com',                              // Recipient of the email
     subject: `${name} has contacted you`,   // Subject of the email
     // text: `${name} has a question:  ${message} || email : ${email} phone number: ${phone}`                          // Message of the email
     html: `<h1>${name} has a question:</h1>
@@ -96,7 +96,7 @@ app.post('/api/email/appointment', (req, res) => {
   // Four important options for our mailOptions
   const mailOptions = {
     from: 'msantostheworks@gmail.com',      // Sender of the email 
-    to: 'mnemenzo82@gmail.com',                              // Recipient of the email
+    to: 'theworkscardetail@gmail.com',                              // Recipient of the email
     subject: `${name} has scheduled an appointment!`,   // Subject of the email
     html: `<h1>${name} has scheduled an appointment on:</h1>
             <br>
