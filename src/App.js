@@ -7,7 +7,6 @@ import AboutUs from './components/about-us';
 import Appointment from './components/appointment';
 import Contact from './components/contact';
 import Gallery from './components/gallery';
-import Payments from './components/payments';
 import Services from './components/services';
 import Disclaimer from './components/disclaimer';
 import Footer from './components/footer';

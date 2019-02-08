@@ -1,11 +1,6 @@
 {
   "name": "the-works",
   "version": "0.1.0",
-  "proxy": {
-    "/api/*": {
-      "target": "http://localhost:9000"
-    }
-  },
   "private": true,
   "dependencies": {
     "@kenshooui/react-multi-select": "^1.0.58",
