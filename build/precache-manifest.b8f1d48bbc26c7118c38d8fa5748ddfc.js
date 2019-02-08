@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/tacoma_drivers_side.1cdd17bf.jpg"
   },
   {
-    "revision": "156087b8b75567b9389f",
+    "revision": "1f47ed7ea16bd39825cd",
     "url": "/static/css/main.de4c3dea.chunk.css"
   },
   {
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/static/media/tesla_front.92c0d8a2.jpg"
   },
   {
-    "revision": "156087b8b75567b9389f",
-    "url": "/static/js/main.156087b8.chunk.js"
+    "revision": "1f47ed7ea16bd39825cd",
+    "url": "/static/js/main.1f47ed7e.chunk.js"
   },
   {
     "revision": "97e2f581247e49d86c5beff194a8b2af",
@@ -72,10 +72,6 @@ self.__precacheManifest = [
     "url": "/static/media/react-bootstrap-carousel.21823303.eot"
   },
   {
-    "revision": "f7448c0408e7a78012a82def0fb9e2fe",
-    "url": "/static/media/react-bootstrap-carousel.f7448c04.ttf"
-  },
-  {
     "revision": "2fe6d179ea5aa1ceab26113e77e13da4",
     "url": "/static/media/react-bootstrap-carousel.2fe6d179.svg"
   },
@@ -84,11 +80,15 @@ self.__precacheManifest = [
     "url": "/static/media/react-bootstrap-carousel.c746c488.woff"
   },
   {
+    "revision": "f7448c0408e7a78012a82def0fb9e2fe",
+    "url": "/static/media/react-bootstrap-carousel.f7448c04.ttf"
+  },
+  {
     "revision": "392d8f587b5f03ef8c4e",
     "url": "/static/css/1.9e406fd8.chunk.css"
   },
   {
-    "revision": "b0350a73a2ded5f532d712820f714f97",
+    "revision": "66a2e8db516c67546a8aa70a713de940",
     "url": "/index.html"
   }
 ];

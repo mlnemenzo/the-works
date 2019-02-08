@@ -1,13 +1,13 @@
 {
   "main.css": "/static/css/main.de4c3dea.chunk.css",
-  "main.js": "/static/js/main.156087b8.chunk.js",
-  "main.js.map": "/static/js/main.156087b8.chunk.js.map",
+  "main.js": "/static/js/main.1f47ed7e.chunk.js",
+  "main.js.map": "/static/js/main.1f47ed7e.chunk.js.map",
   "static/css/1.9e406fd8.chunk.css": "/static/css/1.9e406fd8.chunk.css",
   "static/js/1.392d8f58.chunk.js": "/static/js/1.392d8f58.chunk.js",
   "static/js/1.392d8f58.chunk.js.map": "/static/js/1.392d8f58.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/react-bootstrap-carousel.css": "/static/media/react-bootstrap-carousel.2fe6d179.svg",
+  "static/media/react-bootstrap-carousel.css": "/static/media/react-bootstrap-carousel.c746c488.woff",
   "static/media/tesla.jpg": "/static/media/tesla.6d9a8f65.jpg",
   "static/media/mike2.jpg": "/static/media/mike2.6ea90739.jpg",
   "static/media/the_works.jpg": "/static/media/the_works.d8add582.jpg",
@@ -24,6 +24,6 @@
   "static/css/main.de4c3dea.chunk.css.map": "/static/css/main.de4c3dea.chunk.css.map",
   "static/css/1.9e406fd8.chunk.css.map": "/static/css/1.9e406fd8.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.8b2c2a34af01878eafd81eb07e6bb3f0.js": "/precache-manifest.8b2c2a34af01878eafd81eb07e6bb3f0.js",
+  "precache-manifest.b8f1d48bbc26c7118c38d8fa5748ddfc.js": "/precache-manifest.b8f1d48bbc26c7118c38d8fa5748ddfc.js",
   "service-worker.js": "/service-worker.js"
 }
