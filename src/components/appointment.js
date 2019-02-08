@@ -244,7 +244,7 @@ class Appointment extends Component {
                     <p className="text-danger">{errors.carModel}</p>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="enter-caryear col-12" className="enter-caryear">Car Model</label>
+                    <label htmlFor="enter-caryear col-12" className="enter-caryear">Car Year</label>
                     <input className="form-control" value = {carYear} type = "text" placeholder = "Car Year" onChange = { event => this.setState({carYear: event.target.value})} autoComplete = "phone"/>
                     <p className="text-danger">{errors.carYear}</p>
                 </div>
