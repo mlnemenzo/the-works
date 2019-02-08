@@ -135,7 +135,7 @@ class Gallery extends Component {
                             <div style = {{ height: 500 }}>
                                 <img style={{ width: "500", height: "100%"}} src = {acura} alt = "img not available"/>
                             <div className="carousel-caption">Acura TSX Polish/ Paint Correction</div>
-                            </div>            
+                            </div>             
                         </React_Bootstrap_Carousel>
                   </div>
                   
