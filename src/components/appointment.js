@@ -111,8 +111,9 @@ class Appointment extends Component {
 
         if(this.validateForm()) {
             this.sendEmailToServer();
-
+            
             this.setState({
+
                 errors: {},
                 value : "",
                 dropDownOpen : false,
@@ -129,6 +130,17 @@ class Appointment extends Component {
                 time : "", 
                 date : new Date(),
                 minDate : new Date(),
+                items : [{id: 1, label :'Engine Detail - $55.00'}, 
+                    {id : 2, label :'Headlight Restoration - $55.00'},
+                    {id : 3, label : 'Aluminum and/or Chrome Polish - $35.00'}, 
+                    {id : 4, label : 'Concentrated Scratch Correction - $55.00/Panel'},
+                    {id : 5, label : 'Water Spots Removal - $55.00/Panel'},
+                    {id : 6, label : 'Trim & Plastic Coating - $55.00'}, 
+                    {id : 7, label : 'Fabric & Leather Protection & Restoration (Interior & Exterior) - $55.00'}, 
+                    {id : 8, label : 'Ozone Decontamination - $75.00'}, 
+                    {id : 9, label : 'Glass Polishing and Restoration - $75.00'},
+                    {id : 10, label : 'R1 Ceramic Coating - $650.00' }],
+                selectedItems : [],
             })
         }
 
@@ -300,18 +312,11 @@ class Appointment extends Component {
                         {this.state.appointmentTime}
                         </DropdownToggle>
                         <DropdownMenu> 
-                        <DropdownItem onClick = {() => this.selectTime('09:00 - 10:00')}>09:00 - 10:00</DropdownItem>
-                        <DropdownItem onClick = {() => this.selectTime('10:00 - 11:00')}>10:00 - 11:00</DropdownItem>
-                        <DropdownItem onClick = {() => this.selectTime('11:00 - 12:00')}>11:00 - 12:00</DropdownItem>
-                        <DropdownItem onClick = {() => this.selectTime('12:00 - 01:00')}>12:00 - 01:00</DropdownItem>
-                        <DropdownItem onClick = {() => this.selectTime('01:00 - 02:00')}>01:00 - 02:00</DropdownItem> 
-                        <DropdownItem onClick = {() => this.selectTime('02:00 - 03:00')}>02:00 - 03:00</DropdownItem>
-                        <DropdownItem onClick = {() => this.selectTime('03:00 - 04:00')}>03:00 - 04:00</DropdownItem>
-                        <DropdownItem onClick = {() => this.selectTime('04:00 - 05:00')}>04:00 - 05:00</DropdownItem>
-                        <DropdownItem onClick = {() => this.selectTime('05:00 - 06:00')}>05:00 - 06:00</DropdownItem>
-                        <DropdownItem onClick = {() => this.selectTime('06:00 - 07:00')}>06:00 - 07:00 (Thursdays Only)</DropdownItem>
-                        <DropdownItem >Sundays Off</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('09:00am')}>09:00am</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('12:00pm')}>12:00pm</DropdownItem>
+                        <DropdownItem onClick = {() => this.selectTime('3:00pm')}>3:00pm</DropdownItem>
                         </DropdownMenu>
+                        <p className="apptHours text-center">Times may vary depending on location and special services requested. Will confirm appointment within 24 hours.</p>
                         <p className="text-danger">{errors.appointmentTime}</p>
                     </Dropdown>
                     
