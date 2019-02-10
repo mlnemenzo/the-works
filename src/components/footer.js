@@ -12,8 +12,7 @@ class Footer extends Component {
                 <div className="social-media col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                     <h5 className="contact-us">hours</h5>
                         <ul>
-                            <li>Mon-Wed: 9am - 5pm</li>
-                            <li>Thursday: 9am - 7pm</li>
+                            <li>Mon-Thurs: 9am - 5pm</li>
                             <li>Fri-Sat: By appointment only</li>
                             <li>Sunday: Closed</li>
                         </ul>

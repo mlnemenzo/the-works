@@ -119,7 +119,8 @@ class Contact extends Component {
                     <div className = "call col-12 col-sm-12 col-md-4 col-lg-4">
                         <h3 className = "d-flex justify-content-center">Call Us Now At</h3>
                         <ul>
-                            <li className = "text-center"><span className="glyphicons glyphicons-call-outgoing"></span>(951)449-6383</li>                       
+                            <li className = "text-center"><span className="glyphicons glyphicons-call-outgoing"></span>(951)449-6383</li>
+                            <li className= "text-center">(951) 420-5555</li>                       
                         </ul>
                     </div>
                     <div className = "email col-12 col-sm-12 col-md-4 col-lg-4">
@@ -133,8 +134,7 @@ class Contact extends Component {
                     <div className = "availability col-12 col-sm-12 col-md-4 col-lg-4">
                         <h3>Availability</h3>
                         <ul>
-                            <li className = "text-center"><strong>Mon-Wed: </strong>9AM-5PM</li>
-                            <li className = "text-center"><strong>Thursday: </strong>9AM-7PM</li>
+                            <li className = "text-center"><strong>Mon-Thurs: </strong>9AM-5PM</li>
                             <li className = "text-center"><strong>Fri-Sat: </strong>By Appointment Only</li>
                             <li className = "text-center"><strong>Sunday: </strong>Closed</li>
                         </ul>
