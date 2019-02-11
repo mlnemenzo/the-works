@@ -380,7 +380,14 @@ tr:nth-child(even) {
 }
 
 .about-image {
-  transform: rotate(270deg)
+  transform: rotate(270deg);
+}
+
+.about-img > img {
+  margin: 180px 65px;
+  width: 100%;
+  box-shadow: 2px 3px 5px rgb(24, 24, 24);
+  height: 65%;
 }
 
 /* ////////////////////////////////// contact ///////////////////////////////////////// */
@@ -586,6 +593,21 @@ img {
     };
   }
 
+  @media (max-width: 576px) {
+
+    .about-img > img {
+      display: none
+    };
+  }
+
+  @media (min-width: 1000px) {
+
+    .about-img > img {
+      margin: 300px 65px
+    };
+
+  }
+ 
 
 
 @media (min-width: 768px) {
