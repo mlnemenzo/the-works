@@ -95,43 +95,43 @@ class Gallery extends Component {
                             ref={r => (this.slider = r)}
                             version={4}
                             >
-                            <div style={{ height: 500 }}>
-                                <img style={{ width: "500", height: "100%" }} src={theWorks} alt = "img not available"/>
+                            <div className = "carouselImage">
+                                <img src={theWorks} alt = "img not available"/>
                             <div className="carousel-caption">Our mobile service vehicle</div>
                             </div>
-                            <div style = {{ height: 500 }}>
-                                <img style={{ width: "500", height: "100%"}} src = {tesla} alt = "img not available"/>
+                            <div className = "carouselImage">
+                                <img src = {tesla} alt = "img not available"/>
                             <div className="carousel-caption">Tesla Ceramic Coating</div>
                             </div>  
-                            <div style = {{ height: 500 }}>
-                                <img style={{ width: "500", height: "100%"}} src = {tesla2} alt = "img not available"/>
+                            <div className = "carouselImage">
+                                <img src = {tesla2} alt = "img not available"/>
                             <div className="carousel-caption">Tesla and Mike, Coating Process</div>
                             </div>
-                            <div style = {{ height: 500 }}>
+                            <div className = "carouselImage">
                                 <img style={{ width: "500", height: "100%"}} src = {tesla3} alt = "img not available"/>
                             <div className="carousel-caption">Tesla Completed Coating</div>
                             </div>
-                            <div style = {{ height: 500 }}>
+                            <div className = "carouselImage">
                                 <img style={{ width: "500", height: "100%"}} src = {tacoma} alt = "img not available"/>
                             <div className="carousel-caption">Toyota Tacoma Polish/ Paint Correction</div>
                             </div> 
-                            <div style = {{ height: 500 }}>
+                            <div className = "carouselImage">
                                 <img style={{ width: "500", height: "100%"}} src = {fj} alt = "img not available"/>
                             <div className="carousel-caption">Toyota FJ Cruiser Paint Correction</div>
                             </div>  
-                            <div style = {{ height: 500 }}>
+                            <div className = "carouselImage">
                                 <img style={{ width: "500", height: "100%"}} src = {fj2} alt = "img not available"/>
                             <div className="carousel-caption">Toyota FJ Cruiser Paint Correction</div>
                             </div>
-                            <div style = {{ height: 500 }}>
+                            <div className = "carouselImage">
                                 <img style={{ width: "500", height: "100%"}} src = {before} alt = "img not available"/>
                             <div className="carousel-caption">Acura TSX before headlight restoration</div>
                             </div> 
-                            <div style = {{ height: 500 }}>
+                            <div className = "carouselImage">
                                 <img style={{ width: "500", height: "100%"}} src = {after} alt = "img not available"/>
                             <div className="carousel-caption">Acura TSX after headlight restoration</div>
                             </div> 
-                            <div style = {{ height: 500 }}>
+                            <div className = "carouselImage">
                                 <img style={{ width: "500", height: "100%"}} src = {acura} alt = "img not available"/>
                             <div className="carousel-caption">Acura TSX Polish/ Paint Correction</div>
                             </div>             
