@@ -57,14 +57,15 @@ class LandingPage extends Component {
                 </div>
                 <div className= "services-landing col-10 offset-1 text-center">
                     <h2 className= "col-12 text-center">OUR SERVICES</h2>
-                    <div style = {{ height: 500 }}>
-                        <img style={{ width: "500", height: "100%"}} src = {tesla} alt = "img not available"/>
-                    <div className="carousel-caption">Tesla Ceramic Coating</div>
-                    </div>  
-                    <p className = "d-flex justify-content-center">We offer a full range of Auto Detailing and Auto Reconditioning to vehicle owners. Our professionals know how to handle a wide range of services.</p>
-                    <div className="service-images">
+                    <div className ="secondImage">
+                        <img className = "landingImage2" src = {tesla} alt = "img not available"/>
+                        <div className="carousel-caption">Tesla Ceramic Coating</div>
                     </div>
-                    <Link className = "about-link nav-link" to = "/services">VIEW ALL SERVICES</Link> 
+                    <div className = "description">
+                        <p className = "d-flex justify-content-center">We offer a full range of Auto Detailing and Auto Reconditioning to vehicle owners. Our professionals know how to handle a wide range of services.</p>
+                        <Link className = "about-link nav-link" to = "/services">VIEW ALL SERVICES</Link> 
+                    </div> 
+                    
                 </div>
                 <div className="appt col-10 offset-1">
                     <h4 className="make-appt text-center"><Link className="make-appt-link nav-link nav-link-text boldLink" to = "/appointment">MAKE AN APPOINTMENT NOW WITH  OUR ONLINE FORM.</Link></h4>
