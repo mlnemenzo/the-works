@@ -456,6 +456,11 @@ img {
   box-shadow: 3px 3px 5px rgb(24, 24, 24);
 }
 
+.carouselImage > img {
+  box-shadow: 3px 3px 5px rgb(24, 24, 24);
+  width: 75vw;
+}
+
 /* ////////////////////////////////// appointments ///////////////////////////////////////// */
 
 .multi-select .arrow {
