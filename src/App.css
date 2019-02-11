@@ -379,6 +379,10 @@ tr:nth-child(even) {
   margin-top: 15px
 }
 
+.about-image {
+  transform: rotate(270deg)
+}
+
 /* ////////////////////////////////// contact ///////////////////////////////////////// */
 
 .call, .email, .availability {

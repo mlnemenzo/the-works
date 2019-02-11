@@ -11,7 +11,6 @@ import fj2 from '../assets/images/fj_passenger.jpg';
 import acura from '../assets/images/acura.jpg';
 import before from '../assets/images/before.jpg';
 import after from '../assets/images/after.jpg';
-import mike from '../assets/images/mike.jpg'
 
 // const styles = { height: 400, width: "100%" };
 
