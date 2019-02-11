@@ -15,7 +15,7 @@ class AboutUs extends Component {
                     <p className= "about-statment justify-content-center">We are Certified Advance Auto Detailing and Auto Reconditioning Professionals.  We have extensive training and experience in the field of auto detailing, paint correction and R1 Ceramic Coatings.  We use eco-safe products and commercial grade equipment to ensure optimum results without harming the environment.  As an Auto Reconditioning Professional, we provide a systematic and efficient appropact to rejuvenate and protect various surfaces / components of your vehicle.</p>
                 </div>
                 <div className="about-img col-12 justify-content-center">
-                    <img src={mike} alt="no img available"/>
+                    <img className="about-image" src={mike} alt="no img available"/>
                 </div>
                 <div className="mission-statement col-12">
                     <h3 className="statement text-center">Mission Statement: </h3>
