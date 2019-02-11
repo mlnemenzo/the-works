@@ -57,6 +57,7 @@ class LandingPage extends Component {
                 </div>
                 <div className= "services-landing col-10 offset-1 text-center">
                     <h2 className= "col-12 text-center">OUR SERVICES</h2>
+                    <h3 className="tint-service">TINT SERVICE COMING SOON</h3>
                     <div className ="secondImage">
                         <img className = "landingImage2" src = {tesla} alt = "img not available"/>
                         <div className="carousel-caption">Tesla Ceramic Coating</div>

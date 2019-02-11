@@ -11,6 +11,7 @@ class Services extends Component {
         return (
             <div className = "services-body">
                 <h1 className="services-header col-12" id = "service-header">Our Services</h1>
+                <h3 className="tintService">TINT SERVICE COMING SOON!</h3>
                 <div className="service-list">
                     <div className="service-info-body col-12 col-sm-6 col-md-6 col-lg-3">
                         <div className="service-level text-center">Bronze Detail</div>
