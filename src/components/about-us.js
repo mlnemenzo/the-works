@@ -11,11 +11,13 @@ class AboutUs extends Component {
         return (
             <div className="about-us-body row">
                 <div className="about col-12">
-                    <h3 className="about-us-header text-center">About us: </h3>
-                    <p className= "about-statment justify-content-center">We are Certified Advance Auto Detailing and Auto Reconditioning Professionals.  We have extensive training and experience in the field of auto detailing, paint correction and R1 Ceramic Coatings.  We use eco-safe products and commercial grade equipment to ensure optimum results without harming the environment.  As an Auto Reconditioning Professional, we provide a systematic and efficient appropact to rejuvenate and protect various surfaces / components of your vehicle.</p>
+                    <h3 className="about-us-header col-12 text-center">About us: </h3>
+                    <p className= "about-statment col-12 justify-content-center">We are Certified Advance Auto Detailing and Auto Reconditioning Professionals.  We have extensive training and experience in the field of auto detailing, paint correction and R1 Ceramic Coatings.  We use eco-safe products and commercial grade equipment to ensure optimum results without harming the environment.  As an Auto Reconditioning Professional, we provide a systematic and efficient appropact to rejuvenate and protect various surfaces / components of your vehicle.</p>
                 </div>
-                <div className="about-img col-12 justify-content-center">
-                    <img className="about-image" src={mike} alt="no img available"/>
+                <div className="aboutImage col-12">
+                    <div className="about-img col-12 d-flex justify-content-center flex-wr">
+                        <img className="about-image" src={mike} alt="no img available"/>
+                    </div>
                 </div>
                 <div className="mission-statement col-12">
                     <h3 className="statement text-center">Mission Statement: </h3>
