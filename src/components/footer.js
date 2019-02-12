@@ -19,7 +19,6 @@ class Footer extends Component {
                 </div>
                 <div className="footer-number col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                     <h5 className="number">business number</h5>
-                    <h5>(951)449-6383</h5>
                     <h5>(951) 420-5555</h5>
                 </div>
                 
