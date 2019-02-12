@@ -119,7 +119,6 @@ class Contact extends Component {
                     <div className = "call col-12 col-sm-12 col-md-4 col-lg-4">
                         <h3 className = "d-flex justify-content-center">Call Us Now At</h3>
                         <ul>
-                            <li className = "text-center"><span className="glyphicons glyphicons-call-outgoing"></span>(951)449-6383</li>
                             <li className= "text-center">(951) 420-5555</li>                       
                         </ul>
                     </div>
