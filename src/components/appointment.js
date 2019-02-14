@@ -108,9 +108,11 @@ class Appointment extends Component {
         event.preventDefault();
 
         console.log('Is Valid:', this.validateForm());
-
+        
         if(this.validateForm()) {
             this.sendEmailToServer();
+
+            alert("Your appointment has been set.")
             
             this.setState({
 
