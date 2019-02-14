@@ -67,6 +67,8 @@ class Contact extends Component {
         if(this.validateForm()){
             this.sendEmailToServer();  
 
+            alert("Thanks! Your message has been sent.")
+
             this.setState({
                 name : "",
                 email : "",

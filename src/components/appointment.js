@@ -318,12 +318,10 @@ class Appointment extends Component {
                         <DropdownItem onClick = {() => this.selectTime('12:00pm')}>12:00pm</DropdownItem>
                         <DropdownItem onClick = {() => this.selectTime('3:00pm')}>3:00pm</DropdownItem>
                         </DropdownMenu>
-                        <p className="apptHours text-center">Times may vary depending on location and special services requested. Will confirm appointment within 24 hours.</p>
                         <p className="text-danger">{errors.appointmentTime}</p>
                     </Dropdown>
-                    
                     </div>
-                    
+                    <p className="apptHours col-12 text-center">Times may vary depending on location and special services requested. Will confirm appointment within 24 hours.</p>
                     <div className="appointment-time col-12 text-left">
                     
                     </div>
