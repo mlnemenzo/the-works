@@ -1,30 +1,22 @@
 import React, { Component } from 'react'
 
-class apptComplete extends Component {
-
-    state() {
-        show: false;
-    }
-
-    showModal = e => {
-        this.setState({
-            show: true
-        })
-    }
-
+class ApptComplete extends Component {
     
     render() {
 
-        if(!this.props.show) {
-            return null;
+        state = {
+            show : false
         }
+
+        showModal = e => ({
+            show: !this.setState.show   
+        });
+
         return( 
-            <Modal show = {this.state.show}>Thanks! Your appointment has been scheduled!<Modal/>
-            <button onClick = { e => showModal()}></button>
-            
-            
+            <div className="apptModal col-4 offset-4 text-center">Hello World</div>
         );
     }
 }
 
-export default apptComplete
+export default ApptComplete;
+

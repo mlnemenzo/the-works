@@ -4,7 +4,7 @@ import axios from 'axios';
 import Calendar from 'react-calendar/dist/entry.nostyle';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import MultiSelect from 'multi-select-react';
-import apptComplete from './apptComplete';
+import ApptComplete from './apptComplete';
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const phoneRegex = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$/;
@@ -65,12 +65,6 @@ class Appointment extends Component {
             customWork: selectedItems });
             console.log('items:', selectedItems )
     }
-
-    showModal = e => (
-        this.setState({
-            show: !this.state.show
-        })
-    )
 
     selectTime(time) {
         this.setState({
@@ -341,8 +335,8 @@ class Appointment extends Component {
                     <div className = "col-12 text-center">                    
                         <Link className = "disclaimer-link col-12 text-center" to = "/disclaimer">guarantees & disclaimer</Link>   
                     </div>
+                    <ApptComplete/>
             </form>    
-            <apptComplete/>     
             </div>
         )
     }
