@@ -10,7 +10,6 @@ import Gallery from './components/gallery';
 import Services from './components/services';
 import Disclaimer from './components/disclaimer';
 import Footer from './components/footer';
-import apptComolete from './components/apptComplete'
 
 
 class App extends Component {
