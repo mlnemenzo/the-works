@@ -2,20 +2,26 @@ import React, { Component } from 'react'
 
 class ApptComplete extends Component {
     
+    onClose = e => {
+        this.props.show = false;
+    }
+
     render() {
 
-        state = {
-            show : false
+        if(!this.props.show) {
+            return null;
         }
 
-        showModal = e => ({
-            show: !this.setState.show   
-        });
-
         return( 
-            <div className="apptModal col-4 offset-4 text-center">Hello World</div>
+            <div className="apptModal col-4 offset-4 text-center">
+            <div>{this.props.children}}</div>
+            <button onClose = {
+                e => { this.onClose(e)}
+            }>Close</button>
+            </div>  
         );
     }
+    
 }
 
 export default ApptComplete;

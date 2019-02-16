@@ -60,6 +60,8 @@ class Appointment extends Component {
          window.scrollTo(0,0);   
     }
 
+
+
     handleChange(selectedItems) {     
         this.setState({ 
             customWork: selectedItems });
@@ -335,7 +337,12 @@ class Appointment extends Component {
                     <div className = "col-12 text-center">                    
                         <Link className = "disclaimer-link col-12 text-center" to = "/disclaimer">guarantees & disclaimer</Link>   
                     </div>
-                    <ApptComplete/>
+                    <button  showModal = {e => ({
+                        show: !this.setState({
+                            show: true
+                        })   
+                    })} onClose = {this.showModals}>Test Modal</button>
+                    <ApptComplete show={ this.state.show }/>
             </form>    
             </div>
         )
