@@ -117,7 +117,8 @@ class Appointment extends Component {
         if(this.validateForm()) {
             this.sendEmailToServer();
 
-            alert("Your appointment has been set.")
+            // alert("Your appointment has been set.");
+            this.showModal();
             
             this.setState({
 
@@ -276,8 +277,8 @@ class Appointment extends Component {
                 <div className="form-group service-type col-12 row">
                     
                     <div className="tier col-12 text-left">
-                        <label htmlFor="exampleFormControlTextarea1">Service Type</label>
-                        <Dropdown className= "col-12" isOpen={this.state.dropDownOpen} toggle={this.toggle}>
+                        <label htmlFor="exampleFormControlTextarea1" className = "col-4 offset-4 text-center">Service Type</label>
+                        <Dropdown className= "col-4 offset-4 text-center" isOpen={this.state.dropDownOpen} toggle={this.toggle}>
                             <DropdownToggle title = "Tier" caret>
                             {this.state.tierLevel}
                             </DropdownToggle>
@@ -338,12 +339,9 @@ class Appointment extends Component {
                     <div className = "col-12 text-center">                    
                         <Link className = "disclaimer-link col-12 text-center" to = "/disclaimer">guarantees & disclaimer</Link>   
                     </div>
-                    <button  showModal = {e => ({
-                        show: !this.setState({
-                            show: true
-                        })   
-                    })}>Test Modal</button>
-                    <ApptComplete onClose = {this.showModal} show={ this.state.show }/>
+                    {/* <button className = "modalButton toggle-button col-4 offset-4 text-center" id = "centered-toggle-button" onClick = { e => {this.showModal(e)}}> {" "}
+                    Thanks! Your appointment has been scheduled!{" "}</button> */}
+                    <ApptComplete onClose = { this.showModal } show={ this.state.show }/>
             </form>    
             </div>
         )

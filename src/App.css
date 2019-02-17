@@ -593,6 +593,48 @@ img {
   padding-top: 20px
 }
 
+/* ////////////////////////////////// apptModal ///////////////////////////////////////// */
+
+/* .modal-overlay {
+  position: fixed;
+  width: 100%; 
+  height: 200%; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(50,50,50, 0); 
+  z-index: 0;
+} */
+
+.modalButton {
+  position: relative;
+  color: black;
+  border: 1px solid black;
+  bottom: 10vh;
+  height: 30vh;
+  box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+  visibility: visible;
+  background-color: #cacaca;
+  z-index: 1
+}
+
+.content {
+  margin-top: 15px;
+  text-overflow: clip
+}
+
+.modalButton.off {
+  opacity: 0;
+  visibility: hidden;
+  filter: blur(8px);
+  transform: scale(0.33);
+  box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.2);
+}
+
+#centered-toggle-button {
+  position: absolute;
+}
 /* ////////////////////////////// media query ///////////////////////////////// */
 
 @media (min-width: 576px) {
