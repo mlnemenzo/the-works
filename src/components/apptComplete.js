@@ -16,13 +16,12 @@ class ApptComplete extends Component {
         }
 
         return( 
-            <div className="modalButton col-4 offset-4 text-center" id = "modal">
-            <div className = "content">{this.props.children}</div>
-            <div className="actions">
-            <Link className = "landing-link  text-center" to = "/">Close</Link>   
-            </div>
-            
-            </div>  
+                <div className="modalButton col-6 offset-3 text-center" id = "modal">
+                <h4 className = "content col-12">Thanks! Your Appointment has been scheduled!</h4>
+                <div className="actions">
+                    <Link className = "col-12 landing-link  text-center" to = "/">Close</Link>   
+                </div>
+                </div>  
         );
     }
 }

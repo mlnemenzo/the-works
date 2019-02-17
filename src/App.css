@@ -595,17 +595,35 @@ img {
 
 /* ////////////////////////////////// apptModal ///////////////////////////////////////// */
 
+/* .modal-overlay {
+  position: fixed;
+  width: 100%; 
+  height: 200%; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(50,50,50, 0); 
+  z-index: 0;
+} */
+
 .modalButton {
-  width: 500px;
-  background: white;
-  border: 1px solid #ccc;
-  transition: 1.1s ease-out;
+  position: relative;
+  color: black;
+  border: 1px solid black;
+  bottom: 10vh;
+  height: 30vh;
   box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
-  filter: blur(0);
-  transform: scale(1);
-  opacity: 1;
   visibility: visible;
+  background-color: #cacaca;
+  z-index: 1
 }
+
+.content {
+  margin-top: 15px;
+  text-overflow: clip
+}
+
 .modalButton.off {
   opacity: 0;
   visibility: hidden;
@@ -613,39 +631,7 @@ img {
   transform: scale(0.33);
   box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.2);
 }
-@supports (offset-rotation: 0deg) {
-  offset-rotation: 0deg;
-  offset-path: path("M 250,100 S -300,500 -700,-200");
-  .modalButton.off {
-    offset-distance: 100%;
-  }
-}
-@media (prefers-reduced-motion) {
-  .modal {
-    offset-path: none;
-  }
-}
-.modalButton h2 {
-  border-bottom: 1px solid #ccc;
-  padding: 1rem;
-  margin: 0;
-}
-.modalButton .content {
-  padding: 1rem;
-}
-.modalButton .actions {
-  border-top: 1px solid #ccc;
-  background: #eee;
-  padding: 0.5rem 1rem;
-}
-.modalButton .actions button {
-  border: 0;
-  background: #78f89f;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  font-size: 0.8rem;
-  line-height: 1;
-}
+
 #centered-toggle-button {
   position: absolute;
 }
