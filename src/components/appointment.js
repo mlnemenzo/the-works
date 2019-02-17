@@ -49,18 +49,19 @@ class Appointment extends Component {
                     {id : 8, label : 'Ozone Decontamination - $75.00'}, 
                     {id : 9, label : 'Glass Polishing and Restoration - $75.00'},
                     {id : 10, label : 'R1 Ceramic Coating - $650.00' }],
-                selectedItems : []
-                                                         
-            }  
-
-            
+                selectedItems : []                                            
+            }          
     }
 
     componentDidMount() {
          window.scrollTo(0,0);   
     }
 
-
+    showModal = e => {
+        this.setState({
+          show: !this.state.show
+        });
+      };
 
     handleChange(selectedItems) {     
         this.setState({ 
@@ -341,8 +342,8 @@ class Appointment extends Component {
                         show: !this.setState({
                             show: true
                         })   
-                    })} onClose = {this.showModals}>Test Modal</button>
-                    <ApptComplete show={ this.state.show }/>
+                    })}>Test Modal</button>
+                    <ApptComplete onClose = {this.showModal} show={ this.state.show }/>
             </form>    
             </div>
         )
