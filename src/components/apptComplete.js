@@ -1,10 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link} from 'react-router-dom';
 
 class ApptComplete extends Component {
     
     onClose = e => {
         this.props.onCLose && this.props.onCLose(e);
     };
+
+    
 
     render() {
 
@@ -13,11 +16,12 @@ class ApptComplete extends Component {
         }
 
         return( 
-            <div className="apptModal col-4 offset-4 text-center">
-            <div>{this.props.children}</div>
-            <button onClose = {
-                e => { this.onClose(e)}
-            }>Close</button>
+            <div className="modalButton col-4 offset-4 text-center" id = "modal">
+            <div className = "content">{this.props.children}</div>
+            <div className="actions">
+            <Link className = "landing-link  text-center" to = "/">Close</Link>   
+            </div>
+            
             </div>  
         );
     }
