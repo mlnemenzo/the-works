@@ -595,7 +595,7 @@ img {
 
 /* ////////////////////////////////// apptModal ///////////////////////////////////////// */
 
-/* .modal-overlay {
+.modal-overlay {
   position: fixed;
   width: 100%; 
   height: 200%; 
@@ -605,35 +605,30 @@ img {
   bottom: 0;
   background-color: rgba(50,50,50, 0); 
   z-index: 0;
-} */
+}
 
 .modalButton {
-  position: relative;
+  position: fixed;
   color: black;
   border: 1px solid black;
-  bottom: 10vh;
-  height: 30vh;
+  bottom: 40vh;
   box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
   visibility: visible;
   background-color: #cacaca;
-  z-index: 1
+  z-index: 10
 }
 
 .content {
   margin-top: 15px;
-  text-overflow: clip
+  border-bottom: 1px solid #505d63
 }
 
-.modalButton.off {
-  opacity: 0;
-  visibility: hidden;
-  filter: blur(8px);
-  transform: scale(0.33);
-  box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.2);
+.actions {
+  margin-bottom: 15px
 }
 
-#centered-toggle-button {
-  position: absolute;
+.landing-link {
+  color: black;
 }
 /* ////////////////////////////// media query ///////////////////////////////// */
 
