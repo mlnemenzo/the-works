@@ -15,9 +15,11 @@ class ContactModal extends Component {
 
         return(
             <div className="modal-overlay col-12">
-                <div className="content">Thanks! Your message has been sent!</div>
-                <div className="action">
-                    <Link className = "col-12 landing-link text-center" to = "/">Close</Link>
+                <div className="modalButton col-6 offset-3 text-center">
+                    <p className="content">Thanks! Your message has been sent!</p>
+                    <div className="action">
+                        <Link className = "col-12 landing-link text-center" to = "/">Close</Link>
+                    </div>
                 </div>
             </div>
         )

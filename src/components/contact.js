@@ -11,7 +11,7 @@ class Contact extends Component {
         super(props);
         this.state = {
                 
-                show: true,
+                show: false,
                 name : "",
                 email : "",
                 phone : "",
@@ -75,7 +75,7 @@ class Contact extends Component {
         if(this.validateForm()){
             this.sendEmailToServer();  
 
-            alert("Thanks! Your message has been sent.")
+            this.showModal();
 
             this.setState({
                 name : "",

@@ -23,7 +23,7 @@ class Appointment extends Component {
 
             this.state = {
                 errors: {},
-                show: true,
+                show: false,
                 value : "",
                 dropDownOpen : false,
                 dropDownOpenTwo : false,
