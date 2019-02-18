@@ -21,7 +21,7 @@ class ApptComplete extends Component {
             <div className="modal-overlay col-12">
                 <div className="modalButton col-6 offset-3 text-center">
                     <p className = "content col-12 text-center">Thanks! Your Appointment has been scheduled!</p>
-                    <div className="actions">
+                    <div className="action">
                         <Link className = "col-12 landing-link  text-center" to = "/">Close</Link>   
                     </div>
                 </div>

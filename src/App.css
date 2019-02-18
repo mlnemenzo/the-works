@@ -226,8 +226,8 @@ tr:nth-child(even) {
 }
 
 .landing-image > img {
-  margin: 15px 15px;
-  width: 80vw;
+  margin: 15px 0;
+  width: 70vw;
   box-shadow: 2px 3px 5px rgb(24, 24, 24);
 }
 
@@ -615,7 +615,7 @@ img {
   box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
   visibility: visible;
   background-color: #cacaca;
-  z-index: 10
+  z-index: 10;
 }
 
 .content {
@@ -623,8 +623,8 @@ img {
   border-bottom: 1px solid #505d63
 }
 
-.actions {
-  margin-bottom: 15px
+.action {
+  margin-bottom: 20px
 }
 
 .landing-link {
