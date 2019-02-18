@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import ContactModal from './contactModal';
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const phoneRegex = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$/;
@@ -9,7 +10,8 @@ class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+                
+                show: true,
                 name : "",
                 email : "",
                 phone : "",
@@ -48,6 +50,12 @@ class Contact extends Component {
         return Object.keys(errors).length === 0
 
     }
+
+    showModal = e => {
+        this.setState({
+          show: !this.state.show
+        });
+      };
 
 
     sendEmailToServer() {
@@ -114,6 +122,7 @@ class Contact extends Component {
                     </div>
                     <div className = "form-submit text-center">
                         <button className = "btn btn-lg pro" type="submit" id = "contact-submit" value="Submit">Submit</button>
+                        <ContactModal show = {this.state.show} onClose = {this.showModal}/>
                     </div>
                     <h6 className = "contact-message text-center">We will contact you within one business day. </h6>
                 </form>

@@ -23,7 +23,7 @@ class Appointment extends Component {
 
             this.state = {
                 errors: {},
-                show: false,
+                show: true,
                 value : "",
                 dropDownOpen : false,
                 dropDownOpenTwo : false,
@@ -117,39 +117,8 @@ class Appointment extends Component {
         if(this.validateForm()) {
             this.sendEmailToServer();
 
-            // alert("Your appointment has been set.");
             this.showModal();
             
-            this.setState({
-
-                errors: {},
-                value : "",
-                dropDownOpen : false,
-                dropDownOpenTwo : false,
-                name : "",
-                email : "",
-                phone : "",
-                message : "",
-                carMake : "",
-                carModel : "",
-                carYear : "",
-                carInfo : "",
-                tier : "",
-                time : "", 
-                date : new Date(),
-                minDate : new Date(),
-                items : [{id: 1, label :'Engine Detail - $55.00'}, 
-                    {id : 2, label :'Headlight Restoration - $55.00'},
-                    {id : 3, label : 'Aluminum and/or Chrome Polish - $35.00'}, 
-                    {id : 4, label : 'Concentrated Scratch Correction - $55.00/Panel'},
-                    {id : 5, label : 'Water Spots Removal - $55.00/Panel'},
-                    {id : 6, label : 'Trim & Plastic Coating - $55.00'}, 
-                    {id : 7, label : 'Fabric & Leather Protection & Restoration (Interior & Exterior) - $55.00'}, 
-                    {id : 8, label : 'Ozone Decontamination - $75.00'}, 
-                    {id : 9, label : 'Glass Polishing and Restoration - $75.00'},
-                    {id : 10, label : 'R1 Ceramic Coating - $650.00' }],
-                selectedItems : [],
-            })
         }
 
       
