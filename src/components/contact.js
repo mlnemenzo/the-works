@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import ContactModal from './contactModal';
+import ErrorModal from './errorModal';
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const phoneRegex = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$/;
@@ -123,6 +124,7 @@ class Contact extends Component {
                     <div className = "form-submit text-center">
                         <button className = "btn btn-lg pro" type="submit" id = "contact-submit" value="Submit">Submit</button>
                         <ContactModal show = {this.state.show} onClose = {this.showModal}/>
+                        <ErrorModal/>
                     </div>
                     <h6 className = "contact-message text-center">We will contact you within one business day. </h6>
                 </form>
