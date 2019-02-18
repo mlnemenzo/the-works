@@ -308,8 +308,6 @@ class Appointment extends Component {
                     <div className = "col-12 text-center">                    
                         <Link className = "disclaimer-link col-12 text-center" to = "/disclaimer">guarantees & disclaimer</Link>   
                     </div>
-                    {/* <button className = "modalButton toggle-button col-4 offset-4 text-center" id = "centered-toggle-button" onClick = { e => {this.showModal(e)}}> {" "}
-                    Thanks! Your appointment has been scheduled!{" "}</button> */}
                     <ApptComplete onClose = { this.showModal } show={ this.state.show }/>
             </form>    
             </div>
