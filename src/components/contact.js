@@ -13,6 +13,7 @@ class Contact extends Component {
         this.state = {
                 
                 show: false,
+                showError: false,
                 name : "",
                 email : "",
                 phone : "",
@@ -47,9 +48,9 @@ class Contact extends Component {
             errors.message = "Please enter a message"
         }
 
-        this.setState({errors: errors})
+        this.setState({errors: errors});
         
-        return Object.keys(errors).length === 0
+        return Object.keys(errors).length === 0;
  
     }
 
@@ -58,7 +59,6 @@ class Contact extends Component {
           show: !this.state.show
         });
       };
-
 
     sendEmailToServer() {
         const contact = this.state;
@@ -85,7 +85,7 @@ class Contact extends Component {
                 phone : "",
                 message : "",
             });
-        }
+        } 
     }
 
     componentDidMount() {
@@ -125,8 +125,7 @@ class Contact extends Component {
                     <div className = "form-submit text-center">
                         <button className = "btn btn-lg pro" type="submit" id = "contact-submit" value="Submit">Submit</button>
                         <ContactModal show = {this.state.show} onClose = {this.showModal}/>
-                        <ErrorModal/>
-                        <p className = "text-danger">{errors.message}</p>
+                        {/* <ErrorModal show = {this.state.show} onClick = {this.showError}/> */}
 
                     </div>
                     <h6 className = "contact-message text-center">We will contact you within one business day. </h6>

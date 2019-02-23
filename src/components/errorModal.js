@@ -12,8 +12,7 @@ class ErrorModal extends Component {
                 <div className="modalButton col-6 offset-3 text-centered">
                     <p className="content col-12 text-center">Please correct indicated errors.</p>
                     <div className="action">
-                         <button className = "modalButton toggle-button col-4 offset-4 text-center" id = "centered-toggle-button" onClick = { e => {this.showModal(e)}}> {" "}
-                            Thanks! Your appointment has been scheduled!{" "}</button>
+                         <button className = "toggle-button col-12 text-center" id = "centered-toggle-button" onClick = { e => {this.showModal(e)}}>OK</button>
                     </div>
                 </div>
             </div>
