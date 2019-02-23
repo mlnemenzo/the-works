@@ -27,7 +27,8 @@ class Contact extends Component {
         let errors = {};
 
         if (!name) {
-            errors.name = "Please enter your name"
+            errors.name = "Please enter your name";
+            errors.field = "Please correct incomplete/incorrect fields"
         }
 
         if (!email) {
@@ -49,7 +50,7 @@ class Contact extends Component {
         this.setState({errors: errors})
         
         return Object.keys(errors).length === 0
-
+ 
     }
 
     showModal = e => {
@@ -125,6 +126,8 @@ class Contact extends Component {
                         <button className = "btn btn-lg pro" type="submit" id = "contact-submit" value="Submit">Submit</button>
                         <ContactModal show = {this.state.show} onClose = {this.showModal}/>
                         <ErrorModal/>
+                        <p className = "text-danger">{errors.message}</p>
+
                     </div>
                     <h6 className = "contact-message text-center">We will contact you within one business day. </h6>
                 </form>
