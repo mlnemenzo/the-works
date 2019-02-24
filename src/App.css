@@ -97,8 +97,7 @@ tr:nth-child(even) {
   background-color: rgb(199, 75, 75);
   border-color: rgb(199, 75, 75);
   outline: none;
-  width: 175px;
-  height: 30px
+  width: 30vw;
 }
 
 .btn-secondary:hover {
@@ -133,6 +132,7 @@ tr:nth-child(even) {
 }
 
 .text-muted {
+  color: white;
   text-shadow: 1px 1px 1px black
 }
 
@@ -140,7 +140,7 @@ tr:nth-child(even) {
 
 #navbarContent {
   position: fixed;
-  top: 30px;
+  top: 50px;
   background-color: rgb(36, 36, 36);
   width: 98%;
   left: 2px;
@@ -159,7 +159,7 @@ tr:nth-child(even) {
   position: fixed;
   width: 100%;
   z-index: 10;
-  height: 85px
+  height: 105px
 }
 
 .header {

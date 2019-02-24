@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import ContactModal from './contactModal';
-import ErrorModal from './errorModal';
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const phoneRegex = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$/;
+
 
 class Contact extends Component {
     constructor(props) {
@@ -13,7 +13,6 @@ class Contact extends Component {
         this.state = {
                 
                 show: false,
-                showError: false,
                 name : "",
                 email : "",
                 phone : "",
@@ -46,6 +45,10 @@ class Contact extends Component {
 
         if (!message) {
             errors.message = "Please enter a message"
+        }
+
+        if (!message || !name || !email || !phone) {
+            errors.warning = "Please correct marked fields"
         }
 
         this.setState({errors: errors});
@@ -101,6 +104,7 @@ class Contact extends Component {
                 
                 <form className = "contact-form wrap animated fast fadeInUp" noValidate = "" onSubmit = {this.handleEvent.bind(this)}>
                     <h1 className="contact-header text-center">Contact Us</h1>
+                    <h3 className = "text-danger col-12 text-center">{errors.warning}</h3>
                     <div className="form-group col-12 text-left">
                         <label htmlFor="name col-12" className="enter-name">Name</label>
                         <input type="text" className="col-12" value = {name} onChange = { event => this.setState({name: event.target.value})} placeholder = "Your name" autoComplete = "name"/>
@@ -114,7 +118,7 @@ class Contact extends Component {
                     <div className="form-group col-12 text-left">
                         <label htmlFor="phone">Phone</label>
                         <small id="phoneHelp" className="form-text text-muted">Please use valid US format, ex: (555) 555-5555</small>
-                        <input className = "col-12" value = {phone} type = "phone" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your Phone" autoComplete = "tel"/>
+                        <input className = "col-12 input-medium bfh-phone" value = {phone} type = "text" data-country="US" onChange = { event => this.setState({phone: event.target.value})} placeholder = "Your phone number, ex: (555) 555-5555" autoComplete = "tel"/>
                         <p className = "text-danger">{errors.phone}</p>
                     </div>
                     <div className="form-group col-12 text-left">
@@ -125,8 +129,6 @@ class Contact extends Component {
                     <div className = "form-submit text-center">
                         <button className = "btn btn-lg pro" type="submit" id = "contact-submit" value="Submit">Submit</button>
                         <ContactModal show = {this.state.show} onClose = {this.showModal}/>
-                        {/* <ErrorModal show = {this.state.show} onClick = {this.showError}/> */}
-
                     </div>
                     <h6 className = "contact-message text-center">We will contact you within one business day. </h6>
                 </form>
