@@ -31,7 +31,7 @@ class Header extends Component {
 
         return (
             <div className = "header-body col-12">
-                {/* <h1 className="header">The Works Auto Detailing and Reconditioning</h1> */}
+                <h1 className="header">The Works Auto Detailing and Reconditioning</h1>
                 <nav className="navbar header-container fixed-top navbar-expand-md navbar-dark blacker" onClick={this.toggleNav}>
                     <button onClick={this.toggleNav} className="navbar-toggler row" type="button" data-toggle="collapse" data-target="#navbarContent">
                         <span className="navbar-toggler-icon"></span>
