@@ -253,7 +253,7 @@ class Appointment extends Component {
                     
                     <div className="tier col-12 text-left">
                         <label htmlFor="exampleFormControlTextarea1" className = "col-4 offset-4 text-center">Service Type</label>
-                        <Dropdown className= "col-4 offset-4 text-center" isOpen={this.state.dropDownOpen} toggle={this.toggle}>
+                        <Dropdown className= "col-12 text-center" isOpen={this.state.dropDownOpen} toggle={this.toggle}>
                             <DropdownToggle title = "Tier" caret>
                             {this.state.tierLevel}
                             </DropdownToggle>
@@ -266,11 +266,11 @@ class Appointment extends Component {
                             <DropdownItem divider />
                             <DropdownItem onClick = {() => this.selectTier('PLATINUM - 170/190')}>Platinum - 170/190</DropdownItem>
                             </DropdownMenu>
-                            <p className="text-danger">{errors.tierLevel}</p>
+                            <p className="text-danger text-center">{errors.tierLevel}</p>
                         </Dropdown>
                     </div>
                     <div className="extra col-12">
-                    <p className="calendar text-left">Custom Work:</p>
+                    <p className="calendar text-center">Custom Work:</p>
                     <MultiSelect
                         options={items}
                         optionClicked={this.optionClicked}
@@ -283,14 +283,16 @@ class Appointment extends Component {
                 </div>
                 
             
-                <div className="schedule col-12 row text-left">  
-                    <div className="appointment-date col-12 col-sm-12 col-md-6 col-lg-6 align-items-left">
-                        <p className="calendar text-left">Date:</p>
-                        <div className ="calendar-container col-12">
+                <div className="schedule col-12 row text-center">  
+                    <div className="appointment-date col-12">
+                        <p className="calendar text-center">Date:</p>
+                        <div className ="calendar-container col-12 col-lg-6 offset-lg-3">
                             <Calendar onChange={this.onClickDay} value={this.state.date} minDate={new Date()} />
                         </div>
-                        <p className ="schedule col-12 text-left">Time:</p>
-                    <Dropdown isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo} list = {this.state.time}>
+                    </div>
+                </div>
+                <p className ="schedule col-12 text-center">Time:</p>
+                <Dropdown className = "col-12 text-center" isOpen={this.state.dropDownOpenTwo} toggle={this.toggleTwo} list = {this.state.time}>
                         <DropdownToggle caret>
                         {this.state.appointmentTime}
                         </DropdownToggle>
@@ -299,13 +301,11 @@ class Appointment extends Component {
                         <DropdownItem onClick = {() => this.selectTime('12:00pm')}>12:00pm</DropdownItem>
                         <DropdownItem onClick = {() => this.selectTime('3:00pm')}>3:00pm</DropdownItem>
                         </DropdownMenu>
-                        <p className="text-danger">{errors.appointmentTime}</p>
-                    </Dropdown>
-                    </div>
+                        <p className="text-danger text-center">{errors.appointmentTime}</p>
+                </Dropdown>
                     <p className="apptHours col-12 text-center">Times may vary depending on location and special services requested. Will confirm appointment within 24 hours.</p>
                     <div className="appointment-time col-12 text-left">
                     </div>
-                </div>
                     <div className = "form-submit col-12 text-center">
                         <button id="appointment-submit">SUBMIT</button> 
                     </div>
