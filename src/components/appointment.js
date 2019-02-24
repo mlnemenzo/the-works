@@ -164,6 +164,11 @@ class Appointment extends Component {
             errors.appointmentTime = "Please schedule time"
         }
 
+        if(!name || !email || !phone || !carMake || !carModel || !carYear  || !tierLevel || !appointmentTime) {
+            errors.warning = "Please correct marked fields";
+            window.scrollTo(0,0)
+        }
+
         this.setState({errors: errors});
 
         return Object.keys(errors).length === 0;
@@ -201,20 +206,21 @@ class Appointment extends Component {
             <div className="appointment-body row">
             <form className = "client-info col-12 text-left" onSubmit = {this.handleEvent.bind(this)}>
                 <h1 className="appointments text-center col-12">Book an Appointment</h1>
+                <h3 className = "text-danger col-12 text-center">{errors.warning}</h3>
                 <div className="form-group">
                     <label htmlFor="enter-name col-12" className="enter-name">Name</label>
-                    <input className="form-control" value = {name} type = "text" placeholder = "Enter name" onChange = { event => this.setState({name: event.target.value})} autoComplete = "name"/>
+                    <input className="form-control" value = {name} type = "text" placeholder = "Your name" onChange = { event => this.setState({name: event.target.value})} autoComplete = "name"/>
                     <p className="text-danger">{errors.name}</p>
                 </div>
                 <div className="form-group">
                     <label htmlFor="enter-email col-12" className="enter-email">Email</label>
-                    <input className="form-control" value = {email} type = "text" placeholder = "Enter email" onChange = { event => this.setState({email: event.target.value})} autoComplete = "email"/>
+                    <input className="form-control" value = {email} type = "text" placeholder = "Your email" onChange = { event => this.setState({email: event.target.value})} autoComplete = "email"/>
                     <p className="text-danger">{errors.email}</p>
                 </div>
                 <div className="form-group">
                     <label htmlFor="enter-phone col-12" className="enter-phone">Telephone</label>
                     <small id="phoneHelp" className="form-text text-muted">Please use valid US format, ex: (555) 555-5555</small>
-                    <input className="form-control" value = {phone} type = "text" placeholder = "Enter phone number" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "phone"/>
+                    <input className="form-control" value = {phone} type = "text" placeholder = "Your phone number, ex: (555) 555-5555" onChange = { event => this.setState({phone: event.target.value})} autoComplete = "phone"/>
                     <p className="text-danger">{errors.phone}</p>
                 </div>
                 <div className="form-group">
@@ -298,7 +304,6 @@ class Appointment extends Component {
                     </div>
                     <p className="apptHours col-12 text-center">Times may vary depending on location and special services requested. Will confirm appointment within 24 hours.</p>
                     <div className="appointment-time col-12 text-left">
-                    
                     </div>
                 </div>
                     <div className = "form-submit col-12 text-center">
