@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.fdfcfda2.js"
   },
   {
-    "revision": "2182330384ebbad826821fdf8e84efe5",
-    "url": "/static/media/react-bootstrap-carousel.21823303.eot"
+    "revision": "2fe6d179ea5aa1ceab26113e77e13da4",
+    "url": "/static/media/react-bootstrap-carousel.2fe6d179.svg"
   },
   {
     "revision": "d719d36722c5e30bfa0e",
@@ -68,16 +68,16 @@ self.__precacheManifest = [
     "url": "/static/media/after.77aa4673.jpg"
   },
   {
+    "revision": "2182330384ebbad826821fdf8e84efe5",
+    "url": "/static/media/react-bootstrap-carousel.21823303.eot"
+  },
+  {
     "revision": "c746c4882df00af3b0a7a3b1616bf295",
     "url": "/static/media/react-bootstrap-carousel.c746c488.woff"
   },
   {
     "revision": "f7448c0408e7a78012a82def0fb9e2fe",
     "url": "/static/media/react-bootstrap-carousel.f7448c04.ttf"
-  },
-  {
-    "revision": "2fe6d179ea5aa1ceab26113e77e13da4",
-    "url": "/static/media/react-bootstrap-carousel.2fe6d179.svg"
   },
   {
     "revision": "d719d36722c5e30bfa0e",
