@@ -13,7 +13,7 @@ class LandingPage extends Component {
     render() {
         return(
             <div className="landing-page">
-                <div className="landing-image justify-content-center">
+                <div className="landing-image col-12 justify-content-center">
                     <img src={landing} alt = "img not available"/>
                 </div>
                 <div className="why-choose col-10 offset-1">

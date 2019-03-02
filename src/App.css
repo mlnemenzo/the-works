@@ -227,7 +227,7 @@ tr:nth-child(even) {
 
 .landing-image > img {
   margin: 15px 0;
-  width: 70vw;
+  width: 60vw;
   box-shadow: 2px 3px 5px rgb(24, 24, 24);
 }
 
