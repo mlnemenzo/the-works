@@ -16,8 +16,8 @@ class Services extends Component {
                     <div className="service-info-body col-12 col-sm-6 col-md-6 col-lg-3">
                         <div className="service-level text-center">Bronze Detail</div>
                         <div className="service-pricing">
-                            <h2 className = "service-pricing-number text-center" id = "detail-cost">50/70</h2>
-                            <div className = "service-detail">$50 for Standard Vehicles (Cars) and $ 70 for Non-Standard or Over-Sized Vehicles (SUV, Trucks)</div>
+                            <h2 className = "service-pricing-number text-center" id = "detail-cost"></h2>
+                            <div className = "service-detail"></div>
                             <div className = "service-info">The Bronze Detail Package is designed for routine cleaning of the internal / external components of the vehicle.</div>
                         </div>
                         <div className="service-info">
@@ -32,8 +32,8 @@ class Services extends Component {
                     <div className="service-info-body col-12 col-sm-6 col-md-6 col-lg-3">
                         <div className="service-level text-center">Siliver Detail</div>
                         <div className="service-pricing">
-                            <h2 className = "service-pricing-number text-center" id = "detail-cost">90/110</h2>
-                                <div className = "service-detail">$90 for Standard Vehicles (Cars) and $ 110 for Non-Standard or Over-Sized Vehicles (SUV, Trucks)</div>
+                            <h2 className = "service-pricing-number text-center" id = "detail-cost"></h2>
+                                <div className = "service-detail"></div>
                                 <div className = "service-info">The Silver Detail Package is designed for routine cleaning of the internal / external components of the vehicle and decontamination of the external paint system. This option provides 3 to 6 months of paint protection. This package is recommended for vehicles that does not require major paint correction. For more severe paint defects, Gold or Platinum Detail Package is highly recommended.</div>
                             </div>
                         <div className="service-info text-left">
@@ -51,8 +51,8 @@ class Services extends Component {
                     <div className="service-info-body col-12 col-sm-6 col-md-6 col-lg-3">
                         <div className="service-level text-center">Gold Detail</div>
                         <div className="service-pricing">
-                            <h2 className = "service-pricing-number text-center" id = "detail-cost">130/150</h2>
-                                <div className = "service-detail">$130 for Standard Vehicles (Cars) and $ 150 for Non-Standard or Over-Sized Vehicles (SUV, Trucks)</div>
+                            <h2 className = "service-pricing-number text-center" id = "detail-cost"></h2>
+                                <div className = "service-detail"></div>
                                 <div className = "service-info">The Gold Detail Package is designed for neutralization and decontamination of the internal / external components of the vehicle, which concentrates more on the external paint system. This package is recommended to remove mild to moderate contamination and oxidation of the carpet fibers (carpet extraction) and to tone down paint defects to significantly enhance, restore, and protect exterior surfaces of your vehicle. This is the ultimate paint protection for your vehicle which last 6 to 12 months.</div>
                             </div>
                         <div className="service-info">
@@ -72,8 +72,8 @@ class Services extends Component {
                     <div className="service-info-body col-12 col-sm-6 col-md-6 col-lg-3">
                         <div className="service-level text-center">Platinum Detail</div>
                         <div className="service-pricing">
-                            <h2 className = "service-pricing-number text-center" id = "detail-cost">170/190</h2>
-                                <div className = "service-detail">$170 for Standard Vehicles (Cars) and $ 190 for Non-Standard or Over-Sized Vehicles (SUV, Trucks)</div>
+                            <h2 className = "service-pricing-number text-center" id = "detail-cost"></h2>
+                                <div className = "service-detail"></div>
                                 <div className = "service-info">The Platinum Detail Package is highly recommended for multi-stage paint correction to remove to moderate to severe contamination and oxidation of the vehicle’s paint system. This requires the vehicle to be in an isolated and controlled environment to complete corrections on any paint defects and restore vehicles natural shine. In addition, this package will provide extreme protection and facilitate the restoration of the vehicle’s paint. This is the ultimate paint protection (6 to 12 months). This will necessitate the preparation for ceramic coating (if applicable). Furthermore, complete interior detail will be provided which includes carpet decontamination / extraction, re-conditioning, and protection of all internal compartments.</div>
                         </div>
                         <div className="service-info">
