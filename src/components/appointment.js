@@ -129,11 +129,11 @@ class Appointment extends Component {
         const errors = {};
 
         if(!name){
-            errors.name = 'Please enter your name';
+            errors.name = 'Please enter your name.';
         }
 
         if(!email){
-            errors.email = 'Please enter your email';
+            errors.email = 'Please enter your email.';
         } else if(!emailRegex.test(email)){
             errors.email = 'Please enter a valid email address, ex: john@mail.com';
         }
@@ -145,27 +145,27 @@ class Appointment extends Component {
         }
         
         if(!carMake) {
-            errors.carMake = "Please enter car manufacturer"
+            errors.carMake = "Please enter car manufacturer."
         }
 
         if(!carModel) {
-            errors.carModel = "Please enter car model"
+            errors.carModel = "Please enter car model."
         }
 
         if(!carYear) {
-            errors.carYear = "Please enter car models year"
+            errors.carYear = "Please enter car models year."
         }
 
         if(!tierLevel) {
-            errors.tierLevel = "Please select service type"
+            errors.tierLevel = "Please select service type."
         }
 
         if(!appointmentTime) {
-            errors.appointmentTime = "Please schedule time"
+            errors.appointmentTime = "Please schedule time."
         }
 
         if(!name || !email || !phone || !carMake || !carModel || !carYear  || !tierLevel || !appointmentTime) {
-            errors.warning = "Please correct marked fields";
+            errors.warning = "Please correct marked fields.";
             window.scrollTo(0,0)
         }
 
